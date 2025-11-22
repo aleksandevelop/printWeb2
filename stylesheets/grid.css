@@ -26,7 +26,6 @@
 
 .column,
 .columns {
-	margin-left: 4.4%;
 	float: left;
 	min-height: 1px;
 	margin-top: -5px;
@@ -214,6 +213,7 @@
 
 .push-ten {
 	left: 83%;
+  margin-right: 60px;
 }
 
 .pull-two {

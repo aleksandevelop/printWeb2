@@ -14,8 +14,8 @@ html, body {
 
 @font-face {
   font-family: "Steelfish";
-  src: url('../fonts/steelfish_bold.otf');
-  font-weight: bold;
+  src: url('../fonts/stell/steelfishbd.woff');
+  /*font-weight: bold;*/
 }
 
 @font-face {
@@ -1069,7 +1069,7 @@ p.copy {
   width: 150px;
   height: 150px;
   background-size: contain;
-  margin-left: 35px;
+  margin-left: 75px;
   /* border: 5px solid #eeede7; */
   -webkit-border-radius: 71px;
   -moz-border-radius: 71px;
@@ -1108,7 +1108,7 @@ p.copy {
 .modNav .nav-bar {
   background: transparent;
   border: none;
-  margin-top: 22px;
+  margin-top: 25px;
 }
 
 .modNav .nav-bar>li {
@@ -1123,8 +1123,7 @@ p.copy {
   padding: 0 15px;
   line-height: 38px;
   text-transform: uppercase;
-  /* font-family: 'Oswald', sans-serif !important; */
-  font-family: "Steelfish";
+   font-family: Steelfish, "helvetica neue", helvetica, arial, sans-serif;
   font-weight: 400;
   letter-spacing: 0.05em;
   font-size: 24px;
@@ -1573,7 +1572,7 @@ p.copy {
 
 .modSocial ul>li {
   margin-bottom: 0;
-  /* float: left; */
+   float: left;
 }
 
 .modSocial ul>li>a {
