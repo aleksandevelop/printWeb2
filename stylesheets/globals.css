@@ -332,7 +332,7 @@ embed {
 
 .title_ord {
   border-bottom: 3px dotted gray;
-  padding-bottom: 12px;
+	padding-block: 20px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -355,7 +355,7 @@ embed {
   margin-top: 5px;
   width: 100%;
   height: 30px;
- font-size: 9px; 
+ font-size: 15px;
    text-align: center;
 }
 .order_input select {
