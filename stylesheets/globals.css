@@ -381,7 +381,8 @@ embed {
 	height: 30px;
   background-color: white;
   border: 1px solid gray;
-  color: #666666;
+  /* color: #666666; */
+	color: black;
 }
 .popup_btn{
 	width: 100%;
@@ -397,6 +398,8 @@ embed {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	font-family: none;
+
 }
 
 
@@ -412,6 +415,7 @@ input:placeholder {
 
 .order_input input::placeholder {
 	font-size: 12px;
+	color: black;
 }
 .order_img_one-title {
 	font-weight: 700;

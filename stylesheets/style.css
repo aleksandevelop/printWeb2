@@ -1108,7 +1108,7 @@ p.copy {
 .modNav .nav-bar {
   background: transparent;
   border: none;
-  margin-top: 25px;
+  margin-top: 19px;
 }
 
 .modNav .nav-bar>li {
@@ -1989,7 +1989,16 @@ p.copy {
   text-transform: none;
   color: #ffff;
 }
-
+.icons {
+  display: flex ;
+  gap: 5px;
+}
+.icons__item{
+  position: relative;
+}
+.icons__item:hover{
+  transform: scale(1.1);
+}
 .icons img {
   cursor: pointer;
   width: 30px;
@@ -2162,6 +2171,11 @@ p.copy {
 }
 .order_input {
   /* margin-right: 45px; */
+}
+#order__textarea{
+  max-width: 205px;
+  font-size: 12px;
+  border: 1px solid black;
 }
 .number {
   margin-right: 5px;
@@ -2446,10 +2460,14 @@ p.copy {
   width: 100%;
   height: 100%;
   padding: 0;
-  border: 1px solid #ccc;
+  border: 1px solid gray;
   font-size: 14px;
   text-align: center;
   align-items: center;
+}
+#dropdown-input::placeholder{
+  color: black;
+
 }
 
 /* Dropdown menu hidden by default */

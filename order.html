@@ -90,11 +90,19 @@
     <div class='container' id='header'>
       <div class='row'>
         <div class='push-ten mobile-social' style=" display: flex; justify-content: end;">
-          <div class="mod modSocial icons" data-connectors="1">
-            <img src="images/social/whatsapp-fill.png" alt="WhatsApp">
-            <img src="images/social/telegram-fill.png" alt="Telegram">
-            <img src="images/social/vk-social-network-logo.png"  alt="VK">
-          </div>
+          <ul class="mod modSocial icons" data-connectors="1">
+            <li class="icons__item">
+              <a href="/" class="icons_link" title="WhatsApp"> <img src="images/social/whatsapp-fill.png" alt="WhatsApp"></a>
+            </li>
+            <li class="icons__item">
+              <a href="/" class="icons_link" title="telegram"> <img src="images/social/telegram-fill.png" alt="Telegram"></a>
+            </li>
+            <li class="icons__item">
+              <a href="/" class="icons_link " title="VK"> <img src="images/social/vk-social-network-logo.png"  alt="VK"></a>
+            </li>
+            
+            
+          </ul>
         </div>
       </div>
       <div class='row navbar-row'>
@@ -246,7 +254,8 @@
                 <p>КОМЕНТАРИЙ</p>
               </div>
               <div class="order_input">
-                <input type="text" name="" id="">
+                <textarea type="text" name="" id="order__textarea">
+                  </textarea>
               </div>
             </div>
             <div class="price total">
