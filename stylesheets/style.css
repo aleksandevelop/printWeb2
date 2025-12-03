@@ -2173,7 +2173,7 @@ p.copy {
   /* margin-right: 45px; */
 }
 #order__textarea{
-  max-width: 205px;
+  max-width: 200px;
   font-size: 12px;
   border: 1px solid black;
 }
@@ -2364,6 +2364,7 @@ p.copy {
   font-family: 'Oswald';
   font-weight: bold;
 }
+
 .nav li {
   cursor: pointer;
 }
