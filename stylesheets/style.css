@@ -2173,9 +2173,10 @@ p.copy {
   /* margin-right: 45px; */
 }
 #order__textarea{
-  max-width: 200px;
+  max-width: 183px;
   font-size: 12px;
   border: 1px solid black;
+  font-weight: 500;
 }
 .number {
   margin-right: 5px;
@@ -2207,7 +2208,9 @@ p.copy {
 .price {
   font-family: 'Oswald', sans-serif;
   font-weight: bold;
-  padding-top: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 26px;
   background-color: red;
   color: #fff;
@@ -2236,7 +2239,7 @@ p.copy {
   border: none;
   cursor: pointer;
   padding-top: 3px;
-  font-size: 18px;
+  font-size: 15px;
   color: gray;
 }
 /* .counter button:nth-child(1) {
@@ -2253,7 +2256,6 @@ p.copy {
 .order_img_one {
   background-color: #fff;
   border: 1px solid #C5C6C6;
-  margin-left: 10px;
   width: 310px;
   min-height: 307px;
 }
@@ -2385,11 +2387,13 @@ p.copy {
 }
 
 .delivery_type ~ div li {
-  font-size: 11px;
+  font-size: 14px;
   text-wrap: nowrap;
   cursor: pointer;
   padding: 6px 12px;
   background: white;
+  font-weight: 500;
+  color: black;
 
   &:hover {
     background-color: lightgray;
@@ -2397,7 +2401,7 @@ p.copy {
 
   span {
     color: rgb(196, 12, 12);
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 100;
   }
 }
@@ -2465,10 +2469,11 @@ p.copy {
   font-size: 14px;
   text-align: center;
   align-items: center;
+  color: black;
+  font-weight: 500;
 }
 #dropdown-input::placeholder{
-  color: black;
-
+	color: black;
 }
 
 /* Dropdown menu hidden by default */
@@ -2482,7 +2487,6 @@ p.copy {
   z-index: 100;
 }
 .order_img_one{
-  margin-bottom: 10px;
   position: relative;
 }
 /* Dropdown options */
@@ -2505,10 +2509,10 @@ p.copy {
   background-color: white;
   border: 1px solid #ccc;
   z-index: 101;
-  width: 30px;
+  width: 50px;
   top: 94%;
   left: 15px;
-  font-size: 9px;
+  font-size: 12px;
   padding:  0px 2px 0px 5px;
 }
 
@@ -2627,7 +2631,7 @@ input:placeholder{
 
 .counter{
   font-size: 12px;
-  padding-top: 8px;
+  /* padding-top: 8px; */
 }
 
 .counter button{

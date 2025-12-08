@@ -14,6 +14,198 @@
  * 		http://meyerweb.com/eric/tools/css/reset/ 
  * 		v2.0 | 20110126
  *    		License: none (public domain) */
+/**
+  Нормализация блочной модели
+ */
+/**
+  Нормализация блочной модели
+ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+	 Убираем внутренние отступы слева тегам списков,
+	 у которых есть атрибут class
+	*/
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+	 Убираем внешние отступы body и двум другим тегам,
+	 у которых есть атрибут class
+	*/
+body,
+:where(blockquote, figure, fieldset):where([class]) {
+  margin: 0;
+}
+
+/**
+	 Убираем внешние отступы вертикали нужным тегам,
+	 у которых есть атрибут class
+	*/
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  padding: 0;
+  border: none;
+}
+
+/**
+	 Убираем стандартный маркер маркированному списку,
+	 у которого есть атрибут class
+	*/
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**
+	 Обнуляем вертикальные внешние отступы параграфа,
+	 объявляем локальную переменную для внешнего отступа вниз,
+	 чтобы избежать взаимодействие с более сложным селектором
+	*/
+p {
+  --paragraphMarginBottom: 24px;
+
+  margin-block: 0;
+}
+
+/**
+	 Внешний отступ вниз для параграфа без атрибута class,
+	 который расположен не последним среди своих соседних элементов
+	*/
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+	 Упрощаем работу с изображениями и видео
+	*/
+img,
+video {
+  /* display: block; */
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+	 Наследуем свойства шрифт для полей ввода
+	*/
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+		 Пригодится в большинстве ситуаций
+		 (когда, например, нужно будет "прижать" футер к низу сайта)
+		*/
+  height: 100%;
+  /**
+		 Убираем скачок интерфейса по горизонтали
+		 при появлении / исчезновении скроллбара
+		*/
+  scrollbar-gutter: stable;
+}
+
+/**
+	 Плавный скролл
+	*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+		 Пригодится в большинстве ситуаций
+		 (когда, например, нужно будет "прижать" футер к низу сайта)
+		*/
+  min-height: 100%;
+  /**
+		 Унифицированный интерлиньяж
+		*/
+  line-height: 1.5;
+}
+
+/**
+	 Нормализация высоты элемента ссылки при его инспектировании в DevTools
+	*/
+a:where([class]) {
+  display: inline-flex;
+}
+
+/**
+	 Курсор-рука при наведении на элемент
+	*/
+button,
+label {
+  cursor: pointer;
+}
+
+/**
+	 Приводим к единому цвету svg-элементы
+	 (за исключением тех, у которых уже указан
+	 атрибут fill со значением 'none' или начинается с 'url')
+	*/
+:where([fill]:not([fill="none"], [fill^="url"])) {
+  fill: currentColor;
+}
+
+/**
+	 Приводим к единому цвету svg-элементы
+	 (за исключением тех, у которых уже указан
+	 атрибут stroke со значением 'none')
+	*/
+:where([stroke]:not([stroke="none"], [stroke^="url"])) {
+  stroke: currentColor;
+}
+
+/**
+	 Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+	*/
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+	 Приведение рамок таблиц в классический 'collapse' вид
+	*/
+:where(table) {
+  border-collapse: collapse;
+  border-color: currentColor;
+}
+
+/**
+	 Удаляем все анимации и переходы для людей,
+	 которые предпочитают их не использовать
+	*/
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 html,
 body,
 div,
@@ -95,15 +287,15 @@ time,
 mark,
 audio,
 video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
 }
 
 html {
-	font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -118,221 +310,219 @@ hgroup,
 menu,
 nav,
 section {
-	display: block;
+  display: block;
 }
 
 ol,
 ul {
-	list-style: none;
+  list-style: none;
 }
 
 blockquote,
 q {
-	quotes: none;
+  quotes: none;
 }
 
 blockquote:before,
 blockquote:after {
-	content: '';
-	content: none;
+  content: "";
+  content: none;
 }
 
 q:before,
 q:after {
-	content: '';
-	content: none;
+  content: "";
+  content: none;
 }
 
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 sub {
-	vertical-align: sub;
+  vertical-align: sub;
 }
 
 sup {
-	vertical-align: super;
+  vertical-align: super;
 }
 
 body {
-	background: white;
-	font-size: 14px;
-	line-height: 1.5em;
-	color: #333333;
-	position: relative;
-	-webkit-font-smoothing: antialiased;
+  background: white;
+  font-size: 14px;
+  line-height: 1.5em;
+  color: #333333;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
 }
 
 /*	--------------------------------------------------
  *	:: Links
  *	-------------------------------------------------- */
 a {
-	color: #bd3b13;
-	text-decoration: none;
-	line-height: inherit;
+  color: #bd3b13;
+  text-decoration: none;
+  line-height: inherit;
 }
 a:hover {
-	color: #333333;
+  color: #333333;
 }
 a:focus {
-	outline: none;
+  outline: none;
 }
 
 p a {
-	line-height: inherit;
+  line-height: inherit;
 }
 p a:visited {
-	line-height: inherit;
+  line-height: inherit;
 }
 
 /*	--------------------------------------------------
  *	:: Lists
  *	-------------------------------------------------- */
 ul {
-	list-style: none outside;
+  list-style: none outside;
 }
 
 ol {
-	list-style: decimal;
-	margin-left: 30px;
+  list-style: decimal;
+  margin-left: 30px;
 }
 
 ul.square,
 ul.circle,
 ul.disc {
-	margin-left: 30px;
+  margin-left: 30px;
 }
 ul.square {
-	list-style: square outside;
+  list-style: square outside;
 }
 ul.circle {
-	list-style: circle outside;
+  list-style: circle outside;
 }
 ul.disc {
-	list-style: disc outside;
+  list-style: disc outside;
 }
 ul.large li {
-	line-height: 21px;
+  line-height: 21px;
 }
 
 /*	--------------------------------------------------
  *	:: Tables
  *	-------------------------------------------------- */
 table {
-	background: white;
-	-moz-border-radius: 3px;
-	-webkit-border-radius: 3px;
-	border-radius: 3px;
-	margin: 0 0 18px;
-	border: 1px solid #dddddd;
+  background: white;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  margin: 0 0 18px;
+  border: 1px solid #dddddd;
 }
 table thead,
 table tfoot {
-	background: #f5f5f5;
+  background: #f5f5f5;
 }
 table thead tr th,
 table tfoot tr th,
 table tbody tr td,
 table tr td,
 table tfoot tr td {
-	font-size: 12px;
-	line-height: 18px;
-	text-align: left;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: left;
 }
 table thead tr th,
 table tfoot tr td {
-	padding: 8px 10px 9px;
-	font-size: 14px;
-	font-weight: bold;
-	color: #222222;
+  padding: 8px 10px 9px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #222222;
 }
 table thead tr th:first-child,
 table tfoot tr td:first-child {
-	border-left: none;
+  border-left: none;
 }
 table thead tr th:last-child,
 table tfoot tr td:last-child {
-	border-right: none;
+  border-right: none;
 }
 table tbody tr.even,
 table tbody tr.alt,
 table tbody tr:nth-child(even) {
-	background: #f9f9f9;
+  background: #f9f9f9;
 }
 table tbody tr td {
-	color: #333333;
-	padding: 9px 10px;
-	vertical-align: top;
-	border: none;
+  color: #333333;
+  padding: 9px 10px;
+  vertical-align: top;
+  border: none;
 }
 
 /* --------------------------------------------------
  *	:: Misc
  *--------------------------------------------------- */
 .left {
-	float: left;
+  float: left;
 }
 
 .right {
-	float: right;
+  float: right;
 }
 
 .text-left {
-	text-align: left;
+  text-align: left;
 }
 
 .text-right {
-	text-align: right;
+  text-align: right;
 }
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 
 .no-border-bottom {
-	border-bottom: none;
+  border-bottom: none;
 }
 
 .no-margin-right {
-	margin-right: 0;
+  margin-right: 0;
 }
 
 .no-margin-left {
-	margin-left: 0;
+  margin-left: 0;
 }
 
 .hide {
-	display: none;
+  display: none;
 }
 
 .highlight {
-	background: yellow;
+  background: yellow;
 }
 
 #googlemap img,
 object,
 embed {
-	max-width: none;
+  max-width: none;
 }
-
 
 #map_canvas embed,
 #map_canvas img,
 #map_canvas object {
-	max-width: none;
+  max-width: none;
 }
 .order_titles {
-	padding-left: 20px;
-	padding-right: 15px;
-	padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-bottom: 20px;
 }
-
 
 .title_ord {
   border-bottom: 3px dotted gray;
-	padding-block: 20px;
+  padding-block: 20px;
   width: 100%;
   display: flex;
   justify-content: space-between;
@@ -340,23 +530,28 @@ embed {
 .title {
   display: flex;
   align-items: center;
-	/* width: 50%; */
+  /* width: 50%; */
 }
 .order_input {
-	width: 50%;
+  width: 50%;
 }
 
-.order_input div  {
+.order_input .counter{
   width: 100%;
-	height: 30px;
+  height: 30px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
 .order_input input {
-  margin-top: 5px;
-  /* width: 100%; */
+  /* margin-top: 5px; */
+  width: 100%;
   height: 30px;
- font-size: 15px;
-   text-align: center;
+  font-size: 15px;
+  text-align: center;
+	font-weight: 500;
 }
 .order_input select {
   width: 100%;
@@ -366,84 +561,83 @@ embed {
   cursor: pointer;
   /* padding: 0 55px 0 55px; */
   background-color: #fff;
-  border:1px solid #666666;
+  border: 1px solid #666666;
   color: #666666;
   /* margin-right: 0 auto; */
-	width: 100%;
-	height: 30px;
+  width: 100%;
+  height: 30px;
 }
 .order_input label span {
   text-align: center;
   margin-right: 0 auto;
-} 
-#openModalBtn{
+}
+#openModalBtn {
   width: 100%;
-	height: 30px;
+  height: 30px;
   background-color: white;
   border: 1px solid gray;
-  /* color: #666666; */
 	color: black;
+  font-weight: 500;
 }
-.popup_btn{
-	width: 100%;
-	height: 30px;
- }
- #openBtn1{
-	width: 100%;
-	height: 30px;
+.popup_btn {
+  width: 100%;
+  height: 30px;
+}
+#openBtn1 {
+  width: 100%;
+  height: 30px;
   display: block;
   white-space: nowrap;
   padding: 0px;
   color: #666666;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	font-family: none;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+	color: black;
+	font-weight: 500;
+	font-size: 14px;
 }
 
-
-
-
-
-
-
-
 input:placeholder {
-	font-size: 11px;
+  font-size: 11px;
 }
 
 .order_input input::placeholder {
-	font-size: 12px;
+	font-weight: 500;
+	font-size: 14px;
 	color: black;
 }
 .order_img_one-title {
-	font-weight: 700;
-	font-size: 20px;
-  font-family: Oswald, sans-serif;
-	margin: 10px 0 0 10px;
-	color: gray;
-}
-
-.price {
-	margin-top: 20px;
-}
-
-.order_img_one-text{
-	font-size: 20px;
-  color: gray;
-  font-family: Oswald, sans-serif;
   font-weight: 700;
+  font-size: 20px;
+  font-family: Oswald, sans-serif;
+	padding-top: 10px;
+  /* color: gray; */
+
+	font-weight: 500;
+	color: black;
 }
-.span-box{
-	width: 20px;
+.order_images{
+	display: flex;
+flex-direction: column;
+	gap: 10px;
+	margin-left:10px ;
+}
+.price {
+  margin-top: 20px;
+}
+
+.order_img_one-text {
+  font-size: 20px;
+  /* color: gray; */
+  font-family: Oswald, sans-serif;
+  /* font-weight: 700; */
+color: black;
+}
+.span-box {
+  width: 20px;
   display: inline-block;
-	background-color: gray;
-	border: 1px solid black;
-	margin-left: 1px;
+  background-color: gray;
+  border: 1px solid black;
+  margin-left: 1px;
 }
-
-
-
-
-
