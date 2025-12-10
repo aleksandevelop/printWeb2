@@ -27,16 +27,14 @@
   <link href="stylesheets/responsive.css" media="screen" rel="stylesheet" type="text/css">
   <script src="javascripts/responsive.js" type="text/javascript"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Droid+Sans"
-      rel="stylesheet"
-      type="text/css"
-    />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
+    rel="stylesheet" />
+  <link
+    href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Droid+Sans"
+    rel="stylesheet"
+    type="text/css" />
 
   <script src="javascripts/app.js" type="text/javascript"></script>
 
@@ -92,16 +90,19 @@
         <div class='push-ten mobile-social' style=" display: flex; justify-content: end;">
           <ul class="mod modSocial icons" data-connectors="1">
             <li class="icons__item">
-              <a href="/" class="icons_link" title="WhatsApp"> <img src="images/social/whatsapp-fill.png" alt="WhatsApp"></a>
+              <a href="/" class="icons_link" title="WhatsApp">
+                <img src="images/social/whatsapp-fill.png" alt="WhatsApp"></a>
             </li>
             <li class="icons__item">
-              <a href="/" class="icons_link" title="telegram"> <img src="images/social/telegram-fill.png" alt="Telegram"></a>
+              <a href="/" class="icons_link" title="telegram">
+                <img src="images/social/telegram-fill.png" alt="Telegram"></a>
             </li>
             <li class="icons__item">
-              <a href="/" class="icons_link " title="VK"> <img src="images/social/vk-social-network-logo.png"  alt="VK"></a>
+              <a href="/" class="icons_link " title="VK">
+                <img src="images/social/vk-social-network-logo.png"  alt="VK"></a>
             </li>
-            
-            
+
+
           </ul>
         </div>
       </div>
@@ -166,1214 +167,1277 @@
       <div class="row">
         <div class="order">
 
-        <form class="order-form">
-          <!--left form-->
-          <div class="order_titles">
-            <div class="title_ord">
-              <div class="title">
-                <p>ИМЯ, ТЕЛЕФОН*</p>
+          <form class="order-form">
+            <!--left form-->
+            <div class="order_titles">
+              <div class="title_ord">
+                <div class="title">
+                  <p>ИМЯ, ТЕЛЕФОН*</p>
+                </div>
+                <div class="order_input">
+                  <input type="text" name="" required id="name-phone" placeholder="ИМЯ, +7(XXX)XXX-XX-XX">
+                </div>
               </div>
-              <div class="order_input" >
-                <input type="text" name=""  required id="name-phone" placeholder="ИМЯ, +7(XXX)XXX-XX-XX">
-                <p class="invalid">*обязательное поле</p>
-              </div>
-            </div>
-            <!-- <div class="line"></div> -->
-            <div class="title_ord" >
-              <!-- style="padding-bottom: 40px;" -->
-              <div class="title">
-                <p>УСЛУГА*</p>
-              </div>
-              <div class="dropdown-container " style="z-index: 1;">
+              <!-- <div class="line"></div> -->
+              <div class="title_ord">
+                <!-- style="padding-bottom: 40px;" -->
+                <div class="title">
+                  <p>УСЛУГА*</p>
+                </div>
                 
-                <input type="text" id="dropdown-input"    required placeholder="Выбрать услугу">
-                <p class="invalid invalid1">*обязательное поле</p>
-              </div>
+                <div class="dropdown-container " style="z-index: 1;">
 
-            </div>
-            <!-- <div class="line"></div> -->
-            <div class="title_ord">
-              <div class="title">
-                <p>МАКЕТ*</p>
-              </div>
-              <div class="order_input">
-                <button type="button" class=""  id="openModalBtn"  >Сделать выбор</button>
-                <p class="invalid">*обязательное поле</p>
-              </div>
-            </div>
-            <!-- <div class="line"></div> -->
+                  <input type="text" id="dropdown-input" readonly required placeholder="Выбрать услугу">
+                  <p class="invalid invalid1">*обязательное поле</p>
 
-            <div class="title_ord">
-              <div class="title">
-                <p>ОСТНАСТКА*</p>
+                </div>
+
               </div>
-              <div class="order_input">
-                <label for="" class="popup_btn" required id="openBtn1">Выбрать оснастку</label>
-                <p class="invalid">*обязательное поле</p>
-              </div>
-            </div>
-            <!-- <div class="line"></div> -->
-            <div class="title_ord">
-              <div class="title">
-                <p>КОЛИЧЕСТВО</p>
-              </div>
-              <div class="order_input">
-                <div class="counter">
-                  <button type="button" class="min">-</button>
-                  <span class="res">1</span>
-                  <button type="button" class="plus">+</button>
+              <!-- <div class="line"></div> -->
+              <div class="title_ord">
+                <div class="title">
+                  <p>МАКЕТ*</p>
+                </div>
+                <div class="order_input">
+                  <button type="button" class="" id="openModalBtn">Сделать выбор</button>
+                  <p class="invalid invalid2">*обязательное поле</p>
+
                 </div>
               </div>
-            </div>
-            <!-- <div class="line"></div> -->
-            <div class="title_ord">
-              <div class="title">
-                <p>ИЗГОТОВЛЕНИЕ</p>
-              </div>
-              <div class="order_input delivery_type_parent">
-                <input class="delivery_type delivery_type-date"  type="text" placeholder="Сделать выбор">
-                <div>
-                  <li class="delivery-priority">срочно <span>+300</span></li>
-                  <li class="delivery-priority">стандартно (2-3 часа) <span>???</span></li>
-                  <li class="delivery-priority">1 день <span>???</span></li>
+              <!-- <div class="line"></div> -->
+
+              <div class="title_ord">
+                <div class="title">
+                  <p>ОСТНАСТКА</p>
+                </div>
+                <div class="order_input">
+                  <label for="" class="popup_btn" required id="openBtn1">Выбрать оснастку</label>
+                  <p class="invalid invalid5">*обязательное поле</p>
                 </div>
               </div>
-            </div>
-            <!-- <div class="line"></div> -->
-            <div class="title_ord" style="padding-bottom: 20px;">
-              <div class="title">
-                <p>ДОСТАВКА</p>
-              </div>
-              <div class="order_input delivery_type_parent">
-                <input class="delivery_type delivery_type-delivery"  type="text" placeholder="Сделать выбор">
-                <div>
-                  <li class="delivery-option">Cамовывоз <span>бесплатно</span></li>
-                  <li class="delivery-option">Доставка до подезда <span>+300</span></li>
-                  <li class="delivery-option">Доставка до метро <span>+200</span></li>
+              <!-- <div class="line"></div> -->
+              <div class="title_ord">
+                <div class="title">
+                  <p>КОЛИЧЕСТВО</p>
+                </div>
+                <div class="order_input">
+                  <div class="counter">
+                    <button type="button" class="min">-</button>
+                    <span class="res">1</span>
+                    <button type="button" class="plus">+</button>
+                  </div>
                 </div>
               </div>
-            </div>
-            <!-- <div class="line"></div> -->
-            <div class="title_ord last-title-ord">
-              <div class="title">
-                <p>КОМЕНТАРИЙ</p>
+              <!-- <div class="line"></div> -->
+              <div class="title_ord">
+                <div class="title">
+                  <p>ИЗГОТОВЛЕНИЕ*</p>
+                </div>
+                <div class="order_input delivery_type_parent">
+                  <input class="delivery_type delivery_type-date" required readonly type="text"
+                    placeholder="Сделать выбор">
+                  <div>
+
+                    <li class="delivery-priority">срочно <span>+300</span></li>
+                    <li class="delivery-priority">стандартно (2-3 часа) <span>???</span></li>
+                    <li class="delivery-priority">1 день <span>???</span></li>
+                  </div>
+                  <p class="invalid invalid3">*обязательное поле</p>
+
+                </div>
               </div>
-              <div class="order_input">
-                <textarea type="text" name="" id="order__textarea">
-                  </textarea>
+              <!-- <div class="line"></div> -->
+              <div class="title_ord" style="padding-bottom: 20px;">
+                <div class="title">
+                  <p>ДОСТАВКА*</p>
+                </div>
+                <div class="order_input delivery_type_parent">
+                  
+                  <input class="delivery_type delivery_type-delivery" readonly required type="text"
+                    placeholder="Сделать выбор">
+
+                  <div>
+                    <li class="delivery-option">Cамовывоз <span>бесплатно</span></li>
+                    <li class="delivery-option">Доставка до подезда <span>+300</span></li>
+                    <li class="delivery-option">Доставка до метро <span>+200</span></li>
+                  </div>
+                  <p class="invalid invalid4" style="pointer-events: none;">*обязательное поле</p>
+
+                </div>
               </div>
-            </div>
-            <button type="submit" class="price total">
-              <span style="color: white;">0 рублей</span>
-            </button>
-            <!-- <div class="order_link">
+              <!-- <div class="line"></div> -->
+              <div class="title_ord last-title-ord">
+                <div class="title">
+                  <p>КОМЕНТАРИЙ</p>
+                </div>
+                <div class="order_input">
+                  <textarea name="comment"
+                    id="order__textarea"
+                    placeholder="Оставьте комментарий"></textarea>
+                </div>
+              </div>
+              <button type="submit" class="price total">
+                0 рублей
+              </button>
+              <!-- <div class="order_link">
               <a href="#">СДЕЛАТЬ ЗАКАЗ</a>
             </div> -->
-          </div>
-          <!--left form ends-->
+            </div>
+            <!--left form ends-->
 
-          <!--right image-->
-          <div class="order_images" style="z-index: 0; ">
-            <div class="order_img_one" style="height: 50%; ">
-              <p class="order_img_one-title"></p>
-              <img class="seal-layout "
-                src="images/plhold.jpg" 
+            <!--right image-->
+            <div class="order_images" style="z-index: 0; ">
+              <div class="order_img_one" style="height: 50%; ">
+                <p class="order_img_one-title"></p>
+                <img class="seal-layout "
+                src="images/plhold.jpg"
               alt="" style=" margin-top: 20px;">
-              <div class="price-wrapper">
-                <p class="order_img_one-text"> </p>
-                <p class="price-title1">0 руб.</p>
+                <div class="price-wrapper">
+                  <p class="order_img_one-text"> </p>
+                  <p class="price-title1">0 руб.</p>
+                </div>
+                <p class="pricee hidden">500 руб</p>
               </div>
-              <p class="pricee hidden">500 руб</p>
+
+              <div class="order_img_one" style="height: 50%; ">
+                <p class="order_img_one-title"></p>
+                <img class="seal-layout seal-img-target"  src="images/plhold.jpg"  alt="" style="margin-top:20px " >
+                <div class="price-wrapper">
+                  <p class="order_img_one-text seal-title"> </p>
+                  <p class="price-title1 price-title2">0 руб</p>
+                </div>
+              </div>
             </div>
-              
-            <div class="order_img_one"  style="height: 50%; ">
-              <p class="order_img_one-title"></p>    
-              <img class="seal-layout seal-img-target"  src="images/plhold.jpg"  alt="" style="margin-top:20px " >   
-              <div class="price-wrapper">
-                <p class="order_img_one-text seal-title"> </p>
-                <p class="price-title1 price-title2">0 руб</p>
+          </form>
+        </div>
+      </div>
+
+      <!-- <button >Choose Seal</button> -->
+
+      <div id="serviceModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p style="margin: 0;">Выберите вид печати</p>
+
+          <!-- <hr style="border: none; height: 4px;"> -->
+          <div style="width: 107%; margin: 12px 0; height: 1px; background-color: gray; transform: translateX(-3%);">
+          </div>
+
+          <div class="dropdown">
+            <div class="dropdown-option">
+              <label for="Печать"
+                style="box-shadow: 0px 0px 2px -1px rgba(0,0,0,1); border-radius: 12px; cursor: pointer; flex: 1;  display: flex; flex-direction: column;">
+                <img style="width: 80px; align-self: center; height: 80px; overflow: hidden; border-radius: 12px;" src="images/layouts/ИП/12.jpg" alt="">
+                <div style="display: flex; align-items: center; gap: 4px;">
+
+                  <input id="Печать" name="service" type="radio">
+                  <label for="Печать">Печать</label>
+                </div>
+              </label>
+              <div class="sub-options">
+                <div class="sub-option">12 ММ</div>
+                <div class="sub-option">17 ММ</div>
+                <div class="sub-option">24 ММ</div>
+                <div class="sub-option">30 ММ</div>
+                <div class="sub-option">38 ММ</div>
+                <div class="sub-option">40 ММ</div>
+                <div class="sub-option">45 ММ</div>
+                <div class="sub-option">50 ММ</div>
+              </div>
+            </div>
+            <div class="dropdown-option">
+
+              <label for="Штамп1"
+                style="box-shadow: 0px 0px 2px -1px rgba(0,0,0,1); border-radius: 12px; cursor: pointer; flex: 1;  display: flex; flex-direction: column;">
+                <img style="width: 80px; height: 80px; border-radius: 12px; align-self: center;" src="images/layouts/ШТАМП/08.jpg" alt="">
+                <div style="display: flex; align-items: center; gap: 4px;">
+
+                  <input id="Штамп1" name="service" type="radio">
+                  <label for="Штамп1">Штамп</label>
+                </div>
+              </label>
+              <div class="sub-options">
+                <div class="sub-option">12 ММ</div>
+                <div class="sub-option">17 ММ</div>
+                <div class="sub-option">24 ММ</div>
+                <div class="sub-option">30 ММ</div>
+                <div class="sub-option">38 ММ</div>
+                <div class="sub-option">40 ММ</div>
+                <div class="sub-option">45 ММ</div>
+                <div class="sub-option">50 ММ</div>
+              </div>
+            </div>
+            <div class="dropdown-option">
+              <label for="Штамп"
+                style="box-shadow: 0px 0px 2px -1px rgba(0,0,0,1); border-radius: 12px; cursor: pointer; flex: 1; display: flex; flex-direction: column;">
+                <img style="width: 80px; align-self: center; height: 80px; border-radius: 12px;" src="images/layouts/ШТАМП/07.jpg" alt="">
+                <div style="display: flex; align-items: center; gap: 4px;">
+
+                  <input id="Штамп" name="service" type="radio">
+                  <label for="Штамп">Штамп</label>
+                </div>
+              </label>
+              <!-- <div clas -->
+              <div class="sub-options">
+                <div class="sub-option">12 ММ</div>
+                <div class="sub-option">17 ММ</div>
+                <div class="sub-option">24 ММ</div>
+                <div class="sub-option">30 ММ</div>
+                <div class="sub-option">38 ММ</div>
+                <div class="sub-option">40 ММ</div>
+                <div class="sub-option">45 ММ</div>
+                <div class="sub-option">50 ММ</div>
+              </div>
+            </div>
+            <div class="dropdown-option">
+              <label for="факсимиле"
+                style="box-shadow: 0px 0px 2px -1px rgba(0,0,0,1);  display: flex; flex-direction: column; border-radius: 12px; cursor: pointer; flex: 1">
+                <img style="width: 80px; height: 80px; border-radius: 12px; align-self: center;" src="images/layouts/ЭКЛИБРИС/08.jpg" alt="">
+                <div style="display: flex; align-items: center; gap: 4px;">
+
+                  <input id="факсимиле" name="service" type="radio">
+                  <label for="факсимиле">Факсимиле</label>
+                </div>
+              </label>
+
+              <div class="sub-options">
+                <div class="sub-option">12 ММ</div>
+                <div class="sub-option">17 ММ</div>
+                <div class="sub-option">24 ММ</div>
+                <div class="sub-option">30 ММ</div>
+                <div class="sub-option">38 ММ</div>
+                <div class="sub-option">40 ММ</div>
+                <div class="sub-option">45 ММ</div>
+                <div class="sub-option">50 ММ</div>
+              </div>
+            </div>
+            <div class="dropdown-option">
+              <label for="Еклибрис"
+                style="box-shadow: 0px 0px 2px -1px rgba(0,0,0,1);  display: flex; flex-direction: column; border-radius: 12px; cursor: pointer; flex: 1;">
+                <img style="width: 80px; height: 80px; border-radius: 12px; align-self: center;" src="images/layouts/ЭКЛИБРИС/08.jpg" alt="">
+                <div style="display: flex; align-items: center; gap: 4px;">
+
+                  <input id="Еклибрис" name="service" type="radio">
+                  <label for="Еклибрис">Еклибрис</label>
+                </div>
+              </label>
+
+              <div class="sub-options">
+                <div class="sub-option">12 ММ</div>
+                <div class="sub-option">17 ММ</div>
+                <div class="sub-option">24 ММ</div>
+                <div class="sub-option">30 ММ</div>
+                <div class="sub-option">38 ММ</div>
+                <div class="sub-option">40 ММ</div>
+                <div class="sub-option">45 ММ</div>
+                <div class="sub-option">50 ММ</div>
               </div>
             </div>
           </div>
-      </form>
-    </div>
-  </div>
+        </div>
+      </div>
 
-  <!-- <button >Choose Seal</button> -->
+      <!-- Modal Structure -->
+      <div id="sealModal" class="modal">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <!-- <h2>Select Seal Type</h2> -->
+          <ul id="sealList">
+            <li class="sealOption" data-id="1">ИП</li>
+            <li class="sealOption" data-id="2">ООО</li>
+            <li class="sealOption" data-id="3">АО</li>
+            <li class="sealOption" data-id="4">ОТК</li>
+            <li class="sealOption" data-id="5">ВРАЧ</li>
+            <li class="sealOption" data-id="6">ФАКСИМИЛИ</li>
+            <li class="sealOption" data-id="7">ЕКЛИБРИС</li>
+            <li class="sealOption" data-id="8">ИНОСТРАННЫЙ</li>
+            <li class="sealOption" data-id="9">ПРИКОЛНИЕ</li>
+            <li class="sealOption" data-id="10">ДЕТСКИЕ</li>
+          </ul>
+          <div id="sealDetails" class="sealDetails"></div>
 
-  <div id="serviceModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <p style="margin: 0;">Выберите вид печати</p>
+        </div>
+      </div>
 
-      <!-- <hr style="border: none; height: 4px;"> -->
-       <div style="width: 107%; margin: 12px 0; height: 1px; background-color: gray; transform: translateX(-3%);"></div>
 
-      <div class="dropdown" >
-        <div class="dropdown-option">
-          <label for="Печать" style="box-shadow: 0px 0px 2px -1px rgba(0,0,0,1); border-radius: 12px; cursor: pointer; flex: 1;  display: flex; flex-direction: column;">
-            <img style="width: 80px; align-self: center; height: 80px; overflow: hidden; border-radius: 12px;" src="images/layouts/ИП/12.jpg" alt="">
-            <div style="display: flex; align-items: center; gap: 4px;">
 
-              <input id="Печать" name="service" type="radio">
-              <label for="Печать">Печать</label> 
-            </div>
-          </label>
-          <div class="sub-options">
-            <div class="sub-option">12 ММ</div>
-            <div class="sub-option">17 ММ</div>
-            <div class="sub-option">24 ММ</div>
-            <div class="sub-option">30 ММ</div>
-            <div class="sub-option">38 ММ</div>
-            <div class="sub-option">40 ММ</div>
-            <div class="sub-option">45 ММ</div>
-            <div class="sub-option">50 ММ</div>
+      <div class="row" style="margin-top: 50px;">
+        <div class="mod modSectionHeader" data-connectors="1">
+          <h3 class="text-center mainheaders">
+            НАШИ ОТЗЫВЫ
+          </h3>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="six columns">
+          <div class="mod modBlogNews" data-connectors="1">
+            <h3 class="title subheaders nexaScriptHeavyFont" style="text-transform: none;">Отзывы о Нас</h3>
+            <ul>
+              <li>
+                <p class="left text-center timestamp">
+                  <span class="month">Nov</span>
+                  <span class="date">26</span>
+                  <span class="year">2011</span>
+                </p>
+                <h4><a href="single.html" style="text-transform: none;">Наталия, Домохозяйка</a></h4>
+                <p class="excerpt">
+                  Dicta est deserunt esse eos rerum eaque corrupti ut dolores nobis id non neque ratione. Quisquam natus
+                  nemo quas repudiandae sit at qui recusandae
+                </p>
+              </li>
+              <li>
+                <p class="left text-center timestamp">
+                  <span class="month">Nov</span>
+                  <span class="date">26</span>
+                  <span class="year">2011</span>
+                </p>
+                <h4><a href="single.html" style="text-transform: none;">Сергей, Предприниматель</a></h4>
+                <p class="excerpt">
+                  Inventore laudantium sint delectus expedita aliquid numquam quam sit aut nemo omnis sapiente in. Aut
+                  est
+                  voluptatem reiciendis eum beatae et hic architecto corrupti fugit dolor voluptas
+                </p>
+              </li>
+              <li>
+                <p class="left text-center timestamp">
+                  <span class="month">Nov</span>
+                  <span class="date">26</span>
+                  <span class="year">2011</span>
+                </p>
+                <h4><a href="single.html" style="text-transform: none;">Ленар, Директор 000</a></h4>
+                <p class="excerpt">
+                  Quis quis odio sit quia aspernatur cum fugit sed aut praesentium est. Dicta et esse voluptas alias
+                  occaecati et eos accusantium et iste odio eaque nulla animi
+                </p>
+              </li>
+            </ul>
           </div>
         </div>
-        <div class="dropdown-option">
-          
-          <label for="Штамп1" style="box-shadow: 0px 0px 2px -1px rgba(0,0,0,1); border-radius: 12px; cursor: pointer; flex: 1;  display: flex; flex-direction: column;">
-            <img style="width: 80px; height: 80px; border-radius: 12px; align-self: center;" src="images/layouts/ШТАМП/08.jpg" alt="">
-            <div style="display: flex; align-items: center; gap: 4px;">
-
-              <input id="Штамп1" name="service" type="radio">
-              <label for="Штамп1">Штамп</label> 
+        <div class="six columns">
+          <div class="mod modTestimonials" data-connectors="1">
+            <h3 class="mainheaders nexaScriptHeavyFont" style="text-transform: none;">Оставить Отзыв</h3>
+            <div class="contacts">
+              <div class="inp">
+                <input type="text" placeholder="Имя, статус">
+                <input type="text" placeholder="Почта" style="margin-top: 20px;">
+                <textarea placeholder="Сообщение"></textarea>
+              </div>
             </div>
-          </label>
-          <div class="sub-options">
-            <div class="sub-option">12 ММ</div>
-            <div class="sub-option">17 ММ</div>
-            <div class="sub-option">24 ММ</div>
-            <div class="sub-option">30 ММ</div>
-            <div class="sub-option">38 ММ</div>
-            <div class="sub-option">40 ММ</div>
-            <div class="sub-option">45 ММ</div>
-            <div class="sub-option">50 ММ</div>
-          </div>
-        </div>
-        <div class="dropdown-option">
-          <label for="Штамп" style="box-shadow: 0px 0px 2px -1px rgba(0,0,0,1); border-radius: 12px; cursor: pointer; flex: 1; display: flex; flex-direction: column;">
-            <img style="width: 80px; align-self: center; height: 80px; border-radius: 12px;" src="images/layouts/ШТАМП/07.jpg" alt="">
-            <div style="display: flex; align-items: center; gap: 4px;">
-
-              <input id="Штамп" name="service" type="radio">
-              <label for="Штамп">Штамп</label> 
+            <div class="send">
+              <button>Отправить</button>
             </div>
-          </label>
-          <!-- <div clas -->
-          <div class="sub-options">
-            <div class="sub-option">12 ММ</div>
-            <div class="sub-option">17 ММ</div>
-            <div class="sub-option">24 ММ</div>
-            <div class="sub-option">30 ММ</div>
-            <div class="sub-option">38 ММ</div>
-            <div class="sub-option">40 ММ</div>
-            <div class="sub-option">45 ММ</div>
-            <div class="sub-option">50 ММ</div>
-          </div>
-        </div>
-        <div class="dropdown-option">
-          <label for="факсимиле" style="box-shadow: 0px 0px 2px -1px rgba(0,0,0,1);  display: flex; flex-direction: column; border-radius: 12px; cursor: pointer; flex: 1">
-            <img style="width: 80px; height: 80px; border-radius: 12px; align-self: center;" src="images/layouts/ЭКЛИБРИС/08.jpg" alt="">
-            <div style="display: flex; align-items: center; gap: 4px;">
 
-              <input id="факсимиле" name="service" type="radio">
-              <label for="факсимиле">Факсимиле</label>
-            </div>
-          </label>
-          
-          <div class="sub-options">
-            <div class="sub-option">12 ММ</div>
-            <div class="sub-option">17 ММ</div>
-            <div class="sub-option">24 ММ</div>
-            <div class="sub-option">30 ММ</div>
-            <div class="sub-option">38 ММ</div>
-            <div class="sub-option">40 ММ</div>
-            <div class="sub-option">45 ММ</div>
-            <div class="sub-option">50 ММ</div>
-          </div>
-        </div>
-        <div class="dropdown-option">
-          <label for="Еклибрис" style="box-shadow: 0px 0px 2px -1px rgba(0,0,0,1);  display: flex; flex-direction: column; border-radius: 12px; cursor: pointer; flex: 1;">
-            <img style="width: 80px; height: 80px; border-radius: 12px; align-self: center;" src="images/layouts/ЭКЛИБРИС/08.jpg" alt="">
-            <div style="display: flex; align-items: center; gap: 4px;">
-
-              <input id="Еклибрис" name="service" type="radio">
-              <label for="Еклибрис">Еклибрис</label>
-            </div>
-          </label>
-          
-          <div class="sub-options">
-            <div class="sub-option">12 ММ</div>
-            <div class="sub-option">17 ММ</div>
-            <div class="sub-option">24 ММ</div>
-            <div class="sub-option">30 ММ</div>
-            <div class="sub-option">38 ММ</div>
-            <div class="sub-option">40 ММ</div>
-            <div class="sub-option">45 ММ</div>
-            <div class="sub-option">50 ММ</div>
           </div>
         </div>
       </div>
-    </div>
-  </div>
 
-  <!-- Modal Structure -->
-  <div id="sealModal" class="modal">
-    <div class="modal-content">
-      <span class="close">&times;</span>
-      <!-- <h2>Select Seal Type</h2> -->
-      <ul id="sealList">
-        <li class="sealOption" data-id="1">ИП</li>
-        <li class="sealOption" data-id="2">ООО</li>
-        <li class="sealOption" data-id="3">АО</li>
-        <li class="sealOption" data-id="4">ОТК</li>
-        <li class="sealOption" data-id="5">ВРАЧ</li>
-        <li class="sealOption" data-id="6">ФАКСИМИЛИ</li>
-        <li class="sealOption" data-id="7">ЕКЛИБРИС</li>
-        <li class="sealOption" data-id="8">ИНОСТРАННЫЙ</li>
-        <li class="sealOption" data-id="9">ПРИКОЛНИЕ</li>
-        <li class="sealOption" data-id="10">ДЕТСКИЕ</li>
-      </ul>
-      <div id="sealDetails" class="sealDetails"></div>
+      <dialog>
+        <button class="dialog-close" aria-label="Close dialog">&times;</button>
+        <div class="seals-container">
 
-    </div>
-  </div>
-  
-  
+        </div>
+      </dialog>
 
-  <div class="row" style="margin-top: 50px;">
-    <div class="mod modSectionHeader" data-connectors="1">
-      <h3 class="text-center mainheaders">
-        НАШИ ОТЗЫВЫ
-      </h3>
-    </div>
-  </div>
 
-  <div class="row">
-    <div class="six columns">
-      <div class="mod modBlogNews" data-connectors="1">
-        <h3 class="title subheaders nexaScriptHeavyFont" style="text-transform: none;">Отзывы о Нас</h3>
-        <ul>
-          <li>
-            <p class="left text-center timestamp">
-              <span class="month">Nov</span>
-              <span class="date">26</span>
-              <span class="year">2011</span>
-            </p>
-            <h4><a href="single.html" style="text-transform: none;">Наталия, Домохозяйка</a></h4>
-            <p class="excerpt">
-              Dicta est deserunt esse eos rerum eaque corrupti ut dolores nobis id non neque ratione. Quisquam natus
-              nemo quas repudiandae sit at qui recusandae
-            </p>
-          </li>
-          <li>
-            <p class="left text-center timestamp">
-              <span class="month">Nov</span>
-              <span class="date">26</span>
-              <span class="year">2011</span>
-            </p>
-            <h4><a href="single.html" style="text-transform: none;">Сергей, Предприниматель</a></h4>
-            <p class="excerpt">
-              Inventore laudantium sint delectus expedita aliquid numquam quam sit aut nemo omnis sapiente in. Aut est
-              voluptatem reiciendis eum beatae et hic architecto corrupti fugit dolor voluptas
-            </p>
-          </li>
-          <li>
-            <p class="left text-center timestamp">
-              <span class="month">Nov</span>
-              <span class="date">26</span>
-              <span class="year">2011</span>
-            </p>
-            <h4><a href="single.html" style="text-transform: none;">Ленар, Директор 000</a></h4>
-            <p class="excerpt">
-              Quis quis odio sit quia aspernatur cum fugit sed aut praesentium est. Dicta et esse voluptas alias
-              occaecati et eos accusantium et iste odio eaque nulla animi
-            </p>
-          </li>
-        </ul>
-      </div>
-    </div>
-    <div class="six columns">
-      <div class="mod modTestimonials" data-connectors="1">
-        <h3 class="mainheaders nexaScriptHeavyFont" style="text-transform: none;">Оставить Отзыв</h3>
-        <div class="contacts">
-          <div class="inp">
-            <input type="text" placeholder="Имя, статус">
-            <input type="text" placeholder="Почта" style="margin-top: 20px;">
-            <textarea placeholder="Сообщение"></textarea>
+
+      <div class="container" id="footer">
+        <div class="row">
+          <div class="foot">
+            <h6>Казань ул.Ф.Амирхана</h6>
+            <div class="social">
+              <img src="images/social/whatsapp-fill.png" alt="">
+              <img src="images/social/telegram-fill.png" alt="">
+              <img src="images/social/viber.png" alt="">
+              <img src="images/social/vk-social-network-logo.png" alt="">
+              <!-- <img src="" -->
+            </div>
+
+            <h6>89370090705 / info@mail.ru</h6>
           </div>
         </div>
-        <div class="send">
-          <button>Отправить</button>
+        <div class="container">
+          <p class="copy">© 2022. Печати и Штампы в Казани</p>
         </div>
-
       </div>
-    </div>
-  </div>
+      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
-  <dialog>
-    <button class="dialog-close" aria-label="Close dialog">&times;</button>
-    <div class="seals-container">
+      <script src="ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          $('#choose-file').change(function () {
+            var i = $(this).prev('label').clone();
+            var file = $('#choose-file')[0].files[0].name;
+            $(this).prev('label').text(file);
+          });
+        });
+      </script>
+      <script>
+        const min = document.querySelector('.min')
+        const plus = document.querySelector('.plus')
+        const res = document.querySelector('.res')
+        const total = document.querySelector(".total");
 
-    </div>
-  </dialog>
-
-
-
-  <div class="container" id="footer">
-    <div class="row">
-      <div class="foot">
-        <h6>Казань ул.Ф.Амирхана</h6>
-        <div class="social">
-          <img src="images/social/whatsapp-fill.png" alt="">
-          <img src="images/social/telegram-fill.png" alt="">
-          <img src="images/social/viber.png" alt="">
-          <img src="images/social/vk-social-network-logo.png" alt="">
-          <!-- <img src="" -->
-        </div>
-
-        <h6>89370090705 / info@mail.ru</h6>
-      </div>
-    </div>
-    <div class="container">
-      <p class="copy">© 2022. Печати и Штампы в Казани</p>
-    </div>
-  </div>
-  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-
-  <script src="ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script>
-    $(document).ready(function () {
-      $('#choose-file').change(function () {
-        var i = $(this).prev('label').clone();
-        var file = $('#choose-file')[0].files[0].name;
-        $(this).prev('label').text(file);
-      });
-    });
-  </script>
-  <script>
-    const min = document.querySelector('.min')
-    const plus = document.querySelector('.plus')
-    const res = document.querySelector('.res')
-    const total = document.querySelector(".total");
-
-    min.addEventListener('click', function () {
-      if(Number(res.innerText) === 0){
-        return
-      }
-      res.innerText = Number(res.innerText) - 1;
-      const newTotal =  (sealPrice+ layoutPrice) * res.innerText  + deliverPrice + preparationFee ;
+        min.addEventListener('click', function () {
+          if (Number(res.innerText) === 0) {
+            return
+          }
+          res.innerText = Number(res.innerText) - 1;
+          const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
           total.textContent = newTotal + " рублей"
-    })
-    plus.addEventListener('click', function () {
-      res.innerText = Number(res.innerText) + 1;
-      const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee ;
+        })
+        plus.addEventListener('click', function () {
+          res.innerText = Number(res.innerText) + 1;
+          const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
           total.textContent = newTotal + " рублей"
-    })
-    
-  </script>
-  <script>
-    let sealPrice = 0;
-    let deliverPrice = 0;
-    let preparationFee = 0
-    let layoutPrice = 0
+        })
 
-    // let closeButton = document.querySelector(".popub_close")
-    let openBtn = document.querySelector(".popup_btn")
-    let popup = document.querySelector("dialog")
-    const orderBtn = document.querySelector("div.price.total")
-    
-    const TOKEN = '8542757312:AAFYeJvaPyZ2lzvAIS3q3CIbE_XLaIFlTOs'
-    const CHAT_ID = '-1003429644025'
-    const url = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+      </script>
+      <script>
+        let sealPrice = 0;
+        let deliverPrice = 0;
+        let preparationFee = 0
+        let layoutPrice = 0
 
-    document.querySelector(".order-form").addEventListener('submit', function(e){
+        // let closeButton = document.querySelector(".popub_close")
+        let openBtn = document.querySelector(".popup_btn")
+        let popup = document.querySelector("dialog")
+        const orderBtn = document.querySelector("div.price.total")
 
-      e.preventDefault();
+        const TOKEN = '8542757312:AAFYeJvaPyZ2lzvAIS3q3CIbE_XLaIFlTOs'
+        const CHAT_ID = '-1003429644025'
+        const url = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
-      const submitBtn = e.target.querySelector('[type="submit"]');
-  const originalText = submitBtn.textContent;
-  
-  // Блокируем кнопку
-  // submitBtn.disabled = true;
+        const uslugaInput = document.querySelector('#dropdown-input');
+        const invalidEl = document.querySelector('.invalid.invalid1');
 
-  //проверки обязательных полей
-// const usluga = document.querySelector('#dropdown-input')
-// function checkUslugi() {
-//   if(usluga.placeholder.trim() === 'Выбрать услугу'){
-//   document.querySelector('.invalid.invalid1').style.display = 'block'
-//   return true
-// }else{
-//   document.querySelector('.invalid.invalid1').style.display = 'none'
-//   return false
-// }
+        const formButton = document.querySelector('#openModalBtn');
+        const invalidEl2 = document.querySelector('.invalid.invalid2');
 
-// }
-// checkUslugi()
-// if(checkUslugi){
-  // submitBtn.disabled = true;
-  // return
-// }else{
-  // submitBtn.disabled = false;
-// }
-// usluga.value.addEventListener('change', checkUslugi)
+        const deliveryDate = document.querySelector('.delivery_type-date');
+        const invalidEl3 = document.querySelector('.invalid.invalid3');
+
+        const deliveryType = document.querySelector('.delivery_type-delivery');
+        const invalidEl4 = document.querySelector('.invalid.invalid4');
 
 
+        const markType = document.querySelector('#openBtn1');
+        const invalidEl5 = document.querySelector('.invalid.invalid5');
+
+        const comment = document.querySelector('#order__textarea')
+
+        // Функция валидации
+        function validateUsluga() {
+          // Получаем все значения
+          const isEmpty1 = !uslugaInput.value || uslugaInput.value === 'Выбрать услугу';
+          const isEmpty2 = !formButton.textContent || formButton.textContent === 'Сделать выбор';
+          const isEmpty3 = !deliveryDate.value || deliveryDate.value === 'Сделать выбор';
+          const isEmpty4 = !deliveryType.value || deliveryType.value === 'Сделать выбор';
+          const isEmpty5 = !markType.textContent || markType.textContent === 'Выбрать оснастку';
+          // Проверяем, что элементы существуют
+          if (invalidEl) {
+            invalidEl.style.display = isEmpty1 ? 'block' : 'none';
+          }
+          if (invalidEl2) {
+            invalidEl2.style.display = isEmpty2 ? 'block' : 'none';
+          }
+          if (invalidEl3) {
+            invalidEl3.style.display = isEmpty3 ? 'block' : 'none';
+          }
+          if (invalidEl4) {
+            invalidEl4.style.display = isEmpty4 ? 'block' : 'none';
+          }
+          if (invalidEl5) {
+            invalidEl5.style.display = isEmpty5 ? 'block' : 'none';
+          }
+
+          // Находим кнопку отправки
+          const submitBtn = document.querySelector('[type="submit"]');
+
+          // Если кнопка существует
+          if (submitBtn) {
+            // Блокируем если ЛЮБОЕ поле пустое
+            const anyFieldEmpty = isEmpty1 || isEmpty2 || isEmpty3 || isEmpty4 || isEmpty5;
+            submitBtn.disabled = anyFieldEmpty;
+          }
+
+          // Возвращаем true если ВСЕ поля заполнены
+          const allFieldsFilled = !isEmpty1 && !isEmpty2 && !isEmpty3 && !isEmpty4 && !isEmpty5;
+          return allFieldsFilled; // true = можно отправлять
+        }
 
 
-      const message = `
+        document.querySelector(".order-form").addEventListener('submit', function (e) {
+
+          e.preventDefault();
+
+          const submitBtn = e.target.querySelector('[type="submit"]');
+          const originalText = submitBtn.textContent;
+
+          // Блокируем кнопку
+          submitBtn.disabled = true;
+
+          if (!validateUsluga()) {
+            submitBtn.disabled = false;
+            return;
+          }
+
+
+          const message = `
       🔔‌Заказ🔔
       Заказ (${new Date()})
       
-      Покупателя: ${document.querySelector("#name-phone").value.trim()}
-      Заказ: Pechat
+      Покупатель: ${document.querySelector("#name-phone").value.trim()}
+      Услуга: ${uslugaInput.value}
+      Макет: ${formButton.textContent}
+      Остнаска: ${markType.textContent}
       Количество: ${res.innerText.trim() || 'Не указано'}
-
-      Доставка: ${deliveryTypeTextHtml.placeholder.trim() || 'Не выбрано'}
-      Метод оплаты: ${deliveryDateTextHtml.placeholder.trim() || 'Не выбрано'}
+      Изготовление: ${deliveryTypeTextHtml.value.trim() || 'Не выбрано'}
+      Доставка: ${deliveryDateTextHtml.value.trim() || 'Не выбрано'}
+      Комментарий: ${comment.value || 'Не выбрано'}
       -------------------------------
       Итого: ${total.textContent.trim()}
       
       Поздравляем вас с продажей!`;
 
-        axios.post(url, {
-        chat_id: CHAT_ID,
-        parse_mode: 'html',
-        text: message,
-      })
-      .then((res) => {
-        alert('Заказ оформлен, с вами свяжемся!')
-        this.reset(); // Очищаем форму после успеха
-      })
-      .catch((err) => {
-    console.error('Ошибка:', err);
-    alert('Ошибка отправки. Попробуйте позже.');
-      })
-      .finally(() => {
-        
-    // Разблокируем кнопку в любом случае
-    // submitBtn.disabled = false;
-    submitBtn.textContent = 0 + 'рублей';
-      })
-    })
+          axios.post(url, {
+            chat_id: CHAT_ID,
+            parse_mode: 'html',
+            text: message,
+          })
+            .then((res) => {
+              alert('Заказ оформлен, с вами свяжемся!')
+              this.reset(); // Очищаем форму после успеха
+            })
+            .catch((err) => {
+              console.error('Ошибка:', err);
+              alert('Ошибка отправки. Попробуйте позже.');
+            })
+            .finally(() => {
 
-      
-
-
-    const seals = [
-      {
-        href: "images/seals/1.png",
-        price: 550,
-        name: "Без остнастки"
-      },
-      {
-        href: "images/seals/2.png",
-        price: 550,
-        name: "Автоматическая"
-      },
-      {
-        href: "images/seals/3.png",
-        price: 650,
-        name: "Карманная ( мышка )"
-      },
-      {
-        href: "images/seals/4.png",
-        price: 1300,
-        name: "Карманная ( ракета )"
-      },
-      {
-        href: "images/seals/5.png",
-        price: 300,
-        name: "Акриловая"
-      },
-      {
-        href: "images/seals/6.png",
-        price: 200,
-        name: "Пешка"
-      },
-      {
-        href: "images/seals/7.png",
-        price: 300,
-        name: "Таблетка"
-      },
-      {
-        href: "images/seals/8.png",
-        price: 200,
-        name: "Пешка-2"
-      },
-      {
-        href: "images/seals/9.png",
-        price: 2200,
-        name: "Пешка-3"
-      },
-      {
-        href: "images/seals/10.png",
-        price: 1900,
-        name: "Пешка-4"
-      },
-      {
-        href: "images/seals/11.png",
-        price: 2100,
-        name: "НЛО"
-      },
-      {
-        href: "images/seals/12.png",
-        price: 2100,
-        name: "Таблетка-2"
-      },
-      {
-        href: "images/seals/13.png",
-        price: 2900,
-        name: "Диско-кейс"
-      },
-      {
-        href: "images/seals/14.png",
-        price: 3000,
-        name: "Диско"
-      },
-      {
-        href: "images/seals/15.png",
-        price: 3000,
-        name: "Магнетик"
-      },
-      {
-        href: "images/seals/16.png",
-        price: 1800,
-        name: "Евро"
-      },
-      {
-        href: "images/seals/17.png",
-        price: 2200,
-        name: "Евро-2"
-      },
-      {
-        href: "images/seals/18.png",
-        price: 2200,
-        name: "Евро-3"
-      },
-      {
-        href: "images/seals/19.png",
-        price: 2000,
-        name: "Евро-4"
-      },
-      {
-        href: "images/seals/20.png",
-        price: 2200,
-        name: "Евро-5"
-      }
-    ];
-
-    // Define arrays for doctors and companies
-    const doctorsArray = [
-      { name: 'ВР-01', img: 'images/doctors/ВР1.svg' },
-      { name: 'ВР-02', img: 'images/doctors/ВР2.svg' },
-      { name: 'ВР-03', img: 'images/doctors/ВР3.svg' },
-      { name: 'ВР-04', img: 'images/doctors/ВР4.svg' },
-      { name: 'ВР-05', img: 'images/doctors/ВР5.svg' },
-      { name: 'ВР-06', img: 'images/doctors/ВР6.svg' },
-      { name: 'ВР-07', img: 'images/doctors/ВР7.svg' },
-      { name: 'ВР-08', img: 'images/doctors/ВР8.svg' }
-    ];
-
-    const oArray = [
-      { name: 'ООО-01', img: 'images/oo/О1.png' },
-      { name: 'ООО-02', img: 'images/oo/О2.png' },
-      { name: 'ООО-03', img: 'images/oo/О3.png' },
-      { name: 'ООО-04', img: 'images/oo/О4.png' },
-      { name: 'ООО-05', img: 'images/oo/О5.png' },
-      { name: 'ООО-06', img: 'images/oo/О6.png' },
-      { name: 'ООО-07', img: 'images/oo/О7.png' },
-      { name: 'ООО-08', img: 'images/oo/О8.png' },
-      { name: 'ООО-09', img: 'images/oo/О9.png' },
-      { name: 'ООО-10', img: 'images/oo/О10.png' },
-      { name: 'ООО-11', img: 'images/oo/О11.png' }
-    ];
-
-    const test = [
-      { name: "Compo", img: "images/test.jpg" },
-      { name: "Compo 2", img: "images/testos.jpg" }
-    ]
-
-    const IP = [
-      {
-        name: "ИП-01", img: "images/layouts/ИП/01.jpg"
-      },
-      {
-        name: "ИП-02", img: "images/layouts/ИП/02.jpg"
-      },
-      {
-        name: "ИП-03", img: "images/layouts/ИП/03.jpg"
-      },
-      {
-        name: "ИП-04", img: "images/layouts/ИП/04.jpg"
-      },
-      {
-        name: "ИП-05", img: "images/layouts/ИП/05.jpg"
-      },
-      {
-        name: "ИП-06", img: "images/layouts/ИП/06.jpg"
-      },
-      {
-        name: "ИП-07", img: "images/layouts/ИП/07.jpg"
-      },
-      {
-        name: "ИП-08", img: "images/layouts/ИП/08.jpg"
-      },
-      {
-        name: "ИП-09", img: "images/layouts/ИП/09.jpg"
-      },
-      {
-        name: "ИП-10", img: "images/layouts/ИП/10.jpg"
-      },
-      {
-        name: "ИП-11", img: "images/layouts/ИП/11.jpg"
-      },
-      {
-        name: "ИП-12", img: "images/layouts/ИП/12.jpg"
-      },
-    ]
-
-    const AO = [
-      {
-        name: "АО-01", img: "images/layouts/АО/01.jpg"
-      },
-      {
-        name: "АО-02", img: "images/layouts/АО/02.jpg"
-      },
-      {
-        name: "АО-03", img: "images/layouts/АО/03.jpg"
-      },
-      {
-        name: "АО-04", img: "images/layouts/АО/04.jpg"
-      },
-      {
-        name: "АО-05", img: "images/layouts/АО/05.jpg"
-      },
-      {
-        name: "АО-06", img: "images/layouts/АО/06.jpg"
-      },
-      {
-        name: "АО-07", img: "images/layouts/АО/07.jpg"
-      },
-      {
-        name: "АО-08", img: "images/layouts/АО/08.jpg"
-      },
-    ]
-
-    const OTK = [
-      {
-        name: "ОТК-01", img: "images/layouts/ОТК/01.jpg"
-      },
-      {
-        name: "ОТК-02", img: "images/layouts/ОТК/02.jpg"
-      },
-      {
-        name: "ОТК-03", img: "images/layouts/ОТК/03.jpg"
-      }
-    ]
-
-    const eklibris = [
-      {
-        name: "ЭК-01", img: "images/layouts/ЭКЛИБРИС/01.jpg"
-      },
-      {
-        name: "ЭК-02", img: "images/layouts/ЭКЛИБРИС/02.jpg"
-      },
-      {
-        name: "ЭК-03", img: "images/layouts/ЭКЛИБРИС/03.jpg"
-      },
-      {
-        name: "ЭК-04", img: "images/layouts/ЭКЛИБРИС/04.jpg"
-      },
-      {
-        name: "ЭК-05", img: "images/layouts/ЭКЛИБРИС/05.jpg"
-      },
-      {
-        name: "ЭК-06", img: "images/layouts/ЭКЛИБРИС/06.jpg"
-      },
-      {
-        name: "ЭК-07", img: "images/layouts/ЭКЛИБРИС/07.jpg"
-      },
-      {
-        name: "ЭК-08", img: "images/layouts/ЭКЛИБРИС/08.jpg"
-      },
-    ]
-
-    const foreign = [
-      {
-        name: "ИН-01", img: "images/layouts/ИНОСТРАННЫЕ/01.jpg"
-      },
-      {
-        name: "ИН-02", img: "images/layouts/ИНОСТРАННЫЕ/02.jpg"
-      },
-      {
-        name: "ИН-03", img: "images/layouts/ИНОСТРАННЫЕ/03.jpg"
-      },
-      {
-        name: "ИН-04", img: "images/layouts/ИНОСТРАННЫЕ/04.jpg"
-      },
-      {
-        name: "ИН-05", img: "images/layouts/ИНОСТРАННЫЕ/05.jpg"
-      },
-      {
-        name: "ИН-06", img: "images/layouts/ИНОСТРАННЫЕ/06.jpg"
-      },
-      {
-        name: "ИН-07", img: "images/layouts/ИНОСТРАННЫЕ/07.jpg"
-      },
-      {
-        name: "ИН-08", img: "images/layouts/ИНОСТРАННЫЕ/08.jpg"
-      },
-    ]
-
-    const comic = [
-      {
-        name: "ПР-01", img: "images/layouts/ПРИКОЛЬНЫЕ/01.jpg"
-      },
-      {
-        name: "ПР-02", img: "images/layouts/ПРИКОЛЬНЫЕ/02.jpg"
-      },
-      {
-        name: "ПР-03", img: "images/layouts/ПРИКОЛЬНЫЕ/03.jpg"
-      },
-      {
-        name: "ПР-04", img: "images/layouts/ПРИКОЛЬНЫЕ/04.jpg"
-      },
-      {
-        name: "ПР-05", img: "images/layouts/ПРИКОЛЬНЫЕ/05.jpg"
-      },
-      {
-        name: "ПР-06", img: "images/layouts/ПРИКОЛЬНЫЕ/06.jpg"
-      },
-      {
-        name: "ПР-07", img: "images/layouts/ПРИКОЛЬНЫЕ/07.jpg"
-      },
-      {
-        name: "ПР-08", img: "images/layouts/ПРИКОЛЬНЫЕ/08.jpg"
-      },
-    ]
-
-    const kids = [
-      {
-        name: "ДТ-01", img: "images/layouts/ДЕТСКИЕ/01.jpg"
-      },
-      {
-        name: "ДТ-02", img: "images/layouts/ДЕТСКИЕ/02.jpg"
-      },
-      {
-        name: "ДТ-03", img: "images/layouts/ДЕТСКИЕ/03.jpg"
-      },
-      {
-        name: "ДТ-04", img: "images/layouts/ДЕТСКИЕ/04.jpg"
-      },
-      {
-        name: "ДТ-05", img: "images/layouts/ДЕТСКИЕ/05.jpg"
-      },
-      {
-        name: "ДТ-06", img: "images/layouts/ДЕТСКИЕ/06.jpg"
-      },
-      {
-        name: "ДТ-07", img: "images/layouts/ДЕТСКИЕ/07.jpg"
-      },
-      {
-        name: "ДТ-08", img: "images/layouts/ДЕТСКИЕ/08.jpg"
-      },
-      {
-        name: "ДТ-09", img: "images/layouts/ДЕТСКИЕ/09.jpg"
-      },
-      {
-        name: "ДТ-10", img: "images/layouts/ДЕТСКИЕ/10.jpg"
-      },
-    ]
-
-    const mixed = [IP[0], IP[1], oArray[0], oArray[1], AO[0], AO[1], OTK[0], OTK[1], doctorsArray[0], doctorsArray[1], test[0], test[1], eklibris[0], eklibris[1], foreign[0], foreign[1], comic[0], comic[1], kids[0], kids[1]]
-
-    const serviceModal = document.querySelector("#serviceModal");
-    const serviceInput = document.querySelector("#dropdown-input");
-
-    serviceInput.addEventListener("focus", () => {
-      serviceModal.style.display = "block"
-    })
+              // Разблокируем кнопку в любом случае
+              submitBtn.disabled = false;
+              submitBtn.textContent = 0 + 'рублей';
+            })
+        }
+        )
 
 
-    // Get the modal, button, and close elements
-    const modal = document.getElementById("sealModal");
-    const openModalBtn = document.getElementById("openModalBtn");
-    const closeModal2 = document.getElementsByClassName("close")[0];
-    const closeModal = document.getElementsByClassName("close")[1];
 
-    // Function to open the modal
-    openModalBtn.onclick = function () {
-      modal.style.display = "block";
-      document.querySelector("#sealList").style.opacity = 1;
-      document.querySelector("#sealList").style.zIndex = 10;
-      showSealDetails()
-    } 
 
-    // Function to close the modal when the "X" button is clicked
-    closeModal.onclick = function () {
-      document.getElementById("sealDetails").innerHTML = ""
-      modal.style.display = "none";
-    }
+        const seals = [
+          {
+            href: "images/seals/1.png",
+            price: 550,
+            name: "Без остнастки"
+          },
+          {
+            href: "images/seals/2.png",
+            price: 550,
+            name: "Автоматическая"
+          },
+          {
+            href: "images/seals/3.png",
+            price: 650,
+            name: "Карманная ( мышка )"
+          },
+          {
+            href: "images/seals/4.png",
+            price: 1300,
+            name: "Карманная ( ракета )"
+          },
+          {
+            href: "images/seals/5.png",
+            price: 300,
+            name: "Акриловая"
+          },
+          {
+            href: "images/seals/6.png",
+            price: 200,
+            name: "Пешка"
+          },
+          {
+            href: "images/seals/7.png",
+            price: 300,
+            name: "Таблетка"
+          },
+          {
+            href: "images/seals/8.png",
+            price: 200,
+            name: "Пешка-2"
+          },
+          {
+            href: "images/seals/9.png",
+            price: 2200,
+            name: "Пешка-3"
+          },
+          {
+            href: "images/seals/10.png",
+            price: 1900,
+            name: "Пешка-4"
+          },
+          {
+            href: "images/seals/11.png",
+            price: 2100,
+            name: "НЛО"
+          },
+          {
+            href: "images/seals/12.png",
+            price: 2100,
+            name: "Таблетка-2"
+          },
+          {
+            href: "images/seals/13.png",
+            price: 2900,
+            name: "Диско-кейс"
+          },
+          {
+            href: "images/seals/14.png",
+            price: 3000,
+            name: "Диско"
+          },
+          {
+            href: "images/seals/15.png",
+            price: 3000,
+            name: "Магнетик"
+          },
+          {
+            href: "images/seals/16.png",
+            price: 1800,
+            name: "Евро"
+          },
+          {
+            href: "images/seals/17.png",
+            price: 2200,
+            name: "Евро-2"
+          },
+          {
+            href: "images/seals/18.png",
+            price: 2200,
+            name: "Евро-3"
+          },
+          {
+            href: "images/seals/19.png",
+            price: 2000,
+            name: "Евро-4"
+          },
+          {
+            href: "images/seals/20.png",
+            price: 2200,
+            name: "Евро-5"
+          }
+        ];
 
-    closeModal2.onclick = () => {
-      console.log(document.querySelector("#serviceModal"))
-      document.querySelector("#serviceModal").style.display = "none"
-    }
+        // Define arrays for doctors and companies
+        const doctorsArray = [
+          { name: 'ВР-01', img: 'images/doctors/ВР1.svg' },
+          { name: 'ВР-02', img: 'images/doctors/ВР2.svg' },
+          { name: 'ВР-03', img: 'images/doctors/ВР3.svg' },
+          { name: 'ВР-04', img: 'images/doctors/ВР4.svg' },
+          { name: 'ВР-05', img: 'images/doctors/ВР5.svg' },
+          { name: 'ВР-06', img: 'images/doctors/ВР6.svg' },
+          { name: 'ВР-07', img: 'images/doctors/ВР7.svg' },
+          { name: 'ВР-08', img: 'images/doctors/ВР8.svg' }
+        ];
 
-    // Close modal if the user clicks outside of the modal
-    window.onclick = function (event) {
-      if (event.target == modal) {
-        document.getElementById("sealDetails").innerHTML = ""
-        modal.style.display = "none";
-      }
+        const oArray = [
+          { name: 'ООО-01', img: 'images/oo/О1.png' },
+          { name: 'ООО-02', img: 'images/oo/О2.png' },
+          { name: 'ООО-03', img: 'images/oo/О3.png' },
+          { name: 'ООО-04', img: 'images/oo/О4.png' },
+          { name: 'ООО-05', img: 'images/oo/О5.png' },
+          { name: 'ООО-06', img: 'images/oo/О6.png' },
+          { name: 'ООО-07', img: 'images/oo/О7.png' },
+          { name: 'ООО-08', img: 'images/oo/О8.png' },
+          { name: 'ООО-09', img: 'images/oo/О9.png' },
+          { name: 'ООО-10', img: 'images/oo/О10.png' },
+          { name: 'ООО-11', img: 'images/oo/О11.png' }
+        ];
 
-      if (event.target === document.querySelector("#serviceModal")) {
-        document.querySelector("#serviceModal").style.display = "none"
-      }
-    }
+        const test = [
+          { name: "Compo", img: "images/test.jpg" },
+          { name: "Compo 2", img: "images/testos.jpg" }
+        ]
 
-    // Event listener for seal option clicks
-    const sealOptions = document.querySelectorAll(".sealOption");
-    sealOptions.forEach(option => {
-      option.addEventListener("click", function () {
-        const sealId = this.getAttribute("data-id");
-        showSealDetails(sealId);
-        document.querySelector("#sealList").style.zIndex = 10;
-        document.querySelector("#sealList").style.opacity = 1;
+        const IP = [
+          {
+            name: "ИП-01", img: "images/layouts/ИП/01.jpg"
+          },
+          {
+            name: "ИП-02", img: "images/layouts/ИП/02.jpg"
+          },
+          {
+            name: "ИП-03", img: "images/layouts/ИП/03.jpg"
+          },
+          {
+            name: "ИП-04", img: "images/layouts/ИП/04.jpg"
+          },
+          {
+            name: "ИП-05", img: "images/layouts/ИП/05.jpg"
+          },
+          {
+            name: "ИП-06", img: "images/layouts/ИП/06.jpg"
+          },
+          {
+            name: "ИП-07", img: "images/layouts/ИП/07.jpg"
+          },
+          {
+            name: "ИП-08", img: "images/layouts/ИП/08.jpg"
+          },
+          {
+            name: "ИП-09", img: "images/layouts/ИП/09.jpg"
+          },
+          {
+            name: "ИП-10", img: "images/layouts/ИП/10.jpg"
+          },
+          {
+            name: "ИП-11", img: "images/layouts/ИП/11.jpg"
+          },
+          {
+            name: "ИП-12", img: "images/layouts/ИП/12.jpg"
+          },
+        ]
 
-      });
-    });
+        const AO = [
+          {
+            name: "АО-01", img: "images/layouts/АО/01.jpg"
+          },
+          {
+            name: "АО-02", img: "images/layouts/АО/02.jpg"
+          },
+          {
+            name: "АО-03", img: "images/layouts/АО/03.jpg"
+          },
+          {
+            name: "АО-04", img: "images/layouts/АО/04.jpg"
+          },
+          {
+            name: "АО-05", img: "images/layouts/АО/05.jpg"
+          },
+          {
+            name: "АО-06", img: "images/layouts/АО/06.jpg"
+          },
+          {
+            name: "АО-07", img: "images/layouts/АО/07.jpg"
+          },
+          {
+            name: "АО-08", img: "images/layouts/АО/08.jpg"
+          },
+        ]
 
-    // Function to display seal details in the modal
-    function showSealDetails(sealId) {
-      let detailsContent = "";
+        const OTK = [
+          {
+            name: "ОТК-01", img: "images/layouts/ОТК/01.jpg"
+          },
+          {
+            name: "ОТК-02", img: "images/layouts/ОТК/02.jpg"
+          },
+          {
+            name: "ОТК-03", img: "images/layouts/ОТК/03.jpg"
+          }
+        ]
 
-      // Show details based on the selected seal option
-      switch (sealId) {
-        case "1":
-          // detailsContent = "ИП: This is the ИП seal option with a base price of $20.";
-          detailsContent += "<div class='imageGallery'>";
-          IP.forEach(oar => {
-            detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
-          });
-          detailsContent += "</div>";
-          break;
-        case "2":
-          // detailsContent = "ООО: This is the ООО seal option with a base price of $30.";
-          detailsContent += "<div class='imageGallery'>";
-          oArray.forEach(oar => {
-            detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
-          });
-          detailsContent += "</div>";
-          break;
-        case "3":
-          detailsContent += "<div class='imageGallery'>";
-          AO.forEach(oar => {
-            detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
-          });
-          detailsContent += "</div>";
-          break;
-        case "4":
-          detailsContent += "<div class='imageGallery'>";
-          OTK.forEach(oar => {
-            detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
-          });
-          detailsContent += "</div>";
-          break;
-        case "5":
-          // detailsContent = "ВРАЧ: Displaying doctor images below.";
-          detailsContent += "<div class='imageGallery'>";
-          doctorsArray.forEach(doctor => {
-            detailsContent += `<img src="${doctor.img}" alt="${doctor.name}" class="sealImage">`;
-          });
-          detailsContent += "</div>";
-          break;
-        case "6":
-          detailsContent += "<div class='imageGallery'>";
-          test.forEach(oar => {
-            detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
-          });
-          detailsContent += "</div>";
-          break;
-        case "7":
-          detailsContent += "<div class='imageGallery'>";
-          eklibris.forEach(oar => {
-            detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
-          });
-          detailsContent += "</div>";
-          break;
-        case "8":
-          detailsContent += "<div class='imageGallery'>";
-          foreign.forEach(oar => {
-            detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
-          });
-          detailsContent += "</div>";
-          break;
-        case "9":
-          detailsContent += "<div class='imageGallery'>";
-          comic.forEach(oar => {
-            detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
-          });
-          detailsContent += "</div>";
-          break;
-        case "10":
-          detailsContent += "<div class='imageGallery'>";
-          kids.forEach(oar => {
-            detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
-          });
-          detailsContent += "</div>";
-          break;
-        default:
-        detailsContent += "<div class='imageGallery'>";
-          mixed.forEach(mix => {
-            detailsContent += `<img src="${mix.img}" alt="${mix.name}" class="sealImage">`;
-          });
-          detailsContent += "</div>";
-          break;
-      }
+        const eklibris = [
+          {
+            name: "ЭК-01", img: "images/layouts/ЭКЛИБРИС/01.jpg"
+          },
+          {
+            name: "ЭК-02", img: "images/layouts/ЭКЛИБРИС/02.jpg"
+          },
+          {
+            name: "ЭК-03", img: "images/layouts/ЭКЛИБРИС/03.jpg"
+          },
+          {
+            name: "ЭК-04", img: "images/layouts/ЭКЛИБРИС/04.jpg"
+          },
+          {
+            name: "ЭК-05", img: "images/layouts/ЭКЛИБРИС/05.jpg"
+          },
+          {
+            name: "ЭК-06", img: "images/layouts/ЭКЛИБРИС/06.jpg"
+          },
+          {
+            name: "ЭК-07", img: "images/layouts/ЭКЛИБРИС/07.jpg"
+          },
+          {
+            name: "ЭК-08", img: "images/layouts/ЭКЛИБРИС/08.jpg"
+          },
+        ]
 
-      // Update the modal with the details
-      document.getElementById("sealDetails").innerHTML = detailsContent;
-      const alls = document.querySelectorAll(".sealImage")
-      alls.forEach((el) => {
-        el.addEventListener("click", () => {
-          const sealLayout = document.querySelector(".seal-layout");
-          const pr = document.querySelector(".price-title1")
-          sealLayout.src = el.src
-          sealLayout.classList.remove("hidden")
-          sealLayout.nextElementSibling.classList.remove("hidden")
+        const foreign = [
+          {
+            name: "ИН-01", img: "images/layouts/ИНОСТРАННЫЕ/01.jpg"
+          },
+          {
+            name: "ИН-02", img: "images/layouts/ИНОСТРАННЫЕ/02.jpg"
+          },
+          {
+            name: "ИН-03", img: "images/layouts/ИНОСТРАННЫЕ/03.jpg"
+          },
+          {
+            name: "ИН-04", img: "images/layouts/ИНОСТРАННЫЕ/04.jpg"
+          },
+          {
+            name: "ИН-05", img: "images/layouts/ИНОСТРАННЫЕ/05.jpg"
+          },
+          {
+            name: "ИН-06", img: "images/layouts/ИНОСТРАННЫЕ/06.jpg"
+          },
+          {
+            name: "ИН-07", img: "images/layouts/ИНОСТРАННЫЕ/07.jpg"
+          },
+          {
+            name: "ИН-08", img: "images/layouts/ИНОСТРАННЫЕ/08.jpg"
+          },
+        ]
+
+        const comic = [
+          {
+            name: "ПР-01", img: "images/layouts/ПРИКОЛЬНЫЕ/01.jpg"
+          },
+          {
+            name: "ПР-02", img: "images/layouts/ПРИКОЛЬНЫЕ/02.jpg"
+          },
+          {
+            name: "ПР-03", img: "images/layouts/ПРИКОЛЬНЫЕ/03.jpg"
+          },
+          {
+            name: "ПР-04", img: "images/layouts/ПРИКОЛЬНЫЕ/04.jpg"
+          },
+          {
+            name: "ПР-05", img: "images/layouts/ПРИКОЛЬНЫЕ/05.jpg"
+          },
+          {
+            name: "ПР-06", img: "images/layouts/ПРИКОЛЬНЫЕ/06.jpg"
+          },
+          {
+            name: "ПР-07", img: "images/layouts/ПРИКОЛЬНЫЕ/07.jpg"
+          },
+          {
+            name: "ПР-08", img: "images/layouts/ПРИКОЛЬНЫЕ/08.jpg"
+          },
+        ]
+
+        const kids = [
+          {
+            name: "ДТ-01", img: "images/layouts/ДЕТСКИЕ/01.jpg"
+          },
+          {
+            name: "ДТ-02", img: "images/layouts/ДЕТСКИЕ/02.jpg"
+          },
+          {
+            name: "ДТ-03", img: "images/layouts/ДЕТСКИЕ/03.jpg"
+          },
+          {
+            name: "ДТ-04", img: "images/layouts/ДЕТСКИЕ/04.jpg"
+          },
+          {
+            name: "ДТ-05", img: "images/layouts/ДЕТСКИЕ/05.jpg"
+          },
+          {
+            name: "ДТ-06", img: "images/layouts/ДЕТСКИЕ/06.jpg"
+          },
+          {
+            name: "ДТ-07", img: "images/layouts/ДЕТСКИЕ/07.jpg"
+          },
+          {
+            name: "ДТ-08", img: "images/layouts/ДЕТСКИЕ/08.jpg"
+          },
+          {
+            name: "ДТ-09", img: "images/layouts/ДЕТСКИЕ/09.jpg"
+          },
+          {
+            name: "ДТ-10", img: "images/layouts/ДЕТСКИЕ/10.jpg"
+          },
+        ]
+
+        const mixed = [IP[0], IP[1], oArray[0], oArray[1], AO[0], AO[1], OTK[0], OTK[1], doctorsArray[0], doctorsArray[1], test[0], test[1], eklibris[0], eklibris[1], foreign[0], foreign[1], comic[0], comic[1], kids[0], kids[1]]
+
+        const serviceModal = document.querySelector("#serviceModal");
+        const serviceInput = document.querySelector("#dropdown-input");
+
+        serviceInput.addEventListener("focus", () => {
+          serviceModal.style.display = "block"
+        })
+
+
+        // Get the modal, button, and close elements
+        const modal = document.getElementById("sealModal");
+        const openModalBtn = document.getElementById("openModalBtn");
+        const closeModal2 = document.getElementsByClassName("close")[0];
+        const closeModal = document.getElementsByClassName("close")[1];
+
+        // Function to open the modal
+        openModalBtn.onclick = function () {
+          modal.style.display = "block";
+          document.querySelector("#sealList").style.opacity = 1;
+          document.querySelector("#sealList").style.zIndex = 10;
+          showSealDetails()
+        }
+
+        // Function to close the modal when the "X" button is clicked
+        closeModal.onclick = function () {
           document.getElementById("sealDetails").innerHTML = ""
           modal.style.display = "none";
-          layoutPrice = 500
-          pr.textContent = layoutPrice + " руб"
-          const total = document.querySelector(".total")
-          const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee ;
-          total.textContent = newTotal + " рублей"
-          document.querySelector(".order_img_one-text").textContent = el.getAttribute("alt")
-          openModalBtn.textContent = el.getAttribute("alt")
-        })
-      })
-    }
+        }
 
-    const checkboxes = document.querySelectorAll("input[name='service']")
-    checkboxes.forEach((check) => {
-      check.addEventListener("change", () => {
-        if (check.checked) {
-          check.parentElement.parentElement.nextElementSibling.style.display = "block"
-          // document.querySelector("#serviceModal").style.display = "none"
-          checkboxes.forEach((otherCheck) => {
-            if (otherCheck !== check) {
-              otherCheck.parentElement.parentElement.nextElementSibling.style.display = "none"
-              otherCheck.checked = false;
+        closeModal2.onclick = () => {
+          console.log(document.querySelector("#serviceModal"))
+          document.querySelector("#serviceModal").style.display = "none"
+        }
+
+        // Close modal if the user clicks outside of the modal
+        window.onclick = function (event) {
+          if (event.target == modal) {
+            document.getElementById("sealDetails").innerHTML = ""
+            modal.style.display = "none";
+          }
+
+          if (event.target === document.querySelector("#serviceModal")) {
+            document.querySelector("#serviceModal").style.display = "none"
+          }
+        }
+
+        // Event listener for seal option clicks
+        const sealOptions = document.querySelectorAll(".sealOption");
+        sealOptions.forEach(option => {
+          option.addEventListener("click", function () {
+            const sealId = this.getAttribute("data-id");
+            showSealDetails(sealId);
+            document.querySelector("#sealList").style.zIndex = 10;
+            document.querySelector("#sealList").style.opacity = 1;
+
+          });
+        });
+
+        // Function to display seal details in the modal
+        function showSealDetails(sealId) {
+          let detailsContent = "";
+
+          // Show details based on the selected seal option
+          switch (sealId) {
+            case "1":
+              // detailsContent = "ИП: This is the ИП seal option with a base price of $20.";
+              detailsContent += "<div class='imageGallery'>";
+              IP.forEach(oar => {
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+              });
+              detailsContent += "</div>";
+              break;
+            case "2":
+              // detailsContent = "ООО: This is the ООО seal option with a base price of $30.";
+              detailsContent += "<div class='imageGallery'>";
+              oArray.forEach(oar => {
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+              });
+              detailsContent += "</div>";
+              break;
+            case "3":
+              detailsContent += "<div class='imageGallery'>";
+              AO.forEach(oar => {
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+              });
+              detailsContent += "</div>";
+              break;
+            case "4":
+              detailsContent += "<div class='imageGallery'>";
+              OTK.forEach(oar => {
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+              });
+              detailsContent += "</div>";
+              break;
+            case "5":
+              // detailsContent = "ВРАЧ: Displaying doctor images below.";
+              detailsContent += "<div class='imageGallery'>";
+              doctorsArray.forEach(doctor => {
+                detailsContent += `<img src="${doctor.img}" alt="${doctor.name}" class="sealImage">`;
+              });
+              detailsContent += "</div>";
+              break;
+            case "6":
+              detailsContent += "<div class='imageGallery'>";
+              test.forEach(oar => {
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+              });
+              detailsContent += "</div>";
+              break;
+            case "7":
+              detailsContent += "<div class='imageGallery'>";
+              eklibris.forEach(oar => {
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+              });
+              detailsContent += "</div>";
+              break;
+            case "8":
+              detailsContent += "<div class='imageGallery'>";
+              foreign.forEach(oar => {
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+              });
+              detailsContent += "</div>";
+              break;
+            case "9":
+              detailsContent += "<div class='imageGallery'>";
+              comic.forEach(oar => {
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+              });
+              detailsContent += "</div>";
+              break;
+            case "10":
+              detailsContent += "<div class='imageGallery'>";
+              kids.forEach(oar => {
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+              });
+              detailsContent += "</div>";
+              break;
+            default:
+              detailsContent += "<div class='imageGallery'>";
+              mixed.forEach(mix => {
+                detailsContent += `<img src="${mix.img}" alt="${mix.name}" class="sealImage">`;
+              });
+              detailsContent += "</div>";
+              break;
+          }
+
+          // Update the modal with the details
+          document.getElementById("sealDetails").innerHTML = detailsContent;
+          const alls = document.querySelectorAll(".sealImage")
+          alls.forEach((el) => {
+            el.addEventListener("click", () => {
+              const sealLayout = document.querySelector(".seal-layout");
+              const pr = document.querySelector(".price-title1")
+              sealLayout.src = el.src
+              sealLayout.classList.remove("hidden")
+              sealLayout.nextElementSibling.classList.remove("hidden")
+              document.getElementById("sealDetails").innerHTML = ""
+              modal.style.display = "none";
+              layoutPrice = 500
+              pr.textContent = layoutPrice + " руб"
+              const total = document.querySelector(".total")
+              const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
+              total.textContent = newTotal + " рублей"
+              document.querySelector(".order_img_one-text").textContent = el.getAttribute("alt")
+              openModalBtn.textContent = el.getAttribute("alt")
+            })
+          })
+        }
+
+        const checkboxes = document.querySelectorAll("input[name='service']")
+        checkboxes.forEach((check) => {
+          check.addEventListener("change", () => {
+            if (check.checked) {
+              check.parentElement.parentElement.nextElementSibling.style.display = "block"
+              // document.querySelector("#serviceModal").style.display = "none"
+              checkboxes.forEach((otherCheck) => {
+                if (otherCheck !== check) {
+                  otherCheck.parentElement.parentElement.nextElementSibling.style.display = "none"
+                  otherCheck.checked = false;
+                }
+              });
             }
           });
-        }
-      });
-    });
+        });
 
 
 
-    const subOptions = document.querySelectorAll('.sub-option');
-    const inputField = document.getElementById('dropdown-input');
-    const dropdown = document.querySelector('.dropdown');
+        const subOptions = document.querySelectorAll('.sub-option');
+        const inputField = document.getElementById('dropdown-input');
+        const dropdown = document.querySelector('.dropdown');
 
-    // When a sub-option is clicked, set the input value and prevent the dropdown from closing
-    subOptions.forEach(subOption => {
-      subOption.addEventListener('click', function (e) {
-        const mainCategory = e.target.parentElement.previousElementSibling.lastElementChild.textContent
-        const subOptionText = this.textContent.trim();
-        console.log(subOptionText)
-        inputField.value = `${mainCategory.trim()}, ${subOptionText}`;
-        const titles = document.querySelectorAll(".order_img_one-title")
-        titles[0].textContent = mainCategory + "," + subOptionText
-        titles[1].textContent = "Ocтнастка, " + subOptionText
-        dropdown.style.display = 'none';
-        document.querySelector("#serviceModal").style.display = "none"
-      });
-    });
-
-
-
-    // Show the dropdown on input focus
-    inputField.addEventListener('focus', function () {
-        dropdown.style.display = 'grid';
-      
-    });
-
-      // inputField.addEventListener("blur", () => {
-      //   setTimeout(() => {
-
-      //     dropdown.style.display = "none"
-      //   }, 300)
-      // })
+        // When a sub-option is clicked, set the input value and prevent the dropdown from closing
+        subOptions.forEach(subOption => {
+          subOption.addEventListener('click', function (e) {
+            const mainCategory = e.target.parentElement.previousElementSibling.lastElementChild.textContent
+            const subOptionText = this.textContent.trim();
+            console.log(subOptionText)
+            inputField.value = `${mainCategory.trim()}, ${subOptionText}`;
+            const titles = document.querySelectorAll(".order_img_one-title")
+            titles[0].textContent = mainCategory + "," + subOptionText
+            titles[1].textContent = "Ocтнастка, " + subOptionText
+            dropdown.style.display = 'none';
+            document.querySelector("#serviceModal").style.display = "none"
+          });
+        });
 
 
-    // const deliverToEntrance = document.querySelector(".delivery-to-entrance")
-    const deliveryOptions = document.querySelectorAll(".delivery-option");
-    const deliveryPriority = document.querySelectorAll(".delivery-priority")
 
-    const deliveryTypeTextHtml= document.querySelector(".delivery_type-delivery")
-    const deliveryDateTextHtml= document.querySelector(".delivery_type-date")
+        // Show the dropdown on input focus
+        inputField.addEventListener('focus', function () {
+          dropdown.style.display = 'grid';
 
+        });
 
-    deliveryOptions.forEach((delType) => {
-      delType.addEventListener("click", () => {
-        const total = document.querySelector(".total");
-        const number = delType.textContent.match(/\d+/); // This will give you the number as a string
-        if (number) {
-          deliverPrice = +number[0]
-          const newTotal = (sealPrice + layoutPrice) * res.innerText  + deliverPrice + preparationFee;
-          total.textContent = newTotal + " рублей"
+        // inputField.addEventListener("blur", () => {
+        //   setTimeout(() => {
 
-          deliveryTypeTextHtml.placeholder = delType.textContent
-        } else {
-          deliverPrice = 0
-          const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee ;
-          total.textContent = newTotal + " рублей"
-
-          deliveryTypeTextHtml.placeholder = delType.textContent
-        }
-      })
-    })
-
-    deliveryPriority.forEach((delType) => {
-      delType.addEventListener("click", () => {
-        const total = document.querySelector(".total");
-        const number = delType.textContent.match(/\d+/); // This will give you the number as a string
-        console.log(number)
-        if (number && number[0].length > 2) {
-          preparationFee = +number[0]
-          const newTotal = (sealPrice+ layoutPrice) * res.innerText  + deliverPrice + preparationFee ;
-          total.textContent = newTotal + " рублей"
-          
-          deliveryDateTextHtml.placeholder = delType.textContent
-
-        } else {
-          preparationFee = 0
-          const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee ;
-          total.textContent = newTotal + " рублей"
-
-          deliveryDateTextHtml.placeholder = delType.textContent
-
-        }
-      })
-    })
+        //     dropdown.style.display = "none"
+        //   }, 300)
+        // })
 
 
-    openBtn.addEventListener('click', function () {
-      popup.showModal();
-      const sealsContainer = document.querySelector(".seals-container");
-      if (sealsContainer.childNodes.length !== 1) {
-        return
-      }
+        // const deliverToEntrance = document.querySelector(".delivery-to-entrance")
+        const deliveryOptions = document.querySelectorAll(".delivery-option");
+        const deliveryPriority = document.querySelectorAll(".delivery-priority")
 
-      seals.forEach((seal, index) => {
-        const imgContainer = document.createElement("div");
-        const img = document.createElement("img");
-        const title = document.createElement("p")
-        const p = document.createElement("p");
-
-        title.textContent = seal.name
-        title.style.marginBottom = "6px"
-        p.textContent = seal.price
-        img.src = seal.href;
-        img.classList.add("seal-modal-images")
-        imgContainer.append(img, title, p)
-        sealsContainer.appendChild(imgContainer)
-
-        img.addEventListener("click", () => {
-          const target = document.querySelector(".seal-img-target");
-          const overallPrice = document.querySelector(".total")
-          const sealTitle = document.querySelector(".seal-title")
+        const deliveryTypeTextHtml = document.querySelector(".delivery_type-delivery")
+        const deliveryDateTextHtml = document.querySelector(".delivery_type-date")
 
 
-          const price = document.querySelector(".price-title2");
-          target.src = seal.href
-          price.textContent = p.textContent + " руб"
-          sealTitle.textContent = "Отнастка " + seal.name
-          openBtn.textContent = seal.name
+        deliveryOptions.forEach((delType) => {
+          delType.addEventListener("click", () => {
+            const total = document.querySelector(".total");
+            const number = delType.textContent.match(/\d+/); // This will give you the number as a string
+            if (number) {
+              deliverPrice = +number[0]
+              const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
+              total.textContent = newTotal + " рублей"
 
-          sealPrice = seal.price
-          overallPrice.textContent = (sealPrice + layoutPrice) * res.innerText +  deliverPrice + preparationFee + " рублей"
-          popup.close()
-          target.classList.remove("hidden")
+              deliveryTypeTextHtml.value = delType.textContent
+            } else {
+              deliverPrice = 0
+              const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
+              total.textContent = newTotal + " рублей"
+
+              deliveryTypeTextHtml.value = delType.textContent
+            }
+          })
         })
-      })
 
-    })
-    closeButton.addEventListener('click', function () {
-      // popup.classList.remove("active")
-    })
+        deliveryPriority.forEach((delType) => {
+          delType.addEventListener("click", () => {
+            const total = document.querySelector(".total");
+            const number = delType.textContent.match(/\d+/); // This will give you the number as a string
+            console.log(number)
+            if (number && number[0].length > 2) {
+              preparationFee = +number[0]
+              const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
+              total.textContent = newTotal + " рублей"
 
-    let closeBtn1 = document.getElementById("closeBtn1")
-    let openBtn1 = document.getElementById("openBtn1")
-    let popup1 = document.getElementById("popup_container1")
+              deliveryDateTextHtml.value = delType.textContent
 
-    openBtn1.addEventListener('click', function () {
-      popup1.classList.add("active1")
-    })
-    closeBtn1.addEventListener('click', function () {
-      popup1.classList.remove("active1")
-    })
+            } else {
+              preparationFee = 0
+              const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
+              total.textContent = newTotal + " рублей"
 
-    // Get all the sub-option elements
+              deliveryDateTextHtml.value = delType.textContent
 
-
-  </script>
-  <script>
-    let e = document.querySelector("#select_one option")
-    console.log(e.value[1]);
-  </script>
-  <link href='../css?family=Droid+Serif:400,400italic|Droid+Sans' rel='stylesheet' type='text/css'>
+            }
+          })
+        })
 
 
-  <script>
-  function updateLogoColumnsClass() {
-    const logoContainer = document.querySelector('.logo-container');
+        openBtn.addEventListener('click', function () {
+          popup.showModal();
+          const sealsContainer = document.querySelector(".seals-container");
+          if (sealsContainer.childNodes.length !== 1) {
+            return
+          }
 
-    if (window.innerWidth <= 768) {
-      logoContainer.classList.remove('columns');
-    } else {
-      if (!logoContainer.classList.contains('columns')) {
-        logoContainer.classList.add('columns');
-      }
-    }
-  }
+          seals.forEach((seal, index) => {
+            const imgContainer = document.createElement("div");
+            const img = document.createElement("img");
+            const title = document.createElement("p")
+            const p = document.createElement("p");
 
-  // Run on page load
-  updateLogoColumnsClass();
+            title.textContent = seal.name
+            title.style.marginBottom = "6px"
+            p.textContent = seal.price
+            img.src = seal.href;
+            img.classList.add("seal-modal-images")
+            imgContainer.append(img, title, p)
+            sealsContainer.appendChild(imgContainer)
 
-  // Run every time the screen is resized
-  window.addEventListener('resize', updateLogoColumnsClass);
-</script>
-
-<script>
-  // Get dialog and close button elements
-const dialog = document.querySelector('dialog');
-const closeButton = dialog.querySelector('.dialog-close');
-
-// Close dialog when clicking the close button
-closeButton.addEventListener('click', () => {
-  dialog.close();
-});
-
-// Close when clicking outside
-dialog.addEventListener('click', (e) => {
-  const dialogDimensions = dialog.getBoundingClientRect();
-  if (
-    e.clientX < dialogDimensions.left ||
-    e.clientX > dialogDimensions.right ||
-    e.clientY < dialogDimensions.top ||
-    e.clientY > dialogDimensions.bottom
-  ) {
-    dialog.close();
-  }
-});
+            img.addEventListener("click", () => {
+              const target = document.querySelector(".seal-img-target");
+              const overallPrice = document.querySelector(".total")
+              const sealTitle = document.querySelector(".seal-title")
 
 
-</script>
+              const price = document.querySelector(".price-title2");
+              target.src = seal.href
+              price.textContent = p.textContent + " руб"
+              sealTitle.textContent = "Отнастка " + seal.name
+              openBtn.textContent = seal.name
+
+              sealPrice = seal.price
+              overallPrice.textContent = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee + " рублей"
+              popup.close()
+              target.classList.remove("hidden")
+            })
+          })
+
+        })
+        closeButton.addEventListener('click', function () {
+          // popup.classList.remove("active")
+        })
+
+        let closeBtn1 = document.getElementById("closeBtn1")
+        let openBtn1 = document.getElementById("openBtn1")
+        let popup1 = document.getElementById("popup_container1")
+
+        openBtn1.addEventListener('click', function () {
+          popup1.classList.add("active1")
+        })
+        closeBtn1.addEventListener('click', function () {
+          popup1.classList.remove("active1")
+        })
+
+        // Get all the sub-option elements
+
+
+      </script>
+      <script>
+        let e = document.querySelector("#select_one option")
+        console.log(e.value[1]);
+      </script>
+      <link href='../css?family=Droid+Serif:400,400italic|Droid+Sans' rel='stylesheet' type='text/css'>
+
+
+      <script>
+        function updateLogoColumnsClass() {
+          const logoContainer = document.querySelector('.logo-container');
+
+          if (window.innerWidth <= 768) {
+            logoContainer.classList.remove('columns');
+          } else {
+            if (!logoContainer.classList.contains('columns')) {
+              logoContainer.classList.add('columns');
+            }
+          }
+        }
+
+        // Run on page load
+        updateLogoColumnsClass();
+
+        // Run every time the screen is resized
+        window.addEventListener('resize', updateLogoColumnsClass);
+      </script>
+
+      <script>
+        // Get dialog and close button elements
+        const dialog = document.querySelector('dialog');
+        const closeButton = dialog.querySelector('.dialog-close');
+
+        // Close dialog when clicking the close button
+        closeButton.addEventListener('click', () => {
+          dialog.close();
+        });
+
+        // Close when clicking outside
+        dialog.addEventListener('click', (e) => {
+          const dialogDimensions = dialog.getBoundingClientRect();
+          if (
+            e.clientX < dialogDimensions.left ||
+            e.clientX > dialogDimensions.right ||
+            e.clientY < dialogDimensions.top ||
+            e.clientY > dialogDimensions.bottom
+          ) {
+            dialog.close();
+          }
+        });
+
+
+      </script>
 
 </body>
 

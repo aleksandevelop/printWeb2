@@ -552,6 +552,7 @@ embed {
   font-size: 15px;
   text-align: center;
 	font-weight: 500;
+  cursor: pointer;
 }
 .order_input select {
   width: 100%;

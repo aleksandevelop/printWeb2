@@ -2460,7 +2460,6 @@ border: none;
 .dropdown-container {
   position: relative;
   width: 50%;
-  height: 30px;
   /* transform: translateX(-10px);
   width: 200px; */
 }
@@ -2476,6 +2475,7 @@ border: none;
   align-items: center;
   color: black;
   font-weight: 500;
+  height: 30px;
 }
 #dropdown-input::placeholder{
 	color: black;
@@ -2683,6 +2683,7 @@ button[disabled] {
 .invalid{
   display: none;
   margin: 0;
+  color: #BD3B13;
 }
 dialog {
   position: absolute !important;
