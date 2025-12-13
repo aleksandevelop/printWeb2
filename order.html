@@ -331,12 +331,12 @@
 
                   <input id="Печать" name="service" type="radio">
                   <label class="dropdown-option__size" for="Печать">
-                    <span>Печать</span> 
-                    <span>размер</span>
+                    <span>Печать</span>
+                    размер
                   </label>
-                  
+
                 </div>
-                
+
               </label>
               <div class="sub-options">
                 <div class="sub-option">12 ММ</div>
@@ -357,8 +357,8 @@
                   data-result-text="штампа">
                   <input id="Штамп1" name="service" type="radio">
                   <label class="dropdown-option__size" for="Штамп1">
-                    <span>Штамп</span> 
-                    <span>размер</span>
+                    <span>Штамп</span>
+                    размер
                   </label>
                 </div>
               </label>
@@ -380,8 +380,8 @@
 
                   <input id="Штамп" name="service" type="radio">
                   <label class="dropdown-option__size" for="Штамп">
-                    <span>Штамп</span> 
-                    <span>размер</span>
+                    <span>Штамп</span>
+                    размер
                   </label>
                 </div>
               </label>
@@ -403,8 +403,8 @@
                 <div class="dropdown-option__label" data-result-text="факсимиле">
                   <input id="факсимиле" name="service" type="radio">
                   <label class="dropdown-option__size" for="факсимиле">
-                    <span>Факсимиле</span> 
-                    <span>размер</span>
+                    <span>Факсимиле</span>
+                    размер
                   </label>
                 </div>
               </label>
@@ -423,11 +423,11 @@
             <div class="dropdown-option">
               <label class="dropdown-label" for="Еклибрис">
                 <img style="width: 110px; height: 80px;   align-self: center;" src="images/layouts/ЭКЛИБРИС/08.jpg" alt="">
-                <div  class="dropdown-option__label" data-result-text="еклибриса">
+                <div class="dropdown-option__label" data-result-text="еклибриса">
                   <input id="Еклибрис" name="service" type="radio">
                   <label class="dropdown-option__size" for="Еклибрис">
-                    <span>Еклибрис</span> 
-                    <span>размер</span>
+                    <span>Еклибрис</span>
+                    размер
                   </label>
                 </div>
               </label>
@@ -1256,7 +1256,7 @@
         subOptions.forEach(subOption => {
           subOption.addEventListener('click', function (e) {
             const element = e.target.parentElement.previousElementSibling.lastElementChild;
-            const mainCategory = element.textContent.trim();
+            const mainCategory = element.querySelector('span').textContent.trim();
             const dataResult = element.dataset.resultText;
 
             const subOptionText = this.textContent.trim();
