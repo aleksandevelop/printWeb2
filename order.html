@@ -184,7 +184,7 @@
                 <div class="title">
                   <p>УСЛУГА*</p>
                 </div>
-                
+
                 <div class="dropdown-container " style="z-index: 1;">
 
                   <input type="text" id="dropdown-input" readonly required placeholder="Выбрать услугу">
@@ -252,7 +252,7 @@
                   <p>ДОСТАВКА*</p>
                 </div>
                 <div class="order_input delivery_type_parent">
-                  
+
                   <input class="delivery_type delivery_type-delivery" readonly required type="text"
                     placeholder="Сделать выбор">
 
@@ -323,16 +323,20 @@
           <div style="width: 107%; margin: 12px 0; height: 1px; background-color: gray; transform: translateX(-3%);">
           </div>
 
-          <div class="dropdown">
+          <div class="dropdown" style="display: grid; gap: 30px;">
             <div class="dropdown-option">
-              <label for="Печать"
-                style="box-shadow: 0px 0px 2px -1px rgba(0,0,0,1); border-radius: 12px; cursor: pointer; flex: 1;  display: flex; flex-direction: column;">
-                <img style="width: 80px; align-self: center; height: 80px; overflow: hidden; border-radius: 12px;" src="images/layouts/ИП/12.jpg" alt="">
-                <div style="display: flex; align-items: center; gap: 4px;">
+              <label class="dropdown-label" for="Печать">
+                <img style="width: 110px; align-self: center; height: 80px; overflow: hidden; " src="images/layouts/ИП/12.jpg" alt="">
+                <div class="dropdown-option__label" data-result-text="печати">
 
                   <input id="Печать" name="service" type="radio">
-                  <label for="Печать">Печать</label>
+                  <label class="dropdown-option__size" for="Печать">
+                    <span>Печать</span> 
+                    <span>размер</span>
+                  </label>
+                  
                 </div>
+                
               </label>
               <div class="sub-options">
                 <div class="sub-option">12 ММ</div>
@@ -347,13 +351,15 @@
             </div>
             <div class="dropdown-option">
 
-              <label for="Штамп1"
-                style="box-shadow: 0px 0px 2px -1px rgba(0,0,0,1); border-radius: 12px; cursor: pointer; flex: 1;  display: flex; flex-direction: column;">
-                <img style="width: 80px; height: 80px; border-radius: 12px; align-self: center;" src="images/layouts/ШТАМП/08.jpg" alt="">
-                <div style="display: flex; align-items: center; gap: 4px;">
-
+              <label class="dropdown-label" for="Штамп1">
+                <img style="width: 110px; height: 80px;   align-self: center;" src="images/layouts/ШТАМП/08.jpg" alt="">
+                <div class="dropdown-option__label"
+                  data-result-text="штампа">
                   <input id="Штамп1" name="service" type="radio">
-                  <label for="Штамп1">Штамп</label>
+                  <label class="dropdown-option__size" for="Штамп1">
+                    <span>Штамп</span> 
+                    <span>размер</span>
+                  </label>
                 </div>
               </label>
               <div class="sub-options">
@@ -368,13 +374,15 @@
               </div>
             </div>
             <div class="dropdown-option">
-              <label for="Штамп"
-                style="box-shadow: 0px 0px 2px -1px rgba(0,0,0,1); border-radius: 12px; cursor: pointer; flex: 1; display: flex; flex-direction: column;">
-                <img style="width: 80px; align-self: center; height: 80px; border-radius: 12px;" src="images/layouts/ШТАМП/07.jpg" alt="">
-                <div style="display: flex; align-items: center; gap: 4px;">
+              <label class="dropdown-label" for="Штамп">
+                <img style="width: 110px; align-self: center; height: 80px;  " src="images/layouts/ШТАМП/01.jpg" alt="">
+                <div class="dropdown-option__label" data-result-text="треугольного штампа">
 
                   <input id="Штамп" name="service" type="radio">
-                  <label for="Штамп">Штамп</label>
+                  <label class="dropdown-option__size" for="Штамп">
+                    <span>Штамп</span> 
+                    <span>размер</span>
+                  </label>
                 </div>
               </label>
               <!-- <div clas -->
@@ -390,13 +398,14 @@
               </div>
             </div>
             <div class="dropdown-option">
-              <label for="факсимиле"
-                style="box-shadow: 0px 0px 2px -1px rgba(0,0,0,1);  display: flex; flex-direction: column; border-radius: 12px; cursor: pointer; flex: 1">
-                <img style="width: 80px; height: 80px; border-radius: 12px; align-self: center;" src="images/layouts/ЭКЛИБРИС/08.jpg" alt="">
-                <div style="display: flex; align-items: center; gap: 4px;">
-
+              <label class="dropdown-label" for=" факсимиле">
+                <img style="width: 110px; height: 80px;   align-self: center;" src="images/layouts/ЭКЛИБРИС/08.jpg" alt="">
+                <div class="dropdown-option__label" data-result-text="факсимиле">
                   <input id="факсимиле" name="service" type="radio">
-                  <label for="факсимиле">Факсимиле</label>
+                  <label class="dropdown-option__size" for="факсимиле">
+                    <span>Факсимиле</span> 
+                    <span>размер</span>
+                  </label>
                 </div>
               </label>
 
@@ -412,13 +421,14 @@
               </div>
             </div>
             <div class="dropdown-option">
-              <label for="Еклибрис"
-                style="box-shadow: 0px 0px 2px -1px rgba(0,0,0,1);  display: flex; flex-direction: column; border-radius: 12px; cursor: pointer; flex: 1;">
-                <img style="width: 80px; height: 80px; border-radius: 12px; align-self: center;" src="images/layouts/ЭКЛИБРИС/08.jpg" alt="">
-                <div style="display: flex; align-items: center; gap: 4px;">
-
+              <label class="dropdown-label" for="Еклибрис">
+                <img style="width: 110px; height: 80px;   align-self: center;" src="images/layouts/ЭКЛИБРИС/08.jpg" alt="">
+                <div  class="dropdown-option__label" data-result-text="еклибриса">
                   <input id="Еклибрис" name="service" type="radio">
-                  <label for="Еклибрис">Еклибрис</label>
+                  <label class="dropdown-option__size" for="Еклибрис">
+                    <span>Еклибрис</span> 
+                    <span>размер</span>
+                  </label>
                 </div>
               </label>
 
@@ -436,7 +446,6 @@
           </div>
         </div>
       </div>
-
       <!-- Modal Structure -->
       <div id="sealModal" class="modal">
         <div class="modal-content">
@@ -1246,12 +1255,15 @@
         // When a sub-option is clicked, set the input value and prevent the dropdown from closing
         subOptions.forEach(subOption => {
           subOption.addEventListener('click', function (e) {
-            const mainCategory = e.target.parentElement.previousElementSibling.lastElementChild.textContent
+            const element = e.target.parentElement.previousElementSibling.lastElementChild;
+            const mainCategory = element.textContent.trim();
+            const dataResult = element.dataset.resultText;
+
             const subOptionText = this.textContent.trim();
             console.log(subOptionText)
-            inputField.value = `${mainCategory.trim()}, ${subOptionText}`;
+            inputField.value = `${mainCategory}, ${subOptionText}`;
             const titles = document.querySelectorAll(".order_img_one-title")
-            titles[0].textContent = mainCategory + "," + subOptionText
+            titles[0].textContent = "Клише для " + dataResult + ", " + subOptionText
             titles[1].textContent = "Ocтнастка, " + subOptionText
             dropdown.style.display = 'none';
             document.querySelector("#serviceModal").style.display = "none"

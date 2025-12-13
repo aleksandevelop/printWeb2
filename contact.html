@@ -270,7 +270,7 @@
             </div> -->
               <div class="map">
                 <div style="position: relative; overflow: hidden">
-                  <iframe
+                  <!-- <iframe
                     id="map_70852858"
                     frameborder="0"
                     width="650"
@@ -278,9 +278,9 @@
                     src="https://makemap.2gis.ru/widget?data=eJw1jsFugzAMht_Fu6KKJBACD9Bpt94qbeoBgbdFCjgKrtQO8e5zYMsp8mf__7cCpRETjq9IE3LyuED3sQI_I0IHZ-z5nhAKiIkiJt75CgMFSsJfSu3UpxbOnkO-kO-Iy5B8ZE_zMfh5m0d8QKfK_7cV8HUUPnPcX9uF_MyyP5BI-bnnXaZqT8q4trZFXZ-cblutb3LvR-hq47ZbAVMfL7T4o3CF0LOgvOussc5aUytbFRAyzmlV6aqm1co0qmpEj2gSuUZCRZxCuH4jhvd9yumO2y_Ov1k6"
                     sandbox="allow-modals allow-forms allow-scripts allow-same-origin allow-popups allow-top-navigation-by-user-activation"
                   >
-                  </iframe>
+                  </iframe> -->
 
-                  <!-- <div id="map" style="width: 650px; height: 400px"></div> -->
+                  <div id="map_70852858" style="width: 650px; height: 400px"></div>
                 </div>
               </div>
             </div>
@@ -504,9 +504,9 @@
     DG.then(function () {
       map = DG.map("map_70852858", {
         center: [55.829856, 49.138955],
-        zoom: 13,
+        zoom: 16,
       });
-      DG.marker([55.829856, 49.138955]).addTo(map).bindPopup("Я попап!");
+      DG.marker([55.829856, 49.138955]).addTo(map).bindPopup("Мы тут!");
     });
   </script>
 </html>
