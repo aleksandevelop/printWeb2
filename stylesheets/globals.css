@@ -533,12 +533,12 @@ embed {
   /* width: 50%; */
 }
 .order_input {
-  width: 50%;
+  width: 63%;
 }
 
 .order_input .counter{
   width: 100%;
-  height: 30px;
+  height: 40px;
 
 	display: flex;
 	align-items: center;
@@ -548,11 +548,11 @@ embed {
 .order_input input {
   /* margin-top: 5px; */
   width: 100%;
-  height: 30px;
-  font-size: 15px;
-  text-align: center;
+  height: 40px;
+  font-size: 16px;
 	font-weight: 500;
   cursor: pointer;
+  padding-left: 10px;
 }
 .order_input select {
   width: 100%;
@@ -574,11 +574,15 @@ embed {
 }
 #openModalBtn {
   width: 100%;
-  height: 30px;
+  height: 40px;
   background-color: white;
   border: 1px solid gray;
 	color: black;
   font-weight: 500;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  font-size: 16px;
 }
 .popup_btn {
   width: 100%;
@@ -586,17 +590,17 @@ embed {
 }
 #openBtn1 {
   width: 100%;
-  height: 30px;
+  height: 40px;
   display: block;
   white-space: nowrap;
   padding: 0px;
   color: #666666;
   display: flex;
+  padding-left: 10px;
   align-items: center;
-  justify-content: center;
 	color: black;
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 16px;
   margin: 0;
 }
 
@@ -606,7 +610,7 @@ input:placeholder {
 
 .order_input input::placeholder {
 	font-weight: 500;
-	font-size: 14px;
+	font-size: 16px;
 	color: black;
 }
 .order_img_one-title {

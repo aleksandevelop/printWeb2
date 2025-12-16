@@ -5,13 +5,13 @@ body {
   margin: 0;
 }
 
-@font-face {
+/* @font-face {
   font-family: "Georgia";
   src: url("../fonts/georgia.ttf");
   src: url("../fonts/georgia.eot") format("eot"),
     url("../fonts/georgia.woff") format("woff");
   font-weight: 800;
-}
+} */
 
 @font-face {
   font-family: "Steelfish";
@@ -2171,10 +2171,11 @@ p.copy {
   flex-direction: column;
 }
 #order__textarea {
-  max-width: 183px;
+  max-width: 100%;
   font-size: 12px;
   border: 1px solid black;
   font-weight: 500;
+  margin: 0;
 }
 .number {
   margin-right: 5px;
@@ -2241,7 +2242,7 @@ span {
   border: none;
   cursor: pointer;
   padding-top: 3px;
-  font-size: 15px;
+  font-size: 20px;
   color: gray;
 }
 /* .counter button:nth-child(1) {
@@ -2266,11 +2267,10 @@ span {
   width: 300px;
 }
 .order_img_one img:nth-child(2) {
-  height: 200px;
-  width: 200px;
+  height: 250px;
+  width: 250px;
   margin: 0 auto;
   display: block;
-  padding-top: 20px;
 }
 
 .hidden {
@@ -2433,6 +2433,18 @@ span {
   overflow: visible; /* no scroll */
   padding: 15px 20px 20px;
 }
+.seals-div {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  gap: 7px;
+  font-size: 15px;
+}
+.seals-div p {
+  margin: 0;
+}
 .seals-container img {
   width: 60px; /* control image size */
   height: 60px;
@@ -2454,7 +2466,7 @@ span {
 /* Dropdown container */
 .dropdown-container {
   position: relative;
-  width: 50%;
+  width: 63%;
   /* transform: translateX(-10px);
   width: 200px; */
 }
@@ -2465,12 +2477,12 @@ span {
   height: 100%;
   padding: 0;
   border: 1px solid gray;
-  font-size: 14px;
-  text-align: center;
+  font-size: 16px;
+  padding-left: 10px;
   align-items: center;
   color: black;
   font-weight: 500;
-  height: 30px;
+  height: 40px;
   cursor: pointer;
 }
 #dropdown-input::placeholder {
@@ -2518,13 +2530,14 @@ span {
   gap: 10px;
   align-self: auto;
 }
-.dropdown-option__size{
+.dropdown-option__size {
   display: flex;
   gap: 15px;
 }
-.dropdown-option__size span{
+.dropdown-option__size span {
   padding: 0;
   color: black;
+  font-size: 14px;
 }
 /* Sub-options positioned to the right */
 .sub-options {
@@ -2535,7 +2548,7 @@ span {
   z-index: 101;
   width: 50px;
   top: 94%;
- right: 15px;
+  right: 15px;
   font-size: 12px;
   padding: 0px 2px 0px 5px;
 }
@@ -2586,8 +2599,8 @@ span {
   padding: 20px;
   border: 1px solid #888;
   max-width: 1024px;
-    /* min-width: 55%; */
-    width: 100%;
+  /* min-width: 55%; */
+  width: 100%;
 }
 
 .close {
@@ -2683,6 +2696,7 @@ input:placeholder {
   display: flex;
   align-items: center;
   overflow: hidden;
+  white-space: nowrap;
 }
 
 .order-form {
