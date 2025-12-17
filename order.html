@@ -301,7 +301,7 @@
 
               <div class="order_img_one" style="height: 50%; ">
                 <p class="order_img_one-title"></p>
-                <img class="seal-layout seal-img-target"  src="images/plhold.jpg"  alt="" style="margin-top:20px " >
+                <img class="seal-layout seal-img-target"  src="images/plhold.jpg"  alt="" style="margin-top:20px " loading="lazy">
                 <div class="price-wrapper">
                   <p class="order_img_one-text seal-title"> </p>
                   <p class="price-title1 price-title2">0 руб</p>
@@ -1168,7 +1168,7 @@
               // detailsContent = "ИП: This is the ИП seal option with a base price of $20.";
               detailsContent += "<div class='imageGallery'>";
               IP.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage"> loading="lazy">`;
               });
               detailsContent += "</div>";
               break;
@@ -1176,21 +1176,21 @@
               // detailsContent = "ООО: This is the ООО seal option with a base price of $30.";
               detailsContent += "<div class='imageGallery'>";
               oArray.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage"> loading="lazy">`;
               });
               detailsContent += "</div>";
               break;
             case "3":
               detailsContent += "<div class='imageGallery'>";
               AO.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage"> loading="lazy">`;
               });
               detailsContent += "</div>";
               break;
             case "4":
               detailsContent += "<div class='imageGallery'>";
               OTK.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage"> loading="lazy" >`;
               });
               detailsContent += "</div>";
               break;
@@ -1198,49 +1198,49 @@
               // detailsContent = "ВРАЧ: Displaying doctor images below.";
               detailsContent += "<div class='imageGallery'>";
               doctorsArray.forEach(doctor => {
-                detailsContent += `<img src="${doctor.img}" alt="${doctor.name}" class="sealImage">`;
+                detailsContent += `<img src="${doctor.img}" alt="${doctor.name}" class="sealImage" loading="lazy">`;
               });
               detailsContent += "</div>";
               break;
             case "6":
               detailsContent += "<div class='imageGallery'>";
               test.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy">`;
               });
               detailsContent += "</div>";
               break;
             case "7":
               detailsContent += "<div class='imageGallery'>";
               eklibris.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy"> `;
               });
               detailsContent += "</div>";
               break;
             case "8":
               detailsContent += "<div class='imageGallery'>";
               foreign.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy">`;
               });
               detailsContent += "</div>";
               break;
             case "9":
               detailsContent += "<div class='imageGallery'>";
               comic.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy">`;
               });
               detailsContent += "</div>";
               break;
             case "10":
               detailsContent += "<div class='imageGallery'>";
               kids.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage">`;
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy">`;
               });
               detailsContent += "</div>";
               break;
             default:
               detailsContent += "<div class='imageGallery'>";
               mixed.forEach(mix => {
-                detailsContent += `<img src="${mix.img}" alt="${mix.name}" class="sealImage">`;
+                detailsContent += `<img src="${mix.img}" alt="${mix.name}" class="sealImage" loading="lazy">`;
               });
               detailsContent += "</div>";
               break;
@@ -1400,6 +1400,7 @@
             p.style.fontSize = "18px"
             img.src = seal.href;
             img.classList.add("seal-modal-images")
+            img.setAttribute('loading', 'lazy')
             imgContainer.append(img, title, p)
             sealsContainer.appendChild(imgContainer)
 
