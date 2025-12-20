@@ -628,7 +628,6 @@ input:placeholder {
 	display: grid;
   grid-template-rows: repeat(2, 1fr);
 	gap: 10px;
-	margin-left:10px ;
   height: 100%;
 }
 .price {

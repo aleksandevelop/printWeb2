@@ -24,6 +24,8 @@
   <link href="stylesheets/style.css" media="screen" rel="stylesheet" type="text/css">
   <script src="javascripts/jquery-1.7.1.js" type="text/javascript"></script>
   <script src="javascripts/terrific-1.1.1.js" type="text/javascript"></script>
+  <script src="https://unpkg.com/imask"></script>
+  <script src="javascripts/inputMask.js" type="module" ></script>
   <link href="stylesheets/responsive.css" media="screen" rel="stylesheet" type="text/css">
   <script src="javascripts/responsive.js" type="text/javascript"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -171,19 +173,28 @@
             <!--left form-->
             <div class="order_titles">
               <div class="title_ord">
-                <div class="title">
-                  <p>ИМЯ, ТЕЛЕФОН *</p>
-                </div>
+                <label for="name" class="title">
+                  <p>ИМЯ *</p>
+                </label>
                 <div class="order_input">
-                  <input type="text" name="" required id="name-phone" placeholder="ИМЯ, +7(XXX)XXX-XX-XX">
+                  <input type="text" name="" required id="name" placeholder="Введите своё имя">
+                </div>
+              </div>
+              <div class="title_ord">
+                <label for="phone" class="title">
+                  <p>ТЕЛЕФОН *</p>
+                </label>
+                <div class="order_input">
+                  
+                  <input id="phone" required placeholder="( XXX ) XXX-XX-XX" data-js-input-mask="( 000 ) 000-00-00">
                 </div>
               </div>
               <!-- <div class="line"></div> -->
               <div class="title_ord">
                 <!-- style="padding-bottom: 40px;" -->
-                <div class="title">
+                <label for="dropdown-input" class="title">
                   <p>УСЛУГА *</p>
-                </div>
+                </label>
 
                 <div class="dropdown-container " style="z-index: 1;">
 
@@ -195,9 +206,9 @@
               </div>
               <!-- <div class="line"></div> -->
               <div class="title_ord">
-                <div class="title">
+                <label for="openModalBtn" class="title">
                   <p>МАКЕТ *</p>
-                </div>
+                </label>
                 <div class="order_input">
                   <button type="button" class="" id="openModalBtn">Сделать выбор</button>
                   <p class="invalid invalid2">*обязательное поле</p>
@@ -207,9 +218,9 @@
               <!-- <div class="line"></div> -->
 
               <div class="title_ord">
-                <div class="title">
+                <label for="openBtn1" class="title">
                   <p>ОСТНАСТКА *</p>
-                </div>
+                </label>
                 <div class="order_input">
                   <label for="" class="popup_btn" required id="openBtn1">Выбрать оснастку</label>
                   <p class="invalid invalid5">*обязательное поле</p>
@@ -222,9 +233,9 @@
                 </div>
                 <div class="order_input">
                   <div class="counter">
-                    <button type="button" class="min">-</button>
+                    <button type="button" class="min">--</button>
                     <span class="res">1</span>
-                    <button type="button" class="plus">+</button>
+                    <button type="button" class="plus" style="font-size: 30px;">+</button>
                   </div>
                 </div>
               </div>
@@ -286,14 +297,14 @@
 
             <!--right image-->
             <div class="order_images" style="z-index: 0; ">
-              <div class="order_img_one" >
+              <div class="order_img_one">
                 <p class="order_img_one-title"></p>
                 <img class="seal-layout "
                 src="images/plhold.jpg"
               alt=""  loading="lazy">
                 <div class="price-wrapper">
                   <p class="order_img_one-text"> </p>
-                  <p class="price-title1">0 руб.</p>
+                  <p class="price-title1"></p>
                 </div>
                 <p class="pricee hidden">500 руб</p>
               </div>
@@ -303,7 +314,7 @@
                 <img class="seal-layout seal-img-target"  src="images/plhold.jpg"  alt=""  loading="lazy  ">
                 <div class="price-wrapper">
                   <p class="order_img_one-text seal-title"> </p>
-                  <p class="price-title1 price-title2">0 руб</p>
+                  <p class="price-title1 price-title2"></p>
                 </div>
               </div>
             </div>
@@ -325,121 +336,108 @@
           <div class="dropdown" style="display: grid; gap: 30px;">
             <div class="dropdown-option">
               <label class="dropdown-label" for="Печать">
-                <img style="width: 110px; align-self: center; height: 80px; overflow: hidden; " src="images/layouts/ИП/12.jpg" alt="" loading="lazy">
+                <img style="width: 120px; align-self: center; height: 100px; overflow: hidden; " src="images/layouts/ИП/12.jpg" alt="" loading="lazy">
                 <div class="dropdown-option__label" data-result-text="печати">
 
                   <input id="Печать" name="service" type="radio">
                   <label class="dropdown-option__size" for="Печать">
                     <span>Печать</span>
-                    размер
+                    <span>размер</span>
                   </label>
 
                 </div>
 
               </label>
               <div class="sub-options">
-                <div class="sub-option">12 ММ</div>
-                <div class="sub-option">17 ММ</div>
-                <div class="sub-option">24 ММ</div>
-                <div class="sub-option">30 ММ</div>
-                <div class="sub-option">38 ММ</div>
-                <div class="sub-option">40 ММ</div>
-                <div class="sub-option">45 ММ</div>
-                <div class="sub-option">50 ММ</div>
+                <div class="sub-option"><span>12</span> мм</div>
+                <div class="sub-option"><span>17</span> мм</div>
+                <div class="sub-option"><span>24</span> мм</div>
+                <div class="sub-option"><span>30</span> мм</div>
+                <div class="sub-option"><span>38</span> мм</div>
+                <div class="sub-option"><span>40</span> мм</div>
+                <div class="sub-option"><span>45</span> мм</div>
+                <div class="sub-option"><span>50</span> мм</div>
               </div>
             </div>
             <div class="dropdown-option">
 
               <label class="dropdown-label" for="Штамп1">
-                <img style="width: 110px; height: 80px;   align-self: center;" src="images/layouts/ШТАМП/08.jpg" alt="" loading="lazy">
+                <img style="width: 150px; height: 100px;   align-self: center;" src="images/layouts/ШТАМП/08.jpg" alt="" loading="lazy">
                 <div class="dropdown-option__label"
                   data-result-text="штампа">
                   <input id="Штамп1" name="service" type="radio">
                   <label class="dropdown-option__size" for="Штамп1">
                     <span>Штамп</span>
-                    размер
+                    <span>размер</span>
                   </label>
                 </div>
               </label>
               <div class="sub-options">
-                <div class="sub-option">12 ММ</div>
-                <div class="sub-option">17 ММ</div>
-                <div class="sub-option">24 ММ</div>
-                <div class="sub-option">30 ММ</div>
-                <div class="sub-option">38 ММ</div>
-                <div class="sub-option">40 ММ</div>
-                <div class="sub-option">45 ММ</div>
-                <div class="sub-option">50 ММ</div>
+                <div class="sub-option"><span>26*9</span>мм</div>
+                <div class="sub-option"><span>38*14</span>мм</div>
+                <div class="sub-option"><span>40*40</span>мм</div>
+                <div class="sub-option"><span>47*18</span>мм</div>
+                <div class="sub-option"><span>58*22</span>мм</div>
+                <div class="sub-option"><span>70*25</span>мм</div>
+                <div class="sub-option"><span>75*38</span>мм</div>
+                <div class="sub-option"><span>42</span>мм</div>
               </div>
             </div>
             <div class="dropdown-option">
-              <label class="dropdown-label" for="Штамп"> 
-                <img style="width: 110px; align-self: center; height: 80px;  " src="images/layouts/ШТАМП/01.jpg" alt="" loading="lazy">
+              <label class="dropdown-label" for="Штамп">
+                <img style="width: 120px; align-self: center; height: 100px;  " src="images/layouts/ШТАМП/01.jpg" alt="" loading="lazy">
                 <div class="dropdown-option__label" data-result-text="треугольного штампа">
 
                   <input id="Штамп" name="service" type="radio">
                   <label class="dropdown-option__size" for="Штамп">
                     <span>Штамп</span>
-                    размер
+                    <span>размер</span>
                   </label>
                 </div>
               </label>
               <!-- <div clas -->
               <div class="sub-options">
-                <div class="sub-option">12 ММ</div>
-                <div class="sub-option">17 ММ</div>
-                <div class="sub-option">24 ММ</div>
-                <div class="sub-option">30 ММ</div>
-                <div class="sub-option">38 ММ</div>
-                <div class="sub-option">40 ММ</div>
-                <div class="sub-option">45 ММ</div>
-                <div class="sub-option">50 ММ</div>
+                <div class="sub-option"><span>45*45*45</span></div>
               </div>
             </div>
             <div class="dropdown-option">
               <label class="dropdown-label" for=" факсимиле">
-                <img style="width: 110px; height: 80px;   align-self: center;" src="images/layouts/ЭКЛИБРИС/08.jpg" alt="" loading="lazy">
+                <img style="width: 120px; height: 100px;   align-self: center;" src="images/layouts/ЭКЛИБРИС/08.jpg" alt="" loading="lazy">
                 <div class="dropdown-option__label" data-result-text="факсимиле">
                   <input id="факсимиле" name="service" type="radio">
                   <label class="dropdown-option__size" for="факсимиле">
                     <span>Факсимиле</span>
-                    размер
+                    <span>размер</span>
                   </label>
                 </div>
               </label>
 
               <div class="sub-options">
-                <div class="sub-option">12 ММ</div>
-                <div class="sub-option">17 ММ</div>
-                <div class="sub-option">24 ММ</div>
-                <div class="sub-option">30 ММ</div>
-                <div class="sub-option">38 ММ</div>
-                <div class="sub-option">40 ММ</div>
-                <div class="sub-option">45 ММ</div>
-                <div class="sub-option">50 ММ</div>
+                <div class="sub-option"><span>26*9</span>мм</div>
+                <div class="sub-option"><span>38*14</span>мм</div>
+                <div class="sub-option"><span>40*40</span>мм</div>
+                <div class="sub-option"><span>47*18</span>мм</div>
+                <div class="sub-option"><span>58*22</span>мм</div>
+                <div class="sub-option"><span>70*25</span>мм</div>
+                <div class="sub-option"><span>75*38</span>мм</div>
+                <div class="sub-option"><span>42</span>мм</div>
               </div>
             </div>
             <div class="dropdown-option">
               <label class="dropdown-label" for="Еклибрис">
-                <img style="width: 110px; height: 80px;   align-self: center;" src="images/layouts/ЭКЛИБРИС/08.jpg" alt="" loading="lazy">
+                <img style="width: 120px; height: 100px;   align-self: center;" src="images/layouts/ЭКЛИБРИС/08.jpg" alt="" loading="lazy">
                 <div class="dropdown-option__label" data-result-text="еклибриса">
                   <input id="Еклибрис" name="service" type="radio">
                   <label class="dropdown-option__size" for="Еклибрис">
                     <span>Еклибрис</span>
-                    размер
+                    <span>размер</span>
                   </label>
                 </div>
               </label>
 
               <div class="sub-options">
-                <div class="sub-option">12 ММ</div>
-                <div class="sub-option">17 ММ</div>
-                <div class="sub-option">24 ММ</div>
-                <div class="sub-option">30 ММ</div>
-                <div class="sub-option">38 ММ</div>
-                <div class="sub-option">40 ММ</div>
-                <div class="sub-option">45 ММ</div>
-                <div class="sub-option">50 ММ</div>
+                <div class="sub-option"><span>35^55-овал55</span></div>
+                <div class="sub-option"><span>35^55-овал55</span></div>
               </div>
             </div>
           </div>
@@ -451,16 +449,17 @@
           <span class="close">&times;</span>
           <!-- <h2>Select Seal Type</h2> -->
           <ul id="sealList">
-            <li class="sealOption" data-id="1">ИП</li>
-            <li class="sealOption" data-id="2">ООО</li>
-            <li class="sealOption" data-id="3">АО</li>
-            <li class="sealOption" data-id="4">ОТК</li>
-            <li class="sealOption" data-id="5">ВРАЧ</li>
-            <li class="sealOption" data-id="6">ФАКСИМИЛИ</li>
-            <li class="sealOption" data-id="7">ЕКЛИБРИС</li>
-            <li class="sealOption" data-id="8">ИНОСТРАННЫЙ</li>
-            <li class="sealOption" data-id="9">ПРИКОЛНИЕ</li>
-            <li class="sealOption" data-id="10">ДЕТСКИЕ</li>
+            <li class="sealOption" data-id="1">ип</li>
+            <li class="sealOption" data-id="2">ооо</li>
+            <li class="sealOption" data-id="3">ао</li>
+            <li class="sealOption" data-id="4">отк</li>
+            <li class="sealOption" data-id="5">врач</li>
+            <li class="sealOption" data-id="6">факсимиле</li>
+            <li class="sealOption" data-id="7">эклибрис</li>
+            <li class="sealOption" data-id="8">инностранные</li>
+            <li class="sealOption" data-id="8">самозанятые</li>
+            <li class="sealOption" data-id="9">прикольные</li>
+            <li class="sealOption" data-id="10">детские</li>
           </ul>
           <div id="sealDetails" class="sealDetails"></div>
 
@@ -681,7 +680,7 @@
 
           const submitBtn = e.target.querySelector('[type="submit"]');
           const originalText = submitBtn.textContent;
-
+          let n = 0 // номер заказа
           // Блокируем кнопку
           submitBtn.disabled = true;
 
@@ -689,24 +688,32 @@
             submitBtn.disabled = false;
             return;
           }
-
+          n += 1
 
           const message = `
-      🔔‌Заказ🔔
-      Заказ (${new Date()})
-      
-      Покупатель: ${document.querySelector("#name-phone").value.trim()}
-      Услуга: ${uslugaInput.value}
-      Макет: ${formButton.textContent}
-      Остнаска: ${markType.textContent}
-      Количество: ${res.innerText.trim() || 'Не указано'}
-      Изготовление: ${deliveryTypeTextHtml.value.trim() || 'Не выбрано'}
-      Доставка: ${deliveryDateTextHtml.value.trim() || 'Не выбрано'}
-      Комментарий: ${comment.value || 'Не выбрано'}
+      🔔‌Заказ № ${n}🔔
+
+      <b>№ ${n} </b>
+      ${new Date()}
+
+      Заказ от <b>${document.querySelector("#name").value.trim()}</b>:
+
+      <b>Покупатель:</b> ${document.querySelector("#name").value.trim()}
+      <b>Телефон:</b> ${document.querySelector("#phone").value.trim()}
+      <b>Услуга:</b> ${uslugaInput.value}
+      <b>Макет:</b> ${formButton.textContent}
+      <b>Остнаска:</b> ${markType.textContent}
+      <b>Количество:</b> ${res.innerText.trim() || 'Не указано'}
+
+      <b>Изготовление:</b> ${deliveryTypeTextHtml.value.trim() || 'Не выбрано'}
+      <b>Доставка:</b> ${deliveryDateTextHtml.value.trim() || 'Не выбрано'}
+
+      <b>Комментарий:</b> ${comment.value || 'Не выбрано'}
+
       -------------------------------
-      Итого: ${total.textContent.trim()}
+      <b>Итого</b>: ${total.textContent.trim()}
       
-      Поздравляем вас с продажей!`;
+      <b>Поздравляем вас с продажей!</b>`;
 
           axios.post(url, {
             chat_id: CHAT_ID,
@@ -1167,7 +1174,7 @@
               // detailsContent = "ИП: This is the ИП seal option with a base price of $20.";
               detailsContent += "<div class='imageGallery'>";
               IP.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage"> loading="lazy">`;
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy"> `;
               });
               detailsContent += "</div>";
               break;
@@ -1175,21 +1182,21 @@
               // detailsContent = "ООО: This is the ООО seal option with a base price of $30.";
               detailsContent += "<div class='imageGallery'>";
               oArray.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage"> loading="lazy">`;
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy">`;
               });
               detailsContent += "</div>";
               break;
             case "3":
               detailsContent += "<div class='imageGallery'>";
               AO.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage"> loading="lazy">`;
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy"> `;
               });
               detailsContent += "</div>";
               break;
             case "4":
               detailsContent += "<div class='imageGallery'>";
               OTK.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage"> loading="lazy" >`;
+                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage"  loading="lazy" >`;
               });
               detailsContent += "</div>";
               break;
@@ -1258,7 +1265,7 @@
               document.getElementById("sealDetails").innerHTML = ""
               modal.style.display = "none";
               layoutPrice = 500
-              pr.textContent = layoutPrice + " руб"
+              pr.textContent = layoutPrice + " ₽"
               const total = document.querySelector(".total")
               const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
               total.textContent = newTotal + " рублей"
@@ -1293,7 +1300,7 @@
         // When a sub-option is clicked, set the input value and prevent the dropdown from closing
         subOptions.forEach(subOption => {
           subOption.addEventListener('click', function (e) {
-            const element = e.target.parentElement.previousElementSibling.lastElementChild;
+            const element = this.parentElement.previousElementSibling.lastElementChild;
             const mainCategory = element.querySelector('span').textContent.trim();
             const dataResult = element.dataset.resultText;
 
@@ -1395,7 +1402,7 @@
             const p = document.createElement("p");
 
             title.textContent = seal.name
-            
+
             p.textContent = seal.price + " ₽"
             p.style.color = "#bd3b13"
             p.style.fontSize = "18px"
@@ -1417,7 +1424,7 @@
               titles[1].textContent = "Ocтнастка " + seal.titleName
               const price = document.querySelector(".price-title2");
               target.src = seal.href
-              price.textContent = p.textContent + " руб"
+              price.textContent = p.textContent
               sealTitle.textContent = seal.sealName
               openBtn.textContent = seal.name
 
