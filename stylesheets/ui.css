@@ -717,6 +717,8 @@ div.panel {
 	text-decoration: none;
 	font-size: 15px;
 	font-size: 1.5rem;
+
+	text-transform: uppercase;
 }
 
 .nav-bar>li>input {

@@ -20,6 +20,7 @@
 
   .mainheaders {
     font-size: 35px;
+    text-transform: uppercase;
   }
 
   .subheaders {

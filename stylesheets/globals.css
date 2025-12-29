@@ -530,7 +530,6 @@ embed {
 .title {
   display: flex;
   align-items: center;
-  /* width: 50%; */
 }
 .order_input {
   width: 63%;

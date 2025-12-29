@@ -22,15 +22,10 @@
   <link href="stylesheets/ui.css" media="screen" rel="stylesheet" type="text/css">
   <link href="stylesheets/forms.css" media="screen" rel="stylesheet" type="text/css">
   <link href="stylesheets/style.css" media="screen" rel="stylesheet" type="text/css">
-  <script src="javascripts/jquery-1.7.1.js" type="text/javascript"></script>
-  <!-- <script src="javascripts/terrific-1.1.1.js" type="text/javascript"></script> -->
   <script src="https://unpkg.com/imask"></script>
-  <script src="javascripts/inputMask.js" type="module"></script>
+  <script src="javascripts/main.js" type="module"></script>
   <link href="stylesheets/responsive.css" media="screen" rel="stylesheet" type="text/css">
   <link rel="stylesheet" href="stylesheets/normalize.css">
-  <!-- <script src="javascripts/responsive.js" type="text/javascript"></script> -->
-  <!-- <link rel="preconnect" href="https://fonts.googleapis.com" /> -->
-  <!-- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" /> -->
   <link
     href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap"
     rel="stylesheet" />
@@ -39,304 +34,225 @@
     rel="stylesheet"
     type="text/css" />
 
-  <script src="javascripts/app.js" type="text/javascript"></script>
-
-  <script type='text/javascript'>
-    //<![CDATA[
-    /* terrificjs bootstrap */
-    (function ($) {
-      $(document).ready(function () {
-        var $page = $('body');
-        var config = {
-          dependencyPath: {
-            plugin: 'javascripts/'
-          }
-        };
-        var application = new Tc.Application($page, config);
-        application.registerModules();
-        application.start();
-      });
-    })(Tc.$);
-    //]]>
-  </script>
 </head>
 
 <body>
-  <div class="order_container">
-    <div class='mod modStylePanel'>
-      <a class='switch to-open' href='#' style="display: none;">switch</a>
-      <div class='panel-container'>
-        <h4>Background Patterns</h4>
-        <ul>
-          <li><a id="pattern-1" class="bg_pattern" href="javascript:void(0);">pattern 1</a></li>
-          <li><a id="pattern-2" class="bg_pattern" href="javascript:void(0);">pattern 2</a></li>
-          <li><a id="pattern-3" class="bg_pattern" href="javascript:void(0);">pattern 3</a></li>
-          <li><a id="pattern-4" class="bg_pattern" href="javascript:void(0);">pattern 4</a></li>
-          <li><a id="pattern-5" class="bg_pattern" href="javascript:void(0);">pattern 5</a></li>
-          <li><a id="pattern-6" class="bg_pattern" href="javascript:void(0);">pattern 6</a></li>
-          <li><a id="pattern-7" class="bg_pattern" href="javascript:void(0);">pattern 7</a></li>
-          <li><a id="pattern-8" class="bg_pattern" href="javascript:void(0);">pattern 8</a></li>
-          <li><a id="pattern-9" class="bg_pattern" href="javascript:void(0);">pattern 9</a></li>
-          <li><a id="pattern-10" class="bg_pattern" href="javascript:void(0);">pattern 10</a></li>
-        </ul>
-        <h4>Color schemes</h4>
-        <ul>
-          <li><a id="red" class="color_scheme" href="javascript:void(0);">Red</a></li>
-          <li><a id="cyan" class="color_scheme" href="javascript:void(0);">Cyan</a></li>
+
+
+  <header class="container" id="header">
+    <div class="row">
+      <div class='push-ten mobile-social' style=" display: flex; justify-content: end;">
+        <ul class="mod modSocial icons">
+          <li class="icons__item">
+            <a href="/" class="icons_link" title="WhatsApp">
+              <img src="images/social/whatsapp-fill.png" alt="WhatsApp" loading="lazy"></a>
+          </li>
+          <li class="icons__item">
+            <a href="/" class="icons_link" title="telegram">
+              <img src="images/social/telegram-fill.png" alt="Telegram" loading="lazy"></a>
+          </li>
+          <li class="icons__item">
+            <a href="/" class="icons_link " title="VK">
+              <img src="images/social/vk-social-network-logo.png"  alt="VK" loading="lazy"></a>
+          </li>
+
+
         </ul>
       </div>
     </div>
-
-    <!--navbar-->
-    <div class='container' id='header'>
-      <div class='row'>
-        <div class='push-ten mobile-social' style=" display: flex; justify-content: end;">
-          <ul class="mod modSocial icons" data-connectors="1">
-            <li class="icons__item">
-              <a href="/" class="icons_link" title="WhatsApp">
-                <img src="images/social/whatsapp-fill.png" alt="WhatsApp"></a>
+    <div class="row navbar-row">
+      <div class="two columns logo-container">
+        <div class="mod modLogo">
+          <h2><a href="index.html">Печати и штампы</a></h2>
+        </div>
+      </div>
+      <div class="ten columns nav-container">
+        <div class="mod modNav right">
+          <ul class="nav-bar" id="navLinks">
+            <li>
+              <a class="main Steelfish current" href="order.html">Онлайн заказ</a>
             </li>
-            <li class="icons__item">
-              <a href="/" class="icons_link" title="telegram">
-                <img src="images/social/telegram-fill.png" alt="Telegram"></a>
+            <li>
+              <a class="main Steelfish " href="services.html">Услуги</a>
             </li>
-            <li class="icons__item">
-              <a href="/" class="icons_link " title="VK">
-                <img src="images/social/vk-social-network-logo.png"  alt="VK"></a>
+            <li><a class="main Steelfish" href="store.html">Магазин</a></li>
+            <li>
+              <a class="main Steelfish" href="portfolio.html">Портфолио</a>
             </li>
-
-
+            <li>
+              <a class="main Steelfish" href="contact.html">Контакты</a>
+            </li>
           </ul>
         </div>
       </div>
-      <div class='row navbar-row'>
-        <div class='two logo-container'>
-          <div class='mod modLogo'>
-            <h2>
-              <a href="index.html">Vagenta</a>
-            </h2>
-          </div>
-        </div>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-        <div class='ten columns nav-container'>
-          <div class='mod modNav right'>
-            <ul class="nav-bar" id="navLinks">
-              <li>
-                <a class="main current" href="order.html">ОНЛАЙН ЗАКАЗ</a>
-              </li>
-              <li>
-                <a class="main" href="services.html">УСЛУГИ</a>
-              </li>
-              <li>
-                <a class="main" href="store.html">МАГАЗИН</a>
-              </li>
-              <li>
-                <a class="main" href="portfolio.html">ПОРТФОЛИО</a>
-              </li>
-              <li>
-                <a class="main" href="contact.html">КОНТАКТЫ</a>
-              </li>
-            </ul>
-          </div>
-        </div>
+    </div>
+  </header>
+
+
+  <main class="container">
+    <section class="row">
+      <div class="mod modSectionHeader">
+        <h3 class="text-center uslug mainheaders">
+          ОНЛАЙН ЗАКАЗ
+        </h3>
       </div>
-    </div>
-    <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
-    <!-- OFFCANVAS MENU -->
-    <div id="offcanvasMenu" class="offcanvas">
-      <span class="closebtn" onclick="toggleMenu()">&times;</span>
-      <ul>
-        <li><a class="main current" href="index.html">ОНЛАЙН ЗАКАЗ</a></li>
-        <li><a href="services.html">УСЛУГИ</a></li>
-        <li><a href="store.html">МАГАЗИН</a></li>
-        <li><a href="portfolio.html">ПОРТФОЛИО</a></li>
-        <li><a href="contact.html">КОНТАКТЫ</a></li>
-      </ul>
-    </div>
-    <!--navbar end-->
-    <div class="container">
-      <div class="row">
-        <div class="twelve columns">
-          <div class="mod modSectionHeader" data-connectors="1">
-            <h3 class="text-center uslug mainheaders">
-              ОНЛАЙН ЗАКАЗ
-            </h3>
-          </div>
-        </div>
-      </div>
-    </div>
+      <div class="order">
+        <form class="order-form">
+          <!--left form-->
 
-    <div class="container">
-      <div class="row">
-        <div class="order">
+          <input type="hidden" name="form_type" value="order">
 
-          <form class="order-form">
-            <!--left form-->
-
-            <input type="hidden" name="form_type" value="order">
-
-            <div class="order_titles">
-              <div class="title_ord">
-                <label for="name" class="title">
-                  <p>ИМЯ *</p>
-                </label>
-                <div class="order_input">
-                  <input type="text"
-                    id="name" name="name" required id="name" placeholder="Введите своё имя"
-                    pattern="^[А-Яа-яЁёA-Za-z\s]{2,50}$"
-                    title="Введите имя (2-50 символов, только буквы и пробелы)">
-                </div>
+          <div class="order_titles">
+            <div class="title_ord">
+              <label for="name" class="title">
+                <p>ИМЯ *</p>
+              </label>
+              <div class="order_input">
+                <input type="text"
+                  id="name" name="name" required id="name" placeholder="Введите своё имя"
+                  pattern="^[А-Яа-яЁёA-Za-z\s]{2,50}$"
+                  title="Введите имя (2-50 символов, только буквы и пробелы)">
               </div>
-              <div class="title_ord">
-                <label for="phone" class="title">
-                  <p>ТЕЛЕФОН *</p>
-                </label>
-                <div class="order_input">
-
-                  <input id="phone" required placeholder="( XXX ) XXX-XX-XX" data-js-input-mask="( 000 ) 000-00-00">
-                </div>
-              </div>
-              <!-- <div class="line"></div> -->
-              <div class="title_ord">
-                <!-- style="padding-bottom: 40px;" -->
-                <label for="dropdown-input" class="title">
-                  <p>УСЛУГА *</p>
-                </label>
-
-                <div class="dropdown-container " style="z-index: 1;">
-
-                  <input type="text" id="dropdown-input" readonly required placeholder="Выбрать услугу">
-                  <p class="invalid invalid1">*обязательное поле</p>
-
-                </div>
-
-              </div>
-              <!-- <div class="line"></div> -->
-              <div class="title_ord">
-                <label for="openModalBtn" class="title">
-                  <p>МАКЕТ *</p>
-                </label>
-                <div class="order_input">
-                  <button type="button" class="" id="openModalBtn">Сделать выбор</button>
-                  <p class="invalid invalid2">*обязательное поле</p>
-
-                </div>
-              </div>
-              <!-- <div class="line"></div> -->
-
-              <div class="title_ord">
-                <label for="openBtn1" class="title">
-                  <p>ОСТНАСТКА *</p>
-                </label>
-                <div class="order_input">
-                  <label for="" class="popup_btn" required id="openBtn1">Выбрать оснастку</label>
-                  <p class="invalid invalid5">*обязательное поле</p>
-                </div>
-              </div>
-              <!-- <div class="line"></div> -->
-              <div class="title_ord">
-                <div class="title">
-                  <p>КОЛИЧЕСТВО</p>
-                </div>
-                <div class="order_input">
-                  <div class="counter">
-                    <button type="button" class="min">--</button>
-                    <span class="res">1</span>
-                    <button type="button" class="plus" style="font-size: 30px;">+</button>
-                  </div>
-                </div>
-              </div>
-              <!-- <div class="line"></div> -->
-              <div class="title_ord">
-                <div class="title">
-                  <p>ИЗГОТОВЛЕНИЕ *</p>
-                </div>
-                <div class="order_input delivery_type_parent">
-                  <input class="delivery_type delivery_type-date" required readonly type="text"
-                    placeholder="Сделать выбор">
-                  <div style="width: 100%;">
-                    <li class="delivery-priority">срочно <span>+300</span></li>
-                    <li class="delivery-priority">стандартно (2-3 часа) <span>???</span></li>
-                    <li class="delivery-priority">1 день <span>???</span></li>
-                  </div>
-                  <p class="invalid invalid3">*обязательное поле</p>
-
-                </div>
-              </div>
-              <!-- <div class="line"></div> -->
-              <div class="title_ord" style="padding-bottom: 20px;">
-                <div class="title">
-                  <p>ДОСТАВКА *</p>
-                </div>
-                <div class="order_input delivery_type_parent">
-
-                  <input class="delivery_type delivery_type-delivery" readonly required type="text"
-                    placeholder="Сделать выбор">
-
-                  <div style="width: 100%;">
-                    <li class="delivery-option">Cамовывоз <span>бесплатно</span></li>
-                    <li class="delivery-option">Доставка до подезда <span>+300</span></li>
-                    <li class="delivery-option">Доставка до метро <span>+200</span></li>
-                  </div>
-                  <p class="invalid invalid4" style="pointer-events: none;">*обязательное поле</p>
-
-                </div>
-              </div>
-              <!-- <div class="line"></div> -->
-              <div class="title_ord last-title-ord">
-                <div class="title">
-                  <p>КОМЕНТАРИЙ</p>
-                </div>
-                <div class="order_input">
-                  <textarea name="comment"
-                    id="order__textarea"
-                    placeholder="Оставьте комментарий"></textarea>
-                </div>
-              </div>
-              <button type="submit" class="price total">
-                0 рублей
-              </button>
-              <!-- <div class="order_link">
-              <a href="#">СДЕЛАТЬ ЗАКАЗ</a>
-            </div> -->
             </div>
-            <!--left form ends-->
+            <div class="title_ord">
+              <label for="phone" class="title">
+                <p>ТЕЛЕФОН *</p>
+              </label>
+              <div class="order_input">
 
-            <!--right image-->
-            <div class="order_images" style="z-index: 0; ">
-              <div class="order_img_one">
-                <p class="order_img_one-title"></p>
-                <img class="seal-layout "
+                <input id="phone" required placeholder="( XXX ) XXX-XX-XX" data-js-input-mask="( 000 ) 000-00-00">
+              </div>
+            </div>
+            <!-- <div class="line"></div> -->
+            <div class="title_ord">
+              <!-- style="padding-bottom: 40px;" -->
+              <label for="dropdown-input" class="title">
+                <p>УСЛУГА *</p>
+              </label>
+
+              <div class="dropdown-container " style="z-index: 1;">
+
+                <input type="text" id="dropdown-input" readonly required placeholder="Выбрать услугу">
+                <p class="invalid invalid1">*обязательное поле</p>
+
+              </div>
+
+            </div>
+            <!-- <div class="line"></div> -->
+            <div class="title_ord">
+              <label for="openModalBtn" class="title">
+                <p>МАКЕТ *</p>
+              </label>
+              <div class="order_input">
+                <button type="button" class="" id="openModalBtn">Сделать выбор</button>
+                <p class="invalid invalid2">*обязательное поле</p>
+
+              </div>
+            </div>
+            <!-- <div class="line"></div> -->
+
+            <div class="title_ord">
+              <label for="openBtn1" class="title">
+                <p>ОСТНАСТКА *</p>
+              </label>
+              <div class="order_input">
+                <label for="" class="popup_btn" required id="openBtn1">Выбрать оснастку</label>
+                <p class="invalid invalid5">*обязательное поле</p>
+              </div>
+            </div>
+            <!-- <div class="line"></div> -->
+            <div class="title_ord">
+              <div class="title">
+                <p>КОЛИЧЕСТВО</p>
+              </div>
+              <div class="order_input">
+                <div class="counter">
+                  <button type="button" class="min">--</button>
+                  <span class="res">1</span>
+                  <button type="button" class="plus" style="font-size: 30px;">+</button>
+                </div>
+              </div>
+            </div>
+            <!-- <div class="line"></div> -->
+            <div class="title_ord">
+              <div class="title">
+                <p>ИЗГОТОВЛЕНИЕ *</p>
+              </div>
+              <div class="order_input delivery_type_parent">
+                <input class="delivery_type delivery_type-date" required readonly type="text"
+                  placeholder="Сделать выбор">
+                <div style="width: 100%;">
+                  <li class="delivery-priority">срочно <span>+300</span></li>
+                  <li class="delivery-priority">стандартно (2-3 часа) <span>???</span></li>
+                  <li class="delivery-priority">1 день <span>???</span></li>
+                </div>
+                <p class="invalid invalid3">*обязательное поле</p>
+
+              </div>
+            </div>
+            <!-- <div class="line"></div> -->
+            <div class="title_ord" style="padding-bottom: 20px;">
+              <div class="title">
+                <p>ДОСТАВКА *</p>
+              </div>
+              <div class="order_input delivery_type_parent">
+
+                <input class="delivery_type delivery_type-delivery" readonly required type="text"
+                  placeholder="Сделать выбор">
+
+                <div style="width: 100%;">
+                  <li class="delivery-option">Cамовывоз <span>бесплатно</span></li>
+                  <li class="delivery-option">Доставка до подезда <span>+300</span></li>
+                  <li class="delivery-option">Доставка до метро <span>+200</span></li>
+                </div>
+                <p class="invalid invalid4" style="pointer-events: none;">*обязательное поле</p>
+
+              </div>
+            </div>
+            <!-- <div class="line"></div> -->
+            <div class="title_ord last-title-ord">
+              <div class="title">
+                <p>КОМЕНТАРИЙ</p>
+              </div>
+              <div class="order_input">
+                <textarea name="comment"
+                  id="order__textarea"
+                  placeholder="Оставьте комментарий"></textarea>
+              </div>
+            </div>
+            <button type="submit" class="price total">
+              0 рублей
+            </button>
+          </div>
+          <div class="order_images" style="z-index: 0; ">
+            <div class="order_img_one">
+              <p class="order_img_one-title"></p>
+              <img class="seal-layout "
                 src="images/plhold.jpg"
               alt=""  loading="lazy">
-                <div class="price-wrapper">
-                  <p class="order_img_one-text"> </p>
-                  <p class="price-title1"></p>
-                </div>
-                <p class="pricee hidden">500 руб</p>
+              <div class="price-wrapper">
+                <p class="order_img_one-text"> </p>
+                <p class="price-title1"></p>
               </div>
+              <p class="pricee hidden">500 руб</p>
+            </div>
 
-              <div class="order_img_one">
-                <p class="order_img_one-title"></p>
-                <img class="seal-layout seal-img-target"  src="images/plhold.jpg"  alt=""  loading="lazy  ">
-                <div class="price-wrapper">
-                  <p class="order_img_one-text seal-title"> </p>
-                  <p class="price-title1 price-title2"></p>
-                </div>
+            <div class="order_img_one">
+              <p class="order_img_one-title"></p>
+              <img class="seal-layout seal-img-target"  src="images/plhold.jpg"  alt=""  loading="lazy  ">
+              <div class="price-wrapper">
+                <p class="order_img_one-text seal-title"> </p>
+                <p class="price-title1 price-title2"></p>
               </div>
             </div>
-          </form>
-        </div>
+          </div>
+        </form>
       </div>
-
-      <!-- <button >Choose Seal</button> -->
-
       <div id="serviceModal" class="modal">
         <div class="modal-content">
           <div><span class="close">&times;</span>
             <p style="margin: 0;font-size: 20px;">Выберите вид печати</p>
 
-            <!-- <hr style="border: none; height: 4px;"> -->
             <div style="width: 104%;margin: 12px 0;height: 2px;background-color: black;transform: translateX(-2%);">
             </div>
           </div>
@@ -451,7 +367,6 @@
           </div>
         </div>
       </div>
-      <!-- Modal Structure -->
       <div id="sealModal" class="modal">
         <div class="modal-content">
           <span class="close">&times;</span>
@@ -473,281 +388,297 @@
 
         </div>
       </div>
-
-
-
-      <div class="row" style="margin-top: 50px;">
-        <div class="mod modSectionHeader" data-connectors="1">
-          <h3 class="text-center mainheaders">
-            НАШИ ОТЗЫВЫ
-          </h3>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="six columns">
-          <div class="mod modBlogNews" data-connectors="1">
-            <h3 class="title subheaders nexaScriptHeavyFont" style="text-transform: none;">Отзывы о Нас</h3>
-            <ul style="
-            display: flex;
-            flex-direction: column;
-            gap: 35px;">
-              <li>
-                <p class="left text-center timestamp">
-                  <span class="month">Nov</span>
-                  <span class="date">26</span>
-                  <span class="year">2011</span>
-                </p>
-                <h4><a href="single.html" style="text-transform: none;">Наталия, Домохозяйка</a></h4>
-                <p class="excerpt">
-                  Dicta est deserunt esse eos rerum eaque corrupti ut dolores nobis id non neque ratione. Quisquam natus
-                  nemo quas repudiandae sit at qui recusandae
-                </p>
-              </li>
-              <li>
-                <p class="left text-center timestamp">
-                  <span class="month">Nov</span>
-                  <span class="date">26</span>
-                  <span class="year">2011</span>
-                </p>
-                <h4><a href="single.html" style="text-transform: none;">Сергей, Предприниматель</a></h4>
-                <p class="excerpt">
-                  Inventore laudantium sint delectus expedita aliquid numquam quam sit aut nemo omnis sapiente in. Aut
-                  est
-                  voluptatem reiciendis eum beatae et hic architecto corrupti fugit dolor voluptas
-                </p>
-              </li>
-              <li>
-                <p class="left text-center timestamp">
-                  <span class="month">Nov</span>
-                  <span class="date">26</span>
-                  <span class="year">2011</span>
-                </p>
-                <h4><a href="single.html" style="text-transform: none;">Ленар, Директор 000</a></h4>
-                <p class="excerpt">
-                  Quis quis odio sit quia aspernatur cum fugit sed aut praesentium est. Dicta et esse voluptas alias
-                  occaecati et eos accusantium et iste odio eaque nulla animi
-                </p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="six columns">
-          <div class="mod modTestimonials" data-connectors="1">
-            <h3
-              class="mainheaders nexaScriptHeavyFont"
-              style="text-transform: none">
-              Оставить Отзыв
-            </h3>
-
-            <form id="feedbackForm" action="https://api.web3forms.com/submit" method="POST">
-              <input type="hidden" name="access_key" value="d75a56e0-7cf0-4715-93eb-17ee229d7ce5">
-              <input type="hidden" name="form_type" value="review">
-              <div class="contacts">
-                <div class="inp">
-                  <input
-                    type="text"
-                    id="user_name"
-                    name="user_name"
-                    placeholder="Имя"
-                    required
-                    pattern="^[А-Яа-яЁёA-Za-z\s]{2,50}$"
-                    title="Введите имя (2-50 символов, только буквы и пробелы)" />
-
-                  <input
-                    type="text"
-                    id="user_status"
-                    name="user_status"
-                    style="margin-top: 20px"
-                    placeholder="Статус"
-                    required
-                    pattern="^[А-Яа-яЁёA-Za-z\s]{2,50}$"
-                    title="Введите имя (2-50 символов, только буквы и пробелы)" />
-                  <input
-                    type="email"
-                    id="user_email"
-                    name="user_email"
-                    placeholder="Почта"
-                    style="margin-top: 20px"
-                    required
-                    pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
-                    title="Введите корректный email адрес" />
-
-                  <textarea
-                    id="user_message"
-                    name="user_message"
-                    placeholder="Сообщение"
-                    required
-                    minlength="10"
-                    maxlength="1000"
-                    rows="4"
-                    title="Сообщение должно быть от 10 до 1000 символов"></textarea>
-                </div>
-              </div>
-
-
-              <div class="send">
-                <button type="submit" id="submitBtn">Отправить</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-
       <dialog>
         <button class="dialog-close" aria-label="Close dialog">&times;</button>
         <div class="seals-container">
 
         </div>
       </dialog>
+    </section>
 
 
 
-      <footer class="footer" id="footer">
-        <div class="footer__container ">
-          <div class="footer__main row">
-            <h6>Казань ул.Ф.Амирхана</h6>
-            <div class="social">
-              <a href="/"
-                class="social__link"><img src="images/social/whatsapp-fill.png" alt="whatsapp" loading="lazy"></a>
-              <a href="/"
-                class="social__link"><img src="images/social/telegram-fill.png" alt="telegram"  loading="lazy"></a>
-              <a href="/" class="social__link"><img src="images/social/viber.png" alt="viber" loading="lazy"></a>
-              <a href="/"
-                class="social__link"><img src="images/social/vk-social-network-logo.png" alt="VK " loading="lazy"></a>
+
+
+
+    <section class="row">
+      <div class="mod modSectionHeader" style="
+    margin-bottom: 40px;">
+        <h3 class="text-center mainheaders">Наши отзывы</h3>
+      </div>
+
+      <div style="
+    width: 100%;
+    display: grid;
+    grid-template-columns: calc(52% - 5px) calc(48% - 5px);
+    gap: 10px;">
+        <div class="mod modBlogNews">
+          <h3 class="title subheaders nexaScriptHeavyFont" style="text-transform: none">
+            Отзывы о Нас
+          </h3>
+          <ul style="
+            display: flex;
+            flex-direction: column;
+            gap: 35px;">
+            <li>
+              <p class="left text-center timestamp">
+                <span class="month">Nov</span>
+                <span class="date">26</span>
+                <span class="year">2011</span>
+              </p>
+              <h4>
+                <a href="single.html" style="text-transform: none">Наталия, Домохозяйка</a>
+              </h4>
+              <p class="excerpt">
+                Dicta est deserunt esse eos rerum eaque corrupti ut dolores
+                nobis id non neque ratione. Quisquam natus nemo quas
+                repudiandae sit at qui recusandae
+              </p>
+            </li>
+            <li>
+              <p class="left text-center timestamp">
+                <span class="month">Nov</span>
+                <span class="date">26</span>
+                <span class="year">2011</span>
+              </p>
+              <h4>
+                <a href="single.html" style="text-transform: none">Сергей, Предприниматель</a>
+              </h4>
+              <p class="excerpt">
+                Inventore laudantium sint delectus expedita aliquid numquam
+                quam sit aut nemo omnis sapiente in. Aut est voluptatem
+                reiciendis eum beatae et hic architecto corrupti fugit dolor
+                voluptas
+              </p>
+            </li>
+            <li>
+              <p class="left text-center timestamp">
+                <span class="month">Nov</span>
+                <span class="date">26</span>
+                <span class="year">2011</span>
+              </p>
+              <h4>
+                <a href="single.html" style="text-transform: none">Ленар, Директор 000</a>
+              </h4>
+              <p class="excerpt">
+                Quis quis odio sit quia aspernatur cum fugit sed aut
+                praesentium est. Dicta et esse voluptas alias occaecati et eos
+                accusantium et iste odio eaque nulla animi
+              </p>
+            </li>
+          </ul>
+        </div>
+
+        <div>
+          <h3
+            class="mainheaders nexaScriptHeavyFont"
+            style="margin-bottom: 40px;text-transform: none">
+            Оставить Отзыв
+          </h3>
+
+          <form id="feedbackForm" action="https://api.web3forms.com/submit" method="POST">
+            <input type="hidden" name="access_key" value="d75a56e0-7cf0-4715-93eb-17ee229d7ce5">
+            <input type="hidden" name="form_type" value="review">
+            <div class="contacts">
+              <div class="inp">
+                <input
+                  type="text"
+                  id="user_name"
+                  name="user_name"
+                  placeholder="Имя, статус"
+                  required
+                  pattern="^[А-Яа-яЁёA-Za-z\s]{2,50}$"
+                  title="Введите имя (2-50 символов, только буквы и пробелы)" />
+
+                <input
+                  type="text"
+                  id="user_status"
+                  name="user_status"
+                  style="margin-top: 20px"
+                  placeholder="Статус"
+                  required
+                  pattern="^[А-Яа-яЁёA-Za-z\s]{2,50}$"
+                  title="Введите имя (2-50 символов, только буквы и пробелы)" />
+                <input
+                  type="email"
+                  id="user_email"
+                  name="user_email"
+                  placeholder="Почта"
+                  style="margin-top: 20px"
+                  required
+                  pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
+                  title="Введите корректный email адрес" />
+
+                <textarea
+                  id="user_message"
+                  name="user_message"
+                  placeholder="Сообщение"
+                  required
+                  minlength="10"
+                  maxlength="1000"
+                  rows="4"
+                  title="Сообщение должно быть от 10 до 1000 символов"></textarea>
+              </div>
             </div>
-            <h6>89370090705 / info@mail.ru</h6>
+
+
+            <div class="send">
+              <button type="submit" id="submitBtn">Отправить</button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+    <footer class="footer" id="footer">
+      <div class="footer__container ">
+        <div class="footer__main row">
+          <h6>Казань ул.Ф.Амирхана</h6>
+          <div class="social">
+            <a href="/"
+              class="social__link"><img src="images/social/whatsapp-fill.png" alt="whatsapp" loading="lazy"></a>
+            <a href="/"
+              class="social__link"><img src="images/social/telegram-fill.png" alt="telegram"  loading="lazy"></a>
+            <a href="/" class="social__link"><img src="images/social/viber.png" alt="viber" loading="lazy"></a>
+            <a href="/"
+              class="social__link"><img src="images/social/vk-social-network-logo.png" alt="VK " loading="lazy"></a>
           </div>
+          <h6>89370090705 / info@mail.ru</h6>
         </div>
-        <div class="container">
-          <p class="copy">© 2022. Печати и Штампы в Казани</p>
-        </div>
-      </footer>
+      </div>
+      <div class="container">
+        <p class="copy">© 2022. Печати и Штампы в Казани</p>
+      </div>
+    </footer>
 
-      <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="module" src="javascripts/main.js"></script>
 
-      <script src="ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script>
-        $(document).ready(function () {
-          $('#choose-file').change(function () {
-            var i = $(this).prev('label').clone();
-            var file = $('#choose-file')[0].files[0].name;
-            $(this).prev('label').text(file);
-          });
+    <script>
+      $(document).ready(function () {
+        $('#choose-file').change(function () {
+          var i = $(this).prev('label').clone();
+          var file = $('#choose-file')[0].files[0].name;
+          $(this).prev('label').text(file);
         });
-      </script>
-      <script>
-        const min = document.querySelector('.min')
-        const plus = document.querySelector('.plus')
-        const res = document.querySelector('.res')
-        const total = document.querySelector(".total");
+      });
+    </script>
+    <script>
+      const min = document.querySelector('.min')
+      const plus = document.querySelector('.plus')
+      const res = document.querySelector('.res')
+      const total = document.querySelector(".total");
 
-        min.addEventListener('click', function () {
-          if (Number(res.innerText) === 0) {
-            return
-          }
-          res.innerText = Number(res.innerText) - 1;
-          const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
-          total.textContent = newTotal + " рублей"
-        })
-        plus.addEventListener('click', function () {
-          res.innerText = Number(res.innerText) + 1;
-          const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
-          total.textContent = newTotal + " рублей"
-        })
+      min.addEventListener('click', function () {
+        if (Number(res.innerText) === 0) {
+          return
+        }
+        res.innerText = Number(res.innerText) - 1;
+        const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
+        total.textContent = newTotal + " рублей"
+      })
+      plus.addEventListener('click', function () {
+        res.innerText = Number(res.innerText) + 1;
+        const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
+        total.textContent = newTotal + " рублей"
+      })
 
-      </script>
-      <script>
-        let sealPrice = 0;
-        let deliverPrice = 0;
-        let preparationFee = 0
-        let layoutPrice = 0
+    </script>
+    <script>
+      let sealPrice = 0;
+      let deliverPrice = 0;
+      let preparationFee = 0
+      let layoutPrice = 0
 
-        // let closeButton = document.querySelector(".popub_close")
-        let openBtn = document.querySelector(".popup_btn")
-        let popup = document.querySelector("dialog")
-        const orderBtn = document.querySelector("div.price.total")
+      // let closeButton = document.querySelector(".popub_close")
+      let openBtn = document.querySelector(".popup_btn")
+      let popup = document.querySelector("dialog")
+      const orderBtn = document.querySelector("div.price.total")
 
-        const TOKEN = '8542757312:AAFYeJvaPyZ2lzvAIS3q3CIbE_XLaIFlTOs'
-        const CHAT_ID = '-1003429644025'
-        const url = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+      const TOKEN = '8542757312:AAFYeJvaPyZ2lzvAIS3q3CIbE_XLaIFlTOs'
+      const CHAT_ID = '-1003429644025'
+      const url = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
 
-        const uslugaInput = document.querySelector('#dropdown-input');
-        const invalidEl = document.querySelector('.invalid.invalid1');
+      const uslugaInput = document.querySelector('#dropdown-input');
+      const invalidEl = document.querySelector('.invalid.invalid1');
 
-        const formButton = document.querySelector('#openModalBtn');
-        const invalidEl2 = document.querySelector('.invalid.invalid2');
+      const formButton = document.querySelector('#openModalBtn');
+      const invalidEl2 = document.querySelector('.invalid.invalid2');
 
-        const deliveryDate = document.querySelector('.delivery_type-date');
-        const invalidEl3 = document.querySelector('.invalid.invalid3');
+      const deliveryDate = document.querySelector('.delivery_type-date');
+      const invalidEl3 = document.querySelector('.invalid.invalid3');
 
-        const deliveryType = document.querySelector('.delivery_type-delivery');
-        const invalidEl4 = document.querySelector('.invalid.invalid4');
+      const deliveryType = document.querySelector('.delivery_type-delivery');
+      const invalidEl4 = document.querySelector('.invalid.invalid4');
 
 
-        const markType = document.querySelector('#openBtn1');
-        const invalidEl5 = document.querySelector('.invalid.invalid5');
+      const markType = document.querySelector('#openBtn1');
+      const invalidEl5 = document.querySelector('.invalid.invalid5');
 
-        const comment = document.querySelector('#order__textarea')
+      const comment = document.querySelector('#order__textarea')
 
-        // Функция валидации
-        function validateUsluga() {
-          // Получаем все значения
-          const isEmpty1 = !uslugaInput.value || uslugaInput.value === 'Выбрать услугу';
-          const isEmpty2 = !formButton.textContent || formButton.textContent === 'Сделать выбор';
-          const isEmpty3 = !deliveryDate.value || deliveryDate.value === 'Сделать выбор';
-          const isEmpty4 = !deliveryType.value || deliveryType.value === 'Сделать выбор';
-          const isEmpty5 = !markType.textContent || markType.textContent === 'Выбрать оснастку';
-          // Проверяем, что элементы существуют
-          if (invalidEl) {
-            invalidEl.style.display = isEmpty1 ? 'block' : 'none';
-          }
-          if (invalidEl2) {
-            invalidEl2.style.display = isEmpty2 ? 'block' : 'none';
-          }
-          if (invalidEl3) {
-            invalidEl3.style.display = isEmpty3 ? 'block' : 'none';
-          }
-          if (invalidEl4) {
-            invalidEl4.style.display = isEmpty4 ? 'block' : 'none';
-          }
-          if (invalidEl5) {
-            invalidEl5.style.display = isEmpty5 ? 'block' : 'none';
-          }
-
-          // Находим кнопку отправки
-          const submitBtn = document.querySelector('[type="submit"]');
-
-          // Если кнопка существует
-          if (submitBtn) {
-            // Блокируем если ЛЮБОЕ поле пустое
-            const anyFieldEmpty = isEmpty1 || isEmpty2 || isEmpty3 || isEmpty4 || isEmpty5;
-            submitBtn.disabled = anyFieldEmpty;
-          }
-
-          // Возвращаем true если ВСЕ поля заполнены
-          const allFieldsFilled = !isEmpty1 && !isEmpty2 && !isEmpty3 && !isEmpty4 && !isEmpty5;
-          return allFieldsFilled; // true = можно отправлять
+      // Функция валидации
+      function validateUsluga() {
+        // Получаем все значения
+        const isEmpty1 = !uslugaInput.value || uslugaInput.value === 'Выбрать услугу';
+        const isEmpty2 = !formButton.textContent || formButton.textContent === 'Сделать выбор';
+        const isEmpty3 = !deliveryDate.value || deliveryDate.value === 'Сделать выбор';
+        const isEmpty4 = !deliveryType.value || deliveryType.value === 'Сделать выбор';
+        const isEmpty5 = !markType.textContent || markType.textContent === 'Выбрать оснастку';
+        // Проверяем, что элементы существуют
+        if (invalidEl) {
+          invalidEl.style.display = isEmpty1 ? 'block' : 'none';
+        }
+        if (invalidEl2) {
+          invalidEl2.style.display = isEmpty2 ? 'block' : 'none';
+        }
+        if (invalidEl3) {
+          invalidEl3.style.display = isEmpty3 ? 'block' : 'none';
+        }
+        if (invalidEl4) {
+          invalidEl4.style.display = isEmpty4 ? 'block' : 'none';
+        }
+        if (invalidEl5) {
+          invalidEl5.style.display = isEmpty5 ? 'block' : 'none';
         }
 
+        // Находим кнопку отправки
+        const submitBtn = document.querySelector('[type="submit"]');
 
-        document.querySelector(".order-form").addEventListener('submit', function (e) {
+        // Если кнопка существует
+        if (submitBtn) {
+          // Блокируем если ЛЮБОЕ поле пустое
+          const anyFieldEmpty = isEmpty1 || isEmpty2 || isEmpty3 || isEmpty4 || isEmpty5;
+          submitBtn.disabled = anyFieldEmpty;
+        }
 
-          e.preventDefault();
+        // Возвращаем true если ВСЕ поля заполнены
+        const allFieldsFilled = !isEmpty1 && !isEmpty2 && !isEmpty3 && !isEmpty4 && !isEmpty5;
+        return allFieldsFilled; // true = можно отправлять
+      }
 
-          const submitBtn = e.target.querySelector('[type="submit"]');
-          const originalText = submitBtn.textContent;
-          let n = 0 // номер заказа
-          // Блокируем кнопку
-          submitBtn.disabled = true;
 
-          if (!validateUsluga()) {
-            submitBtn.disabled = false;
-            return;
-          }
-          n += 1
+      document.querySelector(".order-form").addEventListener('submit', function (e) {
 
-          const message = `
+        e.preventDefault();
+
+        const submitBtn = e.target.querySelector('[type="submit"]');
+        const originalText = submitBtn.textContent;
+        let n = 0 // номер заказа
+        // Блокируем кнопку
+        submitBtn.disabled = true;
+
+        if (!validateUsluga()) {
+          submitBtn.disabled = false;
+          return;
+        }
+        n += 1
+
+        const message = `
       🔔‌Заказ № ${n}🔔
 
       <b>№ ${n} </b>
@@ -772,782 +703,757 @@
       
       <b>Поздравляем вас с продажей!</b>`;
 
-          axios.post(url, {
-            chat_id: CHAT_ID,
-            parse_mode: 'html',
-            text: message,
-          })
-            .then((res) => {
-              alert('Заказ оформлен, с вами свяжемся!')
-              this.reset(); // Очищаем форму после успеха
-            })
-            .catch((err) => {
-              console.error('Ошибка:', err);
-              alert('Ошибка отправки. Попробуйте позже.');
-            })
-            .finally(() => {
-
-              // Разблокируем кнопку в любом случае
-              submitBtn.disabled = false;
-              submitBtn.textContent = 0 + 'рублей';
-            })
-        }
-        )
-
-
-
-
-        const seals = [
-          {
-            href: "images/seals/1.png",
-            price: 550,
-            name: "Без остнастки"
-          },
-          {
-            href: "images/seals/2.png",
-            price: 550,
-            name: "Trodat (автомат)",
-            titleName: "автоматическая",
-            sealName: "Trodat"
-          },
-          {
-            href: "images/seals/3.png",
-            price: 650,
-            name: "Ideal (полу-автомат)",
-            titleName: "полу автоматическая",
-            sealName: "Ideal"
-
-          },
-          {
-            href: "images/seals/4.png",
-            price: 1300,
-            name: "Ракета (полу-автомат)",
-            titleName: "полу автоматическая",
-            sealName: "Ракета"
-          },
-          {
-            href: "images/seals/5.png",
-            price: 300,
-            name: "Акрил (простая)",
-            titleName: "простая",
-            sealName: "Акрил"
-          },
-          {
-            href: "images/seals/6.png",
-            price: 200,
-            name: "Пешка (простая)",
-            titleName: "простая",
-            sealName: "Пешка"
-          },
-          {
-            href: "images/seals/7.png",
-            price: 300,
-            name: "Таблетка (простая)",
-            titleName: "простая",
-            sealName: "Таблетка"
-          },
-          {
-            href: "images/seals/8.png",
-            price: 200,
-            name: "Пешка-2 (простая)",
-            titleName: "простая",
-            sealName: "Пешка-2"
-          },
-          {
-            href: "images/seals/9.png",
-            price: 2200,
-            name: "Пешка-3 (простая)",
-            titleName: "простая",
-            sealName: "Пешка-3"
-          },
-          {
-            href: "images/seals/10.png",
-            price: 1900,
-            name: "Пешка-4 (простая)",
-            titleName: "простая",
-            sealName: "Пешка-4"
-          },
-          {
-            href: "images/seals/11.png",
-            price: 2100,
-            name: "НЛО (карманная)",
-            titleName: "карманная",
-            sealName: "НЛО"
-          },
-          {
-            href: "images/seals/12.png",
-            price: 2100,
-            name: "Таблетка-2 (карманная)",
-            titleName: "карманная",
-            sealName: "Таблетка"
-          },
-          {
-            href: "images/seals/13.png",
-            price: 2900,
-            name: "Диско-кейс (карманная)",
-            titleName: "карманная",
-            sealName: "Диско-кейс"
-          },
-          {
-            href: "images/seals/14.png",
-            price: 3000,
-            name: "Диско (карманная)",
-            titleName: "карманная",
-            sealName: "Диско"
-          },
-          {
-            href: "images/seals/15.png",
-            price: 3000,
-            name: "Магнет (карманная)",
-            titleName: "карманная",
-            sealName: "Магнет"
-          },
-          {
-            href: "images/seals/16.png",
-            price: 1800,
-            name: "Евро (металл)",
-            titleName: "металлическая",
-            sealName: "Евро"
-          },
-          {
-            href: "images/seals/17.png",
-            price: 2200,
-            name: "Евро-2 (металл)",
-            titleName: "металлическая",
-            sealName: "Евро-2"
-          },
-          {
-            href: "images/seals/18.png",
-            price: 2200,
-            name: "Евро-3 (металл)",
-            titleName: "металлическая",
-            sealName: "Евро-3"
-          },
-          {
-            href: "images/seals/19.png",
-            price: 2000,
-            name: "Евро-4 (металл)",
-            titleName: "металлическая",
-            sealName: "Евро-4"
-          },
-          {
-            href: "images/seals/20.png",
-            price: 2200,
-            name: "Евро-5 (металл)",
-            titleName: "металлическая",
-            sealName: "Евро-5"
-          }
-        ];
-
-        // Define arrays for doctors and companies
-        const doctorsArray = [
-          { name: 'ВР-01', img: 'images/doctors/ВР1.svg' },
-          { name: 'ВР-02', img: 'images/doctors/ВР2.svg' },
-          { name: 'ВР-03', img: 'images/doctors/ВР3.svg' },
-          { name: 'ВР-04', img: 'images/doctors/ВР4.svg' },
-          { name: 'ВР-05', img: 'images/doctors/ВР5.svg' },
-          { name: 'ВР-06', img: 'images/doctors/ВР6.svg' },
-          { name: 'ВР-07', img: 'images/doctors/ВР7.svg' },
-          { name: 'ВР-08', img: 'images/doctors/ВР8.svg' }
-        ];
-
-        const oArray = [
-          { name: 'ООО-01', img: 'images/oo/О1.png' },
-          { name: 'ООО-02', img: 'images/oo/О2.png' },
-          { name: 'ООО-03', img: 'images/oo/О3.png' },
-          { name: 'ООО-04', img: 'images/oo/О4.png' },
-          { name: 'ООО-05', img: 'images/oo/О5.png' },
-          { name: 'ООО-06', img: 'images/oo/О6.png' },
-          { name: 'ООО-07', img: 'images/oo/О7.png' },
-          { name: 'ООО-08', img: 'images/oo/О8.png' },
-          { name: 'ООО-09', img: 'images/oo/О9.png' },
-          { name: 'ООО-10', img: 'images/oo/О10.png' },
-          { name: 'ООО-11', img: 'images/oo/О11.png' }
-        ];
-
-        const test = [
-          { name: "Compo", img: "images/test.jpg" },
-          { name: "Compo 2", img: "images/testos.jpg" }
-        ]
-
-        const IP = [
-          {
-            name: "ИП-01", img: "images/layouts/ИП/01.jpg"
-          },
-          {
-            name: "ИП-02", img: "images/layouts/ИП/02.jpg"
-          },
-          {
-            name: "ИП-03", img: "images/layouts/ИП/03.jpg"
-          },
-          {
-            name: "ИП-04", img: "images/layouts/ИП/04.jpg"
-          },
-          {
-            name: "ИП-05", img: "images/layouts/ИП/05.jpg"
-          },
-          {
-            name: "ИП-06", img: "images/layouts/ИП/06.jpg"
-          },
-          {
-            name: "ИП-07", img: "images/layouts/ИП/07.jpg"
-          },
-          {
-            name: "ИП-08", img: "images/layouts/ИП/08.jpg"
-          },
-          {
-            name: "ИП-09", img: "images/layouts/ИП/09.jpg"
-          },
-          {
-            name: "ИП-10", img: "images/layouts/ИП/10.jpg"
-          },
-          {
-            name: "ИП-11", img: "images/layouts/ИП/11.jpg"
-          },
-          {
-            name: "ИП-12", img: "images/layouts/ИП/12.jpg"
-          },
-        ]
-
-        const AO = [
-          {
-            name: "АО-01", img: "images/layouts/АО/01.jpg"
-          },
-          {
-            name: "АО-02", img: "images/layouts/АО/02.jpg"
-          },
-          {
-            name: "АО-03", img: "images/layouts/АО/03.jpg"
-          },
-          {
-            name: "АО-04", img: "images/layouts/АО/04.jpg"
-          },
-          {
-            name: "АО-05", img: "images/layouts/АО/05.jpg"
-          },
-          {
-            name: "АО-06", img: "images/layouts/АО/06.jpg"
-          },
-          {
-            name: "АО-07", img: "images/layouts/АО/07.jpg"
-          },
-          {
-            name: "АО-08", img: "images/layouts/АО/08.jpg"
-          },
-        ]
-
-        const OTK = [
-          {
-            name: "ОТК-01", img: "images/layouts/ОТК/01.jpg"
-          },
-          {
-            name: "ОТК-02", img: "images/layouts/ОТК/02.jpg"
-          },
-          {
-            name: "ОТК-03", img: "images/layouts/ОТК/03.jpg"
-          }
-        ]
-
-        const eklibris = [
-          {
-            name: "ЭК-01", img: "images/layouts/ЭКЛИБРИС/01.jpg"
-          },
-          {
-            name: "ЭК-02", img: "images/layouts/ЭКЛИБРИС/02.jpg"
-          },
-          {
-            name: "ЭК-03", img: "images/layouts/ЭКЛИБРИС/03.jpg"
-          },
-          {
-            name: "ЭК-04", img: "images/layouts/ЭКЛИБРИС/04.jpg"
-          },
-          {
-            name: "ЭК-05", img: "images/layouts/ЭКЛИБРИС/05.jpg"
-          },
-          {
-            name: "ЭК-06", img: "images/layouts/ЭКЛИБРИС/06.jpg"
-          },
-          {
-            name: "ЭК-07", img: "images/layouts/ЭКЛИБРИС/07.jpg"
-          },
-          {
-            name: "ЭК-08", img: "images/layouts/ЭКЛИБРИС/08.jpg"
-          },
-        ]
-
-        const foreign = [
-          {
-            name: "ИН-01", img: "images/layouts/ИНОСТРАННЫЕ/01.jpg"
-          },
-          {
-            name: "ИН-02", img: "images/layouts/ИНОСТРАННЫЕ/02.jpg"
-          },
-          {
-            name: "ИН-03", img: "images/layouts/ИНОСТРАННЫЕ/03.jpg"
-          },
-          {
-            name: "ИН-04", img: "images/layouts/ИНОСТРАННЫЕ/04.jpg"
-          },
-          {
-            name: "ИН-05", img: "images/layouts/ИНОСТРАННЫЕ/05.jpg"
-          },
-          {
-            name: "ИН-06", img: "images/layouts/ИНОСТРАННЫЕ/06.jpg"
-          },
-          {
-            name: "ИН-07", img: "images/layouts/ИНОСТРАННЫЕ/07.jpg"
-          },
-          {
-            name: "ИН-08", img: "images/layouts/ИНОСТРАННЫЕ/08.jpg"
-          },
-        ]
-
-        const comic = [
-          {
-            name: "ПР-01", img: "images/layouts/ПРИКОЛЬНЫЕ/01.jpg"
-          },
-          {
-            name: "ПР-02", img: "images/layouts/ПРИКОЛЬНЫЕ/02.jpg"
-          },
-          {
-            name: "ПР-03", img: "images/layouts/ПРИКОЛЬНЫЕ/03.jpg"
-          },
-          {
-            name: "ПР-04", img: "images/layouts/ПРИКОЛЬНЫЕ/04.jpg"
-          },
-          {
-            name: "ПР-05", img: "images/layouts/ПРИКОЛЬНЫЕ/05.jpg"
-          },
-          {
-            name: "ПР-06", img: "images/layouts/ПРИКОЛЬНЫЕ/06.jpg"
-          },
-          {
-            name: "ПР-07", img: "images/layouts/ПРИКОЛЬНЫЕ/07.jpg"
-          },
-          {
-            name: "ПР-08", img: "images/layouts/ПРИКОЛЬНЫЕ/08.jpg"
-          },
-        ]
-
-        const kids = [
-          {
-            name: "ДТ-01", img: "images/layouts/ДЕТСКИЕ/01.jpg"
-          },
-          {
-            name: "ДТ-02", img: "images/layouts/ДЕТСКИЕ/02.jpg"
-          },
-          {
-            name: "ДТ-03", img: "images/layouts/ДЕТСКИЕ/03.jpg"
-          },
-          {
-            name: "ДТ-04", img: "images/layouts/ДЕТСКИЕ/04.jpg"
-          },
-          {
-            name: "ДТ-05", img: "images/layouts/ДЕТСКИЕ/05.jpg"
-          },
-          {
-            name: "ДТ-06", img: "images/layouts/ДЕТСКИЕ/06.jpg"
-          },
-          {
-            name: "ДТ-07", img: "images/layouts/ДЕТСКИЕ/07.jpg"
-          },
-          {
-            name: "ДТ-08", img: "images/layouts/ДЕТСКИЕ/08.jpg"
-          },
-          {
-            name: "ДТ-09", img: "images/layouts/ДЕТСКИЕ/09.jpg"
-          },
-          {
-            name: "ДТ-10", img: "images/layouts/ДЕТСКИЕ/10.jpg"
-          },
-        ]
-
-        const mixed = [IP[0], IP[1], oArray[0], oArray[1], AO[0], AO[1], OTK[0], OTK[1], doctorsArray[0], doctorsArray[1], test[0], test[1], eklibris[0], eklibris[1], foreign[0], foreign[1], comic[0], comic[1], kids[0], kids[1]]
-
-        const serviceModal = document.querySelector("#serviceModal");
-        const serviceInput = document.querySelector("#dropdown-input");
-
-        serviceInput.addEventListener("focus", () => {
-          serviceModal.style.display = "block"
+        axios.post(url, {
+          chat_id: CHAT_ID,
+          parse_mode: 'html',
+          text: message,
         })
+          .then((res) => {
+            alert('Заказ оформлен, с вами свяжемся!')
+            this.reset(); // Очищаем форму после успеха
+          })
+          .catch((err) => {
+            console.error('Ошибка:', err);
+            alert('Ошибка отправки. Попробуйте позже.');
+          })
+          .finally(() => {
+
+            // Разблокируем кнопку в любом случае
+            submitBtn.disabled = false;
+            submitBtn.textContent = 0 + 'рублей';
+          })
+      }
+      )
 
 
-        // Get the modal, button, and close elements
-        const modal = document.getElementById("sealModal");
-        const openModalBtn = document.getElementById("openModalBtn");
-        const closeModal2 = document.getElementsByClassName("close")[0];
-        const closeModal = document.getElementsByClassName("close")[1];
 
-        // Function to open the modal
-        openModalBtn.onclick = function () {
-          modal.style.display = "block";
-          document.querySelector("#sealList").style.opacity = 1;
-          document.querySelector("#sealList").style.zIndex = 10;
-          showSealDetails()
+
+      const seals = [
+        {
+          href: "images/seals/1.png",
+          price: 550,
+          name: "Без остнастки"
+        },
+        {
+          href: "images/seals/2.png",
+          price: 550,
+          name: "Trodat (автомат)",
+          titleName: "автоматическая",
+          sealName: "Trodat"
+        },
+        {
+          href: "images/seals/3.png",
+          price: 650,
+          name: "Ideal (полу-автомат)",
+          titleName: "полу автоматическая",
+          sealName: "Ideal"
+
+        },
+        {
+          href: "images/seals/4.png",
+          price: 1300,
+          name: "Ракета (полу-автомат)",
+          titleName: "полу автоматическая",
+          sealName: "Ракета"
+        },
+        {
+          href: "images/seals/5.png",
+          price: 300,
+          name: "Акрил (простая)",
+          titleName: "простая",
+          sealName: "Акрил"
+        },
+        {
+          href: "images/seals/6.png",
+          price: 200,
+          name: "Пешка (простая)",
+          titleName: "простая",
+          sealName: "Пешка"
+        },
+        {
+          href: "images/seals/7.png",
+          price: 300,
+          name: "Таблетка (простая)",
+          titleName: "простая",
+          sealName: "Таблетка"
+        },
+        {
+          href: "images/seals/8.png",
+          price: 200,
+          name: "Пешка-2 (простая)",
+          titleName: "простая",
+          sealName: "Пешка-2"
+        },
+        {
+          href: "images/seals/9.png",
+          price: 2200,
+          name: "Пешка-3 (простая)",
+          titleName: "простая",
+          sealName: "Пешка-3"
+        },
+        {
+          href: "images/seals/10.png",
+          price: 1900,
+          name: "Пешка-4 (простая)",
+          titleName: "простая",
+          sealName: "Пешка-4"
+        },
+        {
+          href: "images/seals/11.png",
+          price: 2100,
+          name: "НЛО (карманная)",
+          titleName: "карманная",
+          sealName: "НЛО"
+        },
+        {
+          href: "images/seals/12.png",
+          price: 2100,
+          name: "Таблетка-2 (карманная)",
+          titleName: "карманная",
+          sealName: "Таблетка"
+        },
+        {
+          href: "images/seals/13.png",
+          price: 2900,
+          name: "Диско-кейс (карманная)",
+          titleName: "карманная",
+          sealName: "Диско-кейс"
+        },
+        {
+          href: "images/seals/14.png",
+          price: 3000,
+          name: "Диско (карманная)",
+          titleName: "карманная",
+          sealName: "Диско"
+        },
+        {
+          href: "images/seals/15.png",
+          price: 3000,
+          name: "Магнет (карманная)",
+          titleName: "карманная",
+          sealName: "Магнет"
+        },
+        {
+          href: "images/seals/16.png",
+          price: 1800,
+          name: "Евро (металл)",
+          titleName: "металлическая",
+          sealName: "Евро"
+        },
+        {
+          href: "images/seals/17.png",
+          price: 2200,
+          name: "Евро-2 (металл)",
+          titleName: "металлическая",
+          sealName: "Евро-2"
+        },
+        {
+          href: "images/seals/18.png",
+          price: 2200,
+          name: "Евро-3 (металл)",
+          titleName: "металлическая",
+          sealName: "Евро-3"
+        },
+        {
+          href: "images/seals/19.png",
+          price: 2000,
+          name: "Евро-4 (металл)",
+          titleName: "металлическая",
+          sealName: "Евро-4"
+        },
+        {
+          href: "images/seals/20.png",
+          price: 2200,
+          name: "Евро-5 (металл)",
+          titleName: "металлическая",
+          sealName: "Евро-5"
         }
+      ];
 
-        // Function to close the modal when the "X" button is clicked
-        closeModal.onclick = function () {
+      // Define arrays for doctors and companies
+      const doctorsArray = [
+        { name: 'ВР-01', img: 'images/doctors/ВР1.svg' },
+        { name: 'ВР-02', img: 'images/doctors/ВР2.svg' },
+        { name: 'ВР-03', img: 'images/doctors/ВР3.svg' },
+        { name: 'ВР-04', img: 'images/doctors/ВР4.svg' },
+        { name: 'ВР-05', img: 'images/doctors/ВР5.svg' },
+        { name: 'ВР-06', img: 'images/doctors/ВР6.svg' },
+        { name: 'ВР-07', img: 'images/doctors/ВР7.svg' },
+        { name: 'ВР-08', img: 'images/doctors/ВР8.svg' }
+      ];
+
+      const oArray = [
+        { name: 'ООО-01', img: 'images/oo/О1.png' },
+        { name: 'ООО-02', img: 'images/oo/О2.png' },
+        { name: 'ООО-03', img: 'images/oo/О3.png' },
+        { name: 'ООО-04', img: 'images/oo/О4.png' },
+        { name: 'ООО-05', img: 'images/oo/О5.png' },
+        { name: 'ООО-06', img: 'images/oo/О6.png' },
+        { name: 'ООО-07', img: 'images/oo/О7.png' },
+        { name: 'ООО-08', img: 'images/oo/О8.png' },
+        { name: 'ООО-09', img: 'images/oo/О9.png' },
+        { name: 'ООО-10', img: 'images/oo/О10.png' },
+        { name: 'ООО-11', img: 'images/oo/О11.png' }
+      ];
+
+      const test = [
+        { name: "Compo", img: "images/test.jpg" },
+        { name: "Compo 2", img: "images/testos.jpg" }
+      ]
+
+      const IP = [
+        {
+          name: "ИП-01", img: "images/layouts/ИП/01.jpg"
+        },
+        {
+          name: "ИП-02", img: "images/layouts/ИП/02.jpg"
+        },
+        {
+          name: "ИП-03", img: "images/layouts/ИП/03.jpg"
+        },
+        {
+          name: "ИП-04", img: "images/layouts/ИП/04.jpg"
+        },
+        {
+          name: "ИП-05", img: "images/layouts/ИП/05.jpg"
+        },
+        {
+          name: "ИП-06", img: "images/layouts/ИП/06.jpg"
+        },
+        {
+          name: "ИП-07", img: "images/layouts/ИП/07.jpg"
+        },
+        {
+          name: "ИП-08", img: "images/layouts/ИП/08.jpg"
+        },
+        {
+          name: "ИП-09", img: "images/layouts/ИП/09.jpg"
+        },
+        {
+          name: "ИП-10", img: "images/layouts/ИП/10.jpg"
+        },
+        {
+          name: "ИП-11", img: "images/layouts/ИП/11.jpg"
+        },
+        {
+          name: "ИП-12", img: "images/layouts/ИП/12.jpg"
+        },
+      ]
+
+      const AO = [
+        {
+          name: "АО-01", img: "images/layouts/АО/01.jpg"
+        },
+        {
+          name: "АО-02", img: "images/layouts/АО/02.jpg"
+        },
+        {
+          name: "АО-03", img: "images/layouts/АО/03.jpg"
+        },
+        {
+          name: "АО-04", img: "images/layouts/АО/04.jpg"
+        },
+        {
+          name: "АО-05", img: "images/layouts/АО/05.jpg"
+        },
+        {
+          name: "АО-06", img: "images/layouts/АО/06.jpg"
+        },
+        {
+          name: "АО-07", img: "images/layouts/АО/07.jpg"
+        },
+        {
+          name: "АО-08", img: "images/layouts/АО/08.jpg"
+        },
+      ]
+
+      const OTK = [
+        {
+          name: "ОТК-01", img: "images/layouts/ОТК/01.jpg"
+        },
+        {
+          name: "ОТК-02", img: "images/layouts/ОТК/02.jpg"
+        },
+        {
+          name: "ОТК-03", img: "images/layouts/ОТК/03.jpg"
+        }
+      ]
+
+      const eklibris = [
+        {
+          name: "ЭК-01", img: "images/layouts/ЭКЛИБРИС/01.jpg"
+        },
+        {
+          name: "ЭК-02", img: "images/layouts/ЭКЛИБРИС/02.jpg"
+        },
+        {
+          name: "ЭК-03", img: "images/layouts/ЭКЛИБРИС/03.jpg"
+        },
+        {
+          name: "ЭК-04", img: "images/layouts/ЭКЛИБРИС/04.jpg"
+        },
+        {
+          name: "ЭК-05", img: "images/layouts/ЭКЛИБРИС/05.jpg"
+        },
+        {
+          name: "ЭК-06", img: "images/layouts/ЭКЛИБРИС/06.jpg"
+        },
+        {
+          name: "ЭК-07", img: "images/layouts/ЭКЛИБРИС/07.jpg"
+        },
+        {
+          name: "ЭК-08", img: "images/layouts/ЭКЛИБРИС/08.jpg"
+        },
+      ]
+
+      const foreign = [
+        {
+          name: "ИН-01", img: "images/layouts/ИНОСТРАННЫЕ/01.jpg"
+        },
+        {
+          name: "ИН-02", img: "images/layouts/ИНОСТРАННЫЕ/02.jpg"
+        },
+        {
+          name: "ИН-03", img: "images/layouts/ИНОСТРАННЫЕ/03.jpg"
+        },
+        {
+          name: "ИН-04", img: "images/layouts/ИНОСТРАННЫЕ/04.jpg"
+        },
+        {
+          name: "ИН-05", img: "images/layouts/ИНОСТРАННЫЕ/05.jpg"
+        },
+        {
+          name: "ИН-06", img: "images/layouts/ИНОСТРАННЫЕ/06.jpg"
+        },
+        {
+          name: "ИН-07", img: "images/layouts/ИНОСТРАННЫЕ/07.jpg"
+        },
+        {
+          name: "ИН-08", img: "images/layouts/ИНОСТРАННЫЕ/08.jpg"
+        },
+      ]
+
+      const comic = [
+        {
+          name: "ПР-01", img: "images/layouts/ПРИКОЛЬНЫЕ/01.jpg"
+        },
+        {
+          name: "ПР-02", img: "images/layouts/ПРИКОЛЬНЫЕ/02.jpg"
+        },
+        {
+          name: "ПР-03", img: "images/layouts/ПРИКОЛЬНЫЕ/03.jpg"
+        },
+        {
+          name: "ПР-04", img: "images/layouts/ПРИКОЛЬНЫЕ/04.jpg"
+        },
+        {
+          name: "ПР-05", img: "images/layouts/ПРИКОЛЬНЫЕ/05.jpg"
+        },
+        {
+          name: "ПР-06", img: "images/layouts/ПРИКОЛЬНЫЕ/06.jpg"
+        },
+        {
+          name: "ПР-07", img: "images/layouts/ПРИКОЛЬНЫЕ/07.jpg"
+        },
+        {
+          name: "ПР-08", img: "images/layouts/ПРИКОЛЬНЫЕ/08.jpg"
+        },
+      ]
+
+      const kids = [
+        {
+          name: "ДТ-01", img: "images/layouts/ДЕТСКИЕ/01.jpg"
+        },
+        {
+          name: "ДТ-02", img: "images/layouts/ДЕТСКИЕ/02.jpg"
+        },
+        {
+          name: "ДТ-03", img: "images/layouts/ДЕТСКИЕ/03.jpg"
+        },
+        {
+          name: "ДТ-04", img: "images/layouts/ДЕТСКИЕ/04.jpg"
+        },
+        {
+          name: "ДТ-05", img: "images/layouts/ДЕТСКИЕ/05.jpg"
+        },
+        {
+          name: "ДТ-06", img: "images/layouts/ДЕТСКИЕ/06.jpg"
+        },
+        {
+          name: "ДТ-07", img: "images/layouts/ДЕТСКИЕ/07.jpg"
+        },
+        {
+          name: "ДТ-08", img: "images/layouts/ДЕТСКИЕ/08.jpg"
+        },
+        {
+          name: "ДТ-09", img: "images/layouts/ДЕТСКИЕ/09.jpg"
+        },
+        {
+          name: "ДТ-10", img: "images/layouts/ДЕТСКИЕ/10.jpg"
+        },
+      ]
+
+      const mixed = [IP[0], IP[1], oArray[0], oArray[1], AO[0], AO[1], OTK[0], OTK[1], doctorsArray[0], doctorsArray[1], test[0], test[1], eklibris[0], eklibris[1], foreign[0], foreign[1], comic[0], comic[1], kids[0], kids[1]]
+
+      const serviceModal = document.querySelector("#serviceModal");
+      const serviceInput = document.querySelector("#dropdown-input");
+
+      serviceInput.addEventListener("focus", () => {
+        serviceModal.style.display = "block"
+      })
+
+
+      // Get the modal, button, and close elements
+      const modal = document.getElementById("sealModal");
+      const openModalBtn = document.getElementById("openModalBtn");
+      const closeModal2 = document.getElementsByClassName("close")[0];
+      const closeModal = document.getElementsByClassName("close")[1];
+
+      // Function to open the modal
+      openModalBtn.onclick = function () {
+        modal.style.display = "block";
+        document.querySelector("#sealList").style.opacity = 1;
+        document.querySelector("#sealList").style.zIndex = 10;
+        showSealDetails()
+      }
+
+      // Function to close the modal when the "X" button is clicked
+      closeModal.onclick = function () {
+        document.getElementById("sealDetails").innerHTML = ""
+        modal.style.display = "none";
+      }
+
+      closeModal2.onclick = () => {
+        console.log(document.querySelector("#serviceModal"))
+        document.querySelector("#serviceModal").style.display = "none"
+      }
+
+      // Close modal if the user clicks outside of the modal
+      window.onclick = function (event) {
+        if (event.target == modal) {
           document.getElementById("sealDetails").innerHTML = ""
           modal.style.display = "none";
         }
 
-        closeModal2.onclick = () => {
-          console.log(document.querySelector("#serviceModal"))
+        if (event.target === document.querySelector("#serviceModal")) {
           document.querySelector("#serviceModal").style.display = "none"
         }
+      }
 
-        // Close modal if the user clicks outside of the modal
-        window.onclick = function (event) {
-          if (event.target == modal) {
+      // Event listener for seal option clicks
+      const sealOptions = document.querySelectorAll(".sealOption");
+      sealOptions.forEach(option => {
+        option.addEventListener("click", function () {
+          const sealId = this.getAttribute("data-id");
+          showSealDetails(sealId);
+          document.querySelector("#sealList").style.zIndex = 10;
+          document.querySelector("#sealList").style.opacity = 1;
+
+        });
+      });
+
+      // Function to display seal details in the modal
+      function showSealDetails(sealId) {
+        let detailsContent = "";
+
+        // Show details based on the selected seal option
+        switch (sealId) {
+          case "1":
+            // detailsContent = "ИП: This is the ИП seal option with a base price of $20.";
+            detailsContent += "<div class='imageGallery'>";
+            IP.forEach(oar => {
+              detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy"> `;
+            });
+            detailsContent += "</div>";
+            break;
+          case "2":
+            // detailsContent = "ООО: This is the ООО seal option with a base price of $30.";
+            detailsContent += "<div class='imageGallery'>";
+            oArray.forEach(oar => {
+              detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy">`;
+            });
+            detailsContent += "</div>";
+            break;
+          case "3":
+            detailsContent += "<div class='imageGallery'>";
+            AO.forEach(oar => {
+              detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy"> `;
+            });
+            detailsContent += "</div>";
+            break;
+          case "4":
+            detailsContent += "<div class='imageGallery'>";
+            OTK.forEach(oar => {
+              detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage"  loading="lazy" >`;
+            });
+            detailsContent += "</div>";
+            break;
+          case "5":
+            // detailsContent = "ВРАЧ: Displaying doctor images below.";
+            detailsContent += "<div class='imageGallery'>";
+            doctorsArray.forEach(doctor => {
+              detailsContent += `<img src="${doctor.img}" alt="${doctor.name}" class="sealImage" loading="lazy">`;
+            });
+            detailsContent += "</div>";
+            break;
+          case "6":
+            detailsContent += "<div class='imageGallery'>";
+            test.forEach(oar => {
+              detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy">`;
+            });
+            detailsContent += "</div>";
+            break;
+          case "7":
+            detailsContent += "<div class='imageGallery'>";
+            eklibris.forEach(oar => {
+              detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy"> `;
+            });
+            detailsContent += "</div>";
+            break;
+          case "8":
+            detailsContent += "<div class='imageGallery'>";
+            foreign.forEach(oar => {
+              detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy">`;
+            });
+            detailsContent += "</div>";
+            break;
+          case "9":
+            detailsContent += "<div class='imageGallery'>";
+            comic.forEach(oar => {
+              detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy">`;
+            });
+            detailsContent += "</div>";
+            break;
+          case "10":
+            detailsContent += "<div class='imageGallery'>";
+            kids.forEach(oar => {
+              detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy">`;
+            });
+            detailsContent += "</div>";
+            break;
+          default:
+            detailsContent += "<div class='imageGallery'>";
+            mixed.forEach(mix => {
+              detailsContent += `<img src="${mix.img}" alt="${mix.name}" class="sealImage" loading="lazy">`;
+            });
+            detailsContent += "</div>";
+            break;
+        }
+
+        // Update the modal with the details
+        document.getElementById("sealDetails").innerHTML = detailsContent;
+        const alls = document.querySelectorAll(".sealImage")
+        alls.forEach((el) => {
+          el.addEventListener("click", () => {
+            const sealLayout = document.querySelector(".seal-layout");
+            const pr = document.querySelector(".price-title1")
+            sealLayout.src = el.src
+            sealLayout.classList.remove("hidden")
+            sealLayout.nextElementSibling.classList.remove("hidden")
             document.getElementById("sealDetails").innerHTML = ""
             modal.style.display = "none";
-          }
-
-          if (event.target === document.querySelector("#serviceModal")) {
-            document.querySelector("#serviceModal").style.display = "none"
-          }
-        }
-
-        // Event listener for seal option clicks
-        const sealOptions = document.querySelectorAll(".sealOption");
-        sealOptions.forEach(option => {
-          option.addEventListener("click", function () {
-            const sealId = this.getAttribute("data-id");
-            showSealDetails(sealId);
-            document.querySelector("#sealList").style.zIndex = 10;
-            document.querySelector("#sealList").style.opacity = 1;
-
-          });
-        });
-
-        // Function to display seal details in the modal
-        function showSealDetails(sealId) {
-          let detailsContent = "";
-
-          // Show details based on the selected seal option
-          switch (sealId) {
-            case "1":
-              // detailsContent = "ИП: This is the ИП seal option with a base price of $20.";
-              detailsContent += "<div class='imageGallery'>";
-              IP.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy"> `;
-              });
-              detailsContent += "</div>";
-              break;
-            case "2":
-              // detailsContent = "ООО: This is the ООО seal option with a base price of $30.";
-              detailsContent += "<div class='imageGallery'>";
-              oArray.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy">`;
-              });
-              detailsContent += "</div>";
-              break;
-            case "3":
-              detailsContent += "<div class='imageGallery'>";
-              AO.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy"> `;
-              });
-              detailsContent += "</div>";
-              break;
-            case "4":
-              detailsContent += "<div class='imageGallery'>";
-              OTK.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage"  loading="lazy" >`;
-              });
-              detailsContent += "</div>";
-              break;
-            case "5":
-              // detailsContent = "ВРАЧ: Displaying doctor images below.";
-              detailsContent += "<div class='imageGallery'>";
-              doctorsArray.forEach(doctor => {
-                detailsContent += `<img src="${doctor.img}" alt="${doctor.name}" class="sealImage" loading="lazy">`;
-              });
-              detailsContent += "</div>";
-              break;
-            case "6":
-              detailsContent += "<div class='imageGallery'>";
-              test.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy">`;
-              });
-              detailsContent += "</div>";
-              break;
-            case "7":
-              detailsContent += "<div class='imageGallery'>";
-              eklibris.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy"> `;
-              });
-              detailsContent += "</div>";
-              break;
-            case "8":
-              detailsContent += "<div class='imageGallery'>";
-              foreign.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy">`;
-              });
-              detailsContent += "</div>";
-              break;
-            case "9":
-              detailsContent += "<div class='imageGallery'>";
-              comic.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy">`;
-              });
-              detailsContent += "</div>";
-              break;
-            case "10":
-              detailsContent += "<div class='imageGallery'>";
-              kids.forEach(oar => {
-                detailsContent += `<img src="${oar.img}" alt="${oar.name}" class="sealImage" loading="lazy">`;
-              });
-              detailsContent += "</div>";
-              break;
-            default:
-              detailsContent += "<div class='imageGallery'>";
-              mixed.forEach(mix => {
-                detailsContent += `<img src="${mix.img}" alt="${mix.name}" class="sealImage" loading="lazy">`;
-              });
-              detailsContent += "</div>";
-              break;
-          }
-
-          // Update the modal with the details
-          document.getElementById("sealDetails").innerHTML = detailsContent;
-          const alls = document.querySelectorAll(".sealImage")
-          alls.forEach((el) => {
-            el.addEventListener("click", () => {
-              const sealLayout = document.querySelector(".seal-layout");
-              const pr = document.querySelector(".price-title1")
-              sealLayout.src = el.src
-              sealLayout.classList.remove("hidden")
-              sealLayout.nextElementSibling.classList.remove("hidden")
-              document.getElementById("sealDetails").innerHTML = ""
-              modal.style.display = "none";
-              layoutPrice = 500
-              pr.textContent = layoutPrice + " ₽"
-              const total = document.querySelector(".total")
-              const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
-              total.textContent = newTotal + " рублей"
-              document.querySelector(".order_img_one-text").textContent = el.getAttribute("alt")
-              openModalBtn.textContent = el.getAttribute("alt")
-            })
-          })
-        }
-
-        const checkboxes = document.querySelectorAll("input[name='service']")
-        checkboxes.forEach((check) => {
-          check.addEventListener("change", () => {
-            if (check.checked) {
-              check.parentElement.parentElement.nextElementSibling.style.display = "block"
-              // document.querySelector("#serviceModal").style.display = "none"
-              checkboxes.forEach((otherCheck) => {
-                if (otherCheck !== check) {
-                  otherCheck.parentElement.parentElement.nextElementSibling.style.display = "none"
-                  otherCheck.checked = false;
-                }
-              });
-            }
-          });
-        });
-
-
-
-        const subOptions = document.querySelectorAll('.sub-option');
-        const inputField = document.getElementById('dropdown-input');
-        const dropdown = document.querySelector('.dropdown');
-
-        // When a sub-option is clicked, set the input value and prevent the dropdown from closing
-        subOptions.forEach(subOption => {
-          subOption.addEventListener('click', function (e) {
-            const element = this.parentElement.previousElementSibling.lastElementChild;
-            const mainCategory = element.querySelector('span').textContent.trim();
-            const dataResult = element.dataset.resultText;
-
-            const subOptionText = this.textContent.trim();
-
-            inputField.value = `${mainCategory}, ${subOptionText}`;
-            const titles = document.querySelectorAll(".order_img_one-title")
-            titles[0].textContent = "Клише для " + dataResult + ", " + subOptionText
-
-            // (titles[1].textContent = "Ocтнастка, " + subOptionText) находится тут => seals.forEach((seal, index) => { для того что бы можно было вставить seal.titleName 
-
-            dropdown.style.display = 'none';
-            document.querySelector("#serviceModal").style.display = "none"
-          });
-        });
-
-
-
-        // Show the dropdown on input focus
-        inputField.addEventListener('focus', function () {
-          dropdown.style.display = 'grid';
-
-        });
-
-        // inputField.addEventListener("blur", () => {
-        //   setTimeout(() => {
-
-        //     dropdown.style.display = "none"
-        //   }, 300)
-        // })
-
-
-        // const deliverToEntrance = document.querySelector(".delivery-to-entrance")
-        const deliveryOptions = document.querySelectorAll(".delivery-option");
-        const deliveryPriority = document.querySelectorAll(".delivery-priority")
-
-        const deliveryTypeTextHtml = document.querySelector(".delivery_type-delivery")
-        const deliveryDateTextHtml = document.querySelector(".delivery_type-date")
-
-
-        deliveryOptions.forEach((delType) => {
-          delType.addEventListener("click", () => {
-            const total = document.querySelector(".total");
-            const number = delType.textContent.match(/\d+/); // This will give you the number as a string
-            if (number) {
-              deliverPrice = +number[0]
-              const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
-              total.textContent = newTotal + " рублей"
-
-              deliveryTypeTextHtml.value = delType.textContent
-            } else {
-              deliverPrice = 0
-              const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
-              total.textContent = newTotal + " рублей"
-
-              deliveryTypeTextHtml.value = delType.textContent
-            }
+            layoutPrice = 500
+            pr.textContent = layoutPrice + " ₽"
+            const total = document.querySelector(".total")
+            const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
+            total.textContent = newTotal + " рублей"
+            document.querySelector(".order_img_one-text").textContent = el.getAttribute("alt")
+            openModalBtn.textContent = el.getAttribute("alt")
           })
         })
+      }
 
-        deliveryPriority.forEach((delType) => {
-          delType.addEventListener("click", () => {
-            const total = document.querySelector(".total");
-            const number = delType.textContent.match(/\d+/); // This will give you the number as a string
-            console.log(number)
-            if (number && number[0].length > 2) {
-              preparationFee = +number[0]
-              const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
-              total.textContent = newTotal + " рублей"
-
-              deliveryDateTextHtml.value = delType.textContent
-
-            } else {
-              preparationFee = 0
-              const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
-              total.textContent = newTotal + " рублей"
-
-              deliveryDateTextHtml.value = delType.textContent
-
-            }
-          })
-        })
-
-
-        openBtn.addEventListener('click', function () {
-          popup.showModal();
-          const sealsContainer = document.querySelector(".seals-container");
-          if (sealsContainer.childNodes.length !== 1) {
-            return
+      const checkboxes = document.querySelectorAll("input[name='service']")
+      checkboxes.forEach((check) => {
+        check.addEventListener("change", () => {
+          if (check.checked) {
+            check.parentElement.parentElement.nextElementSibling.style.display = "block"
+            // document.querySelector("#serviceModal").style.display = "none"
+            checkboxes.forEach((otherCheck) => {
+              if (otherCheck !== check) {
+                otherCheck.parentElement.parentElement.nextElementSibling.style.display = "none"
+                otherCheck.checked = false;
+              }
+            });
           }
-
-          seals.forEach((seal, index) => {
-            const imgContainer = document.createElement("div");
-            imgContainer.classList.add("seals-div");
-            const imgWithPContainer = document.createElement("div");
-            imgWithPContainer.classList.add("seals_img-div");
-            const img = document.createElement("img");
-            const title = document.createElement("p")
-            const p = document.createElement("p");
-
-            title.textContent = seal.name
-
-            p.textContent = seal.price + " ₽"
-            p.style.color = "#bd3b13"
-            p.style.fontSize = "18px"
-            img.src = seal.href;
-            img.classList.add("seal-modal-images")
-            img.setAttribute('loading', 'lazy')
-            imgContainer.append(img, title, p)
-            imgWithPContainer.append(img, title)
-            sealsContainer.appendChild(imgContainer)
-            imgContainer.appendChild(imgWithPContainer)
-
-            img.addEventListener("click", () => {
-              const target = document.querySelector(".seal-img-target");
-              const overallPrice = document.querySelector(".total")
-              const sealTitle = document.querySelector(".seal-title")
-
-              const titles = document.querySelectorAll(".order_img_one-title")
-
-              titles[1].textContent = "Ocтнастка " + seal.titleName
-              const price = document.querySelector(".price-title2");
-              target.src = seal.href
-              price.textContent = p.textContent
-              sealTitle.textContent = seal.sealName
-              openBtn.textContent = seal.name
-
-              sealPrice = seal.price
-              overallPrice.textContent = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee + " рублей"
-              popup.close()
-              target.classList.remove("hidden")
-            })
-          })
-
-        })
+        });
+      });
 
 
-        // Get all the sub-option elements
+
+      const subOptions = document.querySelectorAll('.sub-option');
+      const inputField = document.getElementById('dropdown-input');
+      const dropdown = document.querySelector('.dropdown');
+
+      // When a sub-option is clicked, set the input value and prevent the dropdown from closing
+      subOptions.forEach(subOption => {
+        subOption.addEventListener('click', function (e) {
+          const element = this.parentElement.previousElementSibling.lastElementChild;
+          const mainCategory = element.querySelector('span').textContent.trim();
+          const dataResult = element.dataset.resultText;
+
+          const subOptionText = this.textContent.trim();
+
+          inputField.value = `${mainCategory}, ${subOptionText}`;
+          const titles = document.querySelectorAll(".order_img_one-title")
+          titles[0].textContent = "Клише для " + dataResult + ", " + subOptionText
+
+          // (titles[1].textContent = "Ocтнастка, " + subOptionText) находится тут => seals.forEach((seal, index) => { для того что бы можно было вставить seal.titleName 
+
+          dropdown.style.display = 'none';
+          document.querySelector("#serviceModal").style.display = "none"
+        });
+      });
 
 
-      </script>
-      <link href="https://fonts.googleapis.com/css2?family=Droid+Serif:ital@0;1&family=Droid+Sans&display=swap"
-        rel="stylesheet">
+
+      // Show the dropdown on input focus
+      inputField.addEventListener('focus', function () {
+        dropdown.style.display = 'grid';
+
+      });
 
 
-      <script>
-        function updateLogoColumnsClass() {
-          const logoContainer = document.querySelector('.logo-container');
+      // const deliverToEntrance = document.querySelector(".delivery-to-entrance")
+      const deliveryOptions = document.querySelectorAll(".delivery-option");
+      const deliveryPriority = document.querySelectorAll(".delivery-priority")
 
-          if (window.innerWidth <= 768) {
-            logoContainer.classList.remove('columns');
+      const deliveryTypeTextHtml = document.querySelector(".delivery_type-delivery")
+      const deliveryDateTextHtml = document.querySelector(".delivery_type-date")
+
+
+      deliveryOptions.forEach((delType) => {
+        delType.addEventListener("click", () => {
+          const total = document.querySelector(".total");
+          const number = delType.textContent.match(/\d+/); // This will give you the number as a string
+          if (number) {
+            deliverPrice = +number[0]
+            const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
+            total.textContent = newTotal + " рублей"
+
+            deliveryTypeTextHtml.value = delType.textContent
           } else {
-            if (!logoContainer.classList.contains('columns')) {
-              logoContainer.classList.add('columns');
-            }
+            deliverPrice = 0
+            const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
+            total.textContent = newTotal + " рублей"
+
+            deliveryTypeTextHtml.value = delType.textContent
           }
+        })
+      })
+
+      deliveryPriority.forEach((delType) => {
+        delType.addEventListener("click", () => {
+          const total = document.querySelector(".total");
+          const number = delType.textContent.match(/\d+/); // This will give you the number as a string
+          console.log(number)
+          if (number && number[0].length > 2) {
+            preparationFee = +number[0]
+            const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
+            total.textContent = newTotal + " рублей"
+
+            deliveryDateTextHtml.value = delType.textContent
+
+          } else {
+            preparationFee = 0
+            const newTotal = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee;
+            total.textContent = newTotal + " рублей"
+
+            deliveryDateTextHtml.value = delType.textContent
+
+          }
+        })
+      })
+
+
+      openBtn.addEventListener('click', function () {
+        popup.showModal();
+        const sealsContainer = document.querySelector(".seals-container");
+        if (sealsContainer.childNodes.length !== 1) {
+          return
         }
 
-        // Run on page load
-        updateLogoColumnsClass();
+        seals.forEach((seal, index) => {
+          const imgContainer = document.createElement("div");
+          imgContainer.classList.add("seals-div");
+          const imgWithPContainer = document.createElement("div");
+          imgWithPContainer.classList.add("seals_img-div");
+          const img = document.createElement("img");
+          const title = document.createElement("p")
+          const p = document.createElement("p");
 
-        // Run every time the screen is resized
-        window.addEventListener('resize', updateLogoColumnsClass);
-      </script>
+          title.textContent = seal.name
 
-      <script>
-        // Get dialog and close button elements
-        const dialog = document.querySelector('dialog');
-        const closeButton = dialog.querySelector('.dialog-close');
+          p.textContent = seal.price + " ₽"
+          p.style.color = "#bd3b13"
+          p.style.fontSize = "18px"
+          img.src = seal.href;
+          img.classList.add("seal-modal-images")
+          img.setAttribute('loading', 'lazy')
+          imgContainer.append(img, title, p)
+          imgWithPContainer.append(img, title)
+          sealsContainer.appendChild(imgContainer)
+          imgContainer.appendChild(imgWithPContainer)
 
-        // Close dialog when clicking the close button
-        closeButton.addEventListener('click', () => {
+          img.addEventListener("click", () => {
+            const target = document.querySelector(".seal-img-target");
+            const overallPrice = document.querySelector(".total")
+            const sealTitle = document.querySelector(".seal-title")
+
+            const titles = document.querySelectorAll(".order_img_one-title")
+
+            titles[1].textContent = "Ocтнастка " + seal.titleName
+            const price = document.querySelector(".price-title2");
+            target.src = seal.href
+            price.textContent = p.textContent
+            sealTitle.textContent = seal.sealName
+            openBtn.textContent = seal.name
+
+            sealPrice = seal.price
+            overallPrice.textContent = (sealPrice + layoutPrice) * res.innerText + deliverPrice + preparationFee + " рублей"
+            popup.close()
+            target.classList.remove("hidden")
+          })
+        })
+
+      })
+
+
+      // Get all the sub-option elements
+
+
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Droid+Serif:ital@0;1&family=Droid+Sans&display=swap"
+      rel="stylesheet">
+
+
+
+
+    <script>
+      // Get dialog and close button elements
+      const dialog = document.querySelector('dialog');
+      const closeButton = dialog.querySelector('.dialog-close');
+
+      // Close dialog when clicking the close button
+      closeButton.addEventListener('click', () => {
+        dialog.close();
+      });
+
+      // Close when clicking outside
+      dialog.addEventListener('click', (e) => {
+        const dialogDimensions = dialog.getBoundingClientRect();
+        if (
+          e.clientX < dialogDimensions.left ||
+          e.clientX > dialogDimensions.right ||
+          e.clientY < dialogDimensions.top ||
+          e.clientY > dialogDimensions.bottom
+        ) {
           dialog.close();
-        });
-
-        // Close when clicking outside
-        dialog.addEventListener('click', (e) => {
-          const dialogDimensions = dialog.getBoundingClientRect();
-          if (
-            e.clientX < dialogDimensions.left ||
-            e.clientX > dialogDimensions.right ||
-            e.clientY < dialogDimensions.top ||
-            e.clientY > dialogDimensions.bottom
-          ) {
-            dialog.close();
-          }
-        });
+        }
+      });
 
 
-      </script>
+    </script>
 
 </body>
 

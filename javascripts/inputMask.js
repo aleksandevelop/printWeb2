@@ -1,36 +1,18 @@
 
 const rootSelector = '[data-js-input-mask]'
 
-class InputMask {
-  constructor(rootElement) {
-    this.rootElement = rootElement
-    this.init()
+// Функция для масок ввода
+export function initInputMask() {
+  const isLibReady = typeof window.IMask !== 'undefined';
+
+  if (!isLibReady) {
+    console.error('Библиотека "imask" не подключена!');
+    return;
   }
 
-  init() {
-    const isLibReady = typeof window.IMask !== 'undefined'
-
-    if (isLibReady) {
-      window.IMask(this.rootElement, {
-        mask: this.rootElement.dataset.jsInputMask
-      })
-    } else {
-      console.error('Библиотека "imask" не подключена!')
-    }
-  }
+  document.querySelectorAll('[data-js-input-mask]').forEach(element => {
+    window.IMask(element, {
+      mask: element.dataset.jsInputMask
+    });
+  });
 }
-
-class InputMaskCollection {
-  constructor() {
-    this.init()
-  }
-
-  init() {
-    document.querySelectorAll(rootSelector).forEach((element) => {
-      new InputMask(element)
-    })
-  }
-}
-
-// export default InputMaskCollection
-new InputMaskCollection()
