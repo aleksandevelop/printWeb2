@@ -1,4 +1,6 @@
 // Функция фильтрации каталога
+import { updateSeeAllButtonForFilter } from './see-all-button.js';
+
 export function filterWorks(filterValue) {
   const workItems = document.querySelectorAll('.works__item');
   const pechatContainer = document.querySelector('.pechat_container');
@@ -11,23 +13,37 @@ export function filterWorks(filterValue) {
   
   // Ждем завершения анимации скрытия
   setTimeout(() => {
+    let visibleCount = 0;
+    const maxVisible = 12; // Показываем первые 12 элементов (индекс 0-11 = 13 элементов)
+    
     workItems.forEach(item => {
       const category = item.getAttribute('data-category');
+      let shouldShow = false;
       
       if (filterValue === 'all') {
-        item.style.display = 'block';
-        setTimeout(() => {
-          item.style.opacity = '1';
-          item.style.transform = 'scale(1)';
-        }, 50);
+        shouldShow = true;
       } else if (category === filterValue) {
-        item.style.display = 'block';
-        setTimeout(() => {
-          item.style.opacity = '1';
-          item.style.transform = 'scale(1)';
-        }, 50);
+        shouldShow = true;
+      }
+      
+      if (shouldShow) {
+        if (visibleCount < maxVisible) {
+          // Показываем первые 13 элементов
+          item.style.display = 'block';
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'scale(1)';
+          }, 50);
+          visibleCount++;
+        } else {
+          // Скрываем остальные элементы
+          item.style.display = 'none';
+          item.classList.add('hidden-item');
+        }
       } else {
+        // Скрываем элементы не подходящие под фильтр
         item.style.display = 'none';
+        item.classList.add('hidden-item');
       }
     });
   }, 300);
@@ -48,6 +64,11 @@ export function filterWorks(filterValue) {
       }, 300);
     }
   }
+  
+  // Обновляем состояние кнопки "показать еще" после фильтрации
+  setTimeout(() => {
+    updateSeeAllButtonForFilter();
+  }, 350);
 }
 
 export function initCatalogFilter() {
