@@ -1,11 +1,4 @@
-// jQuery код для обработки файла
-$(document).ready(function () {
-  $('#choose-file').change(function () {
-    var i = $(this).prev('label').clone();
-    var file = $('#choose-file')[0].files[0].name;
-    $(this).prev('label').text(file);
-  });
-});
+
 
 // Код для счетчика количества
 const min = document.querySelector('.min');
