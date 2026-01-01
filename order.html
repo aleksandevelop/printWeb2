@@ -43,51 +43,57 @@
 <body>
 
 
-  <header class="container" id="header">
-    <div class="row">
-      <div class='push-ten mobile-social' style=" display: flex; justify-content: end;">
+  <header class="header__background container">
+
+    <div class="header__container">
+
+      <div class="header__top">
         <ul class="mod modSocial icons">
           <li class="icons__item">
             <a href="/" class="icons_link" title="WhatsApp">
-              <img src="images/social/whatsapp-fill.png" alt="WhatsApp" loading="lazy"></a>
+              <img src="images/social/whatsapp-fill.png" alt="WhatsApp" loading="lazy" width="30" height="30"></a>
           </li>
           <li class="icons__item">
             <a href="/" class="icons_link" title="telegram">
-              <img src="images/social/telegram-fill.png" alt="Telegram" loading="lazy"></a>
+              <img src="images/social/telegram-fill.png" alt="Telegram" loading="lazy" width="30" height="30"></a>
           </li>
           <li class="icons__item">
             <a href="/" class="icons_link " title="VK">
-              <img src="images/social/vk-social-network-logo.png"  alt="VK" loading="lazy"></a>
+              <img src="images/social/vk-social-network-logo.png" alt="VK" loading="lazy" width="30" height="30"></a>
           </li>
-
-
         </ul>
       </div>
-    </div>
-    <div class="row navbar-row">
-      <div class="two columns logo-container">
-        <div class="mod modLogo">
-          <h2><a href="index.html">Печати и штампы</a></h2>
+      <div class="header__bottom">
+        <div class="header__image">
+          <a href="index.html">
+            <h1 class="visually-hidden">Печати и штампы в Казани</h1>
+            <img
+              class="header__img"
+              src="images/LOGO2.png"
+              alt=""
+              width="150" height="150" loading="lazy"
+            />
+          </a>
         </div>
-      </div>
-      <div class="ten columns nav-container">
-        <div class="mod modNav right">
-          <ul class="nav-bar" id="navLinks">
-            <li>
-              <a class="main Steelfish current" href="order.html">Онлайн заказ</a>
+        <nav class="header__nav">
+          <ul class="header__list">
+            <li class="header__item Steelfish">
+              <a href="order.html" class="header__link current">Онлайн заказ</a>
             </li>
-            <li>
-              <a class="main Steelfish " href="services.html">Услуги</a>
+            <li class="header__item Steelfish">
+              <a href="services.html" class="header__link">Услуги</a>
             </li>
-            <li><a class="main Steelfish" href="store.html">Магазин</a></li>
-            <li>
-              <a class="main Steelfish" href="portfolio.html">Портфолио</a>
+            <li class="header__item Steelfish">
+              <a href="store.html" class="header__link">Магазин</a>
             </li>
-            <li>
-              <a class="main Steelfish" href="contact.html">Контакты</a>
+            <li class="header__item Steelfish">
+              <a href="portfolio.html" class="header__link">Портфолио</a>
+            </li>
+            <li class="header__item Steelfish">
+              <a href="contact.html" class="header__link">Контакты</a>
             </li>
           </ul>
-        </div>
+        </nav>
       </div>
     </div>
   </header>
@@ -472,11 +478,7 @@
         <h3 class="text-center mainheaders">Наши отзывы</h3>
       </div>
 
-      <div style="
-    width: 100%;
-    display: grid;
-    grid-template-columns: calc(52% - 5px) calc(48% - 5px);
-    gap: 10px;">
+      <div class="modSectionGrid">
         <div class="mod modBlogNews">
           <h3 class="title subheaders nexaScriptHeavyFont" style="text-transform: none">
             Отзывы о Нас
