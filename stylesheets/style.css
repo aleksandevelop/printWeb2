@@ -98,7 +98,7 @@ h6 {
   background: white;
   /* display: block; */
   min-height: 170px;
-  pointer-events: none;
+  width: fit-content;
 }
 
 .image img {
@@ -237,6 +237,10 @@ section {
   font-weight: bold;
   line-height: 1.1;
   text-transform: none;
+  transition-duration: 0.2s;
+}
+.footer-address:hover {
+  color: rgb(189, 55, 13);
 }
 .footer__container {
   padding: 20px;
@@ -1006,7 +1010,6 @@ p.copy {
   letter-spacing: 0.1em;
 }
 
-
 @-webkit-keyframes rotateLogo {
   from {
     -webkit-transform: rotate(0deg);
@@ -1047,11 +1050,10 @@ p.copy {
   }
 }
 
-
-.header__background{
+.header__background {
   background: url(../images/header_bg2.png) 0 75% repeat-x;
 }
-.header__container{
+.header__container {
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -1060,22 +1062,22 @@ p.copy {
   max-width: 980px;
   margin-bottom: 75px;
 }
-.header__top{
+.header__top {
   display: flex;
   justify-content: end;
 }
-.header__bottom{
+.header__bottom {
   display: grid;
   grid-template-columns: 10% 90%;
   position: relative;
   padding-block: 0 35px;
 }
-.header__list{
+.header__list {
   display: flex;
   gap: 30px;
   justify-content: end;
 }
-.header__link{
+.header__link {
   padding: 5px 10px;
   color: white;
   line-height: 30px;
@@ -1087,7 +1089,7 @@ p.copy {
   align-items: center;
 }
 .header__link:hover,
-.header__link.current{
+.header__link.current {
   color: white;
   background: #842002;
   -webkit-border-radius: 5px;
@@ -1103,20 +1105,18 @@ p.copy {
   margin-top: -1px;
   margin-left: -1px;
 }
-.header__image{
+.header__image {
 }
-.header__img{
+.header__img {
   position: absolute;
-  top: -70%;
+  top: -50%;
 }
-.header__img:hover{
+.header__img:hover {
   -webkit-animation: rotateLogo 0.8s 1;
   -moz-animation: rotateLogo 0.8s 1;
   -o-animation: rotateLogo 0.8s 1;
   -ms-animation: rotateLogo 0.8s 1;
 }
-
-
 
 .modSwiperSlider {
   display: flex;
@@ -1170,10 +1170,10 @@ p.copy {
 }
 
 .oswald-font {
+  font-size: 18px;
   font-family: "Oswald";
+  margin: 0;
 }
-
-
 
 .modSectionHeader {
   text-align: center;
@@ -1196,16 +1196,16 @@ p.copy {
 .modSectionHeader.empty h3 {
   visibility: hidden;
 }
-.modSectionGrid{
+.modSectionGrid {
   width: 100%;
   display: grid;
   grid-template-columns: calc(52% - 5px) calc(48% - 5px);
   gap: 10px;
 }
-.modSectionContacts{
+.modSectionContacts {
   display: flex;
-    justify-content: space-between;
-    margin-top: 40px;
+  justify-content: space-between;
+  margin-top: 40px;
 }
 
 .modServices {
@@ -1701,7 +1701,8 @@ p.copy {
   text-align: center;
 }
 
-.send button {
+.send button,
+.see-all-btn {
   cursor: pointer;
   background-color: #bd3b13;
   color: #fff;
@@ -1713,8 +1714,12 @@ p.copy {
   text-transform: uppercase;
   font-family: "Oswald";
   letter-spacing: 1.1px;
+  transition-duration: 0.2s;
 }
-
+.send button:hover,
+.see-all-btn:hover {
+  background-color: #81280d;
+}
 #footer {
 }
 
@@ -1781,10 +1786,10 @@ p.copy {
   display: flex;
   align-items: center;
 }
-#map_70852858{
+#map_70852858 {
   --widthMap: 960px;
   width: var(--widthMap) !important;
-  height: 450px
+  height: 450px;
 }
 .box-content {
   background: url("../images/timetable/graph.jpg") 100% / contain no-repeat;
@@ -1981,6 +1986,10 @@ p.copy {
   height: 40px;
   width: 100%;
   border: none;
+  transition-duration: 0.2s;
+}
+.price:hover {
+  background-color: #81280d;
 }
 .order_link {
   margin-top: 15px;
@@ -2194,10 +2203,10 @@ span {
 } */
 
 .seals-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* allows images to wrap to next line */
+  display: flex;
+  flex-wrap: wrap;
   gap: 10px; /* spacing between images */
-  justify-content: center; /* center images horizontally */
+  justify-content: space-around; /* center images horizontally */
   max-height: none; /* remove scroll limits */
   overflow: visible; /* no scroll */
   padding: 15px 20px 20px;
@@ -2268,13 +2277,14 @@ span {
 .dropdown {
   width: 100%;
   background-color: white;
-  grid-template-columns: repeat(5, 1fr);
-  display: flex;
+  display: flex !important;
+  flex-wrap: wrap;
   z-index: 100;
 }
 
 /* Dropdown options */
 .dropdown-option {
+  max-width: 200px;
   height: 160px;
   padding: 8px 14px;
   min-height: 150px;
@@ -2308,6 +2318,7 @@ span {
   display: flex;
   justify-content: space-between;
   width: 100%;
+  gap: 5px;
 }
 .dropdown-option__size span {
   padding: 0;
@@ -2355,6 +2366,7 @@ span {
   text-transform: uppercase;
   align-items: end;
   gap: 5px;
+  border-bottom: 1px solid black;
 }
 .sub-option span {
   pointer-events: none;
@@ -2380,7 +2392,7 @@ span {
 .modal-content {
   background-color: #fff;
   margin: 5% auto;
-  padding: 20px;
+  padding: 10px;
   border: 1px solid #888;
   max-width: 1024px;
   min-height: 310px;
@@ -2438,7 +2450,7 @@ span {
   width: 160px;
   height: 165px;
   padding: 10px;
-  margin: 10px;
+  /* margin: 10px; */
   outline: 1px solid gray;
   cursor: pointer;
   border-radius: 8px;
@@ -2446,14 +2458,13 @@ span {
 }
 
 .imageGallery {
-  display: grid;
-  gap: 10px;
+  display: flex;
+  gap: 10px 8px;
   padding: 10px;
   max-height: 500px;
   overflow: auto;
-  grid-template-columns: repeat(5, 1fr);
-  justify-items: center;
-  grid-template-columns: repeat(5, 1fr);
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .imageGallery img:hover {
@@ -2517,7 +2528,8 @@ button[disabled] {
 dialog {
   position: absolute !important;
   top: 24em !important;
-  width: 350px;
+  width: 100%;
+  max-width: 1024px;
   max-height: 570px;
   overflow-y: auto;
   border: 1px solid #ccc;
@@ -2557,36 +2569,7 @@ dialog .close:hover {
   background: #f5f5f5;
 }
 
-/* Large screens (900px and above) */
-@media (min-width: 900px) {
-  dialog {
-    width: 100%;
-    width: 1024px;
-  }
-}
 
-/* Medium screens (768px-899px) */
-@media (min-width: 768px) and (max-width: 899px) {
-  dialog {
-    width: 600px;
-    max-height: 350px;
-  }
-}
-
-/* Small screens (mobile) */
-@media (max-width: 767px) {
-  dialog {
-    width: 95vw;
-    max-height: 60vh;
-    /* Convert to bottom sheet on mobile */
-    top: auto !important;
-    bottom: 0 !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    border-radius: 8px 8px 0 0;
-    box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.2);
-  }
-}
 
 /* Prevent body scroll when dialog is open */
 body.dialog-open {
@@ -2604,13 +2587,9 @@ body.dialog-open {
   color: #4a4a43;
 }
 
-.filter-btn:hover {
-  opacity: 0.8;
-}
-
+.filter-btn:hover,
 .filter-btn.current {
   color: #bd370d;
-  /* font-weight: bold; */
 }
 
 .works__item {
