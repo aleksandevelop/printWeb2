@@ -56,7 +56,7 @@
 }
 .header__img{
   position: absolute;
-  top: -50%;
+  top: -75%;
 }
 .header__img:hover{
   -webkit-animation: rotateLogo 0.8s 1;

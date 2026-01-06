@@ -3,20 +3,105 @@
 */
 
 /* -----------------------------------------
+   Contact Form Specific Styles
+----------------------------------------- */
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-form .form-field {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: start;
+  margin: 0;
+  padding: 0;
+}
+
+.contact-form .form-label {
+  font-size: 19px;
+  margin-bottom: 5px;
+  cursor: pointer;
+  line-height: 1.4;
+  order: -1;
+}
+
+.contact-form .form-hint {
+  font-weight: normal;
+  font-size: 16px;
+  color: #666;
+}
+
+.contact-form .input-text,
+.contact-form textarea {
+  border: none;
+  font-family: "droid sans", "helvetica neue", helvetica, arial, sans-serif;
+  font-size: 18px;
+  background-color: rgba(#bcbcb3, 0.22);
+  /* padding: 10px; */
+  width: 230px;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+}
+
+.contact-form .input-text:focus,
+.contact-form textarea:focus {
+  outline: none !important;
+}
+
+.contact-form textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.contact-form .form-actions {
+  margin-top: 5px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.contact-form .submit-button {
+  background-color: #007cba;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-family: "Oswald", sans-serif;
+}
+
+.contact-form .submit-button:hover {
+  background-color: #005a87;
+}
+
+.contact-form .submit-button:active {
+  transform: translateY(1px);
+}
+
+/* Error states for contact form */
+.contact-form .form-field.error .input-text,
+.contact-form .form-field.error textarea {
+  border-color: #c00000;
+  background-color: rgba(255, 0, 0, 0.05);
+}
+
+.contact-form .form-field.error .form-label {
+  color: #c00000;
+}
+
+/* -----------------------------------------
    Standard Forms
 ----------------------------------------- */
 
-form {
-}
-
-form p {
-  /* margin-bottom: 25px; */
-  /* overflow: auto; */
-}
-
 form label {
   float: left;
-  padding: 10px 0 0;
   display: block;
   line-height: 18px;
   cursor: pointer;

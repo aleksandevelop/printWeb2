@@ -60,10 +60,7 @@
   .order_img_one {
     width: 100%;
   }
-  .modSectionContacts{
-    flex-direction: column;
-    gap: 20px;
-  }
+
 
   /* Мобильные стили для хедера */
   .header__bottom {
@@ -124,18 +121,23 @@
   .header__container{
     margin-bottom: 0;
   }
+  .modSectionContacts{
+    grid-template-columns: 1fr;
+  }
+  .modBlogNews .title {
+    padding-left: 0;
+  }
 }
 @media (max-width: 445px) {
   .works__list {
     grid-template-columns: repeat(2, 1fr);
   }
-  .modBlogNews .title {
-    padding-left: 0;
-  }
+  
   .order_titles {
     width: 100%;
   }
-  .modSectionContacts{
-    align-items: center;
+  .header__burger-button{
+    display: inline-flex !important;
   }
+
 }

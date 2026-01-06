@@ -72,7 +72,7 @@
 
 <body>
 
-  <header class="header__background container">
+  <header class="header__background container" data-js-header>
 
     <div class="header__container">
 
@@ -105,12 +105,12 @@
           </a>
         </div>
         <nav class="header__nav">
-          <button class="burger-menu" aria-label="Открыть меню">
-            <span></span>
-            <span></span>
-            <span></span>
+          <button class="header__burger-button burger-button " type="button" aria-label="Open menu" title="Open menu" data-js-header-burger-button="">
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
           </button>
-          <ul class="header__list">
+          <ul class="header__list" data-js-header-overlay>
             <li class="header__item Steelfish">
               <a href="order.html" class="header__link">Онлайн заказ</a>
             </li>
@@ -163,18 +163,21 @@
       </div>
       <div class="modSectionContacts">
         <div class="eight columns">
-          <div class="mod modContactUs" style="display: flex;flex-direction: column;gap: 15px;">
+          <div class="mod modContactUs" style="display: flex;flex-direction: column;gap: 30px;">
             <p class="title">
               Привет, если есть вопросы, <br />
               то Вы всегда можете написать нам.
             </p>
 
-            <form action="https://api.web3forms.com/submit" method="POST" accept-charset="UTF-8" id="contactForm">
+            <form action="https://api.web3forms.com/submit" method="POST" accept-charset="UTF-8" id="contactForm" class="contact-form">
 
               <input type="hidden" name="access_key" value="b806a876-02d7-4992-a734-4569f6e7b853">
               <input type="hidden" name="form_type" value="contact">
 
-              <p class="form-field">
+              <div class="form-field">
+                <label for="name" class="form-label oswald-font">
+                  Имя
+                </label>
                 <input
                   class="input-text required"
                   id="name"
@@ -186,12 +189,12 @@
                   maxlength="50"
                   pattern="^[А-Яа-яЁёA-Za-z\s\-]+$"
                   title="Введите ваше имя (только буквы, пробелы и дефисы)" />
-                <label for="name" class="oswald-font" style="font-size: 19px">
-                  Имя
-                </label>
-              </p>
+              </div>
 
-              <p class="form-field">
+              <div class="form-field">
+                <label for="email" class="form-label oswald-font">
+                  Email<span class="form-hint"> (не будет опубликовано)</span>
+                </label>
                 <input
                   class="input-text required email"
                   id="email"
@@ -202,12 +205,10 @@
                   pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
                   title="Введите корректный email адрес (например: example@mail.ru)"
                   autocomplete="email" />
-                <label for="email" class="oswald-font" style="font-size: 19px">
-                  Емаил<span style="font-weight: normal; font-size: 16px;"> (не будет опубликовано)</span>
-                </label>
-              </p>
+              </div>
 
-              <p class="form-field">
+              <div class="form-field">
+                
                 <textarea
                   class="required"
                   id="message"
@@ -218,13 +219,16 @@
                   minlength="10"
                   maxlength="2000"
                   title="Введите ваше сообщение (от 10 до 2000 символов)"></textarea>
-              </p>
-              <button
-                class="button"
-                type="submit"
-                name="submit">
-                Отправить email
-              </button>
+              </div>
+              
+              <div class="form-actions">
+                <button
+                  class="button submit-button"
+                  type="submit"
+                  name="submit">
+                  Отправить email
+                </button>
+              </div>
             </form>
           </div>
         </div>

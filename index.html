@@ -111,7 +111,7 @@
 <body>
 
 
-  <header class="header__background container">
+  <header class="header__background container" data-js-header>
 
     <div class="header__container">
 
@@ -144,12 +144,12 @@
           </a>
         </div>
         <nav class="header__nav">
-          <button class="burger-menu" aria-label="Открыть меню">
-            <span></span>
-            <span></span>
-            <span></span>
+          <button class="header__burger-button burger-button " type="button" aria-label="Open menu" title="Open menu" data-js-header-burger-button="">
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
+            <span class="burger-button__line"></span>
           </button>
-          <ul class="header__list">
+          <ul class="header__list" data-js-header-overlay>
             <li class="header__item Steelfish">
               <a href="order.html" class="header__link">Онлайн заказ</a>
             </li>
@@ -163,7 +163,7 @@
               <a href="portfolio.html" class="header__link">Портфолио</a>
             </li>
             <li class="header__item Steelfish">
-              <a href="contact.html" class="header__link">Контакты</a>
+              <a href="contact.html" class="header__link ">Контакты</a>
             </li>
           </ul>
         </nav>
