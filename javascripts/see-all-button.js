@@ -48,7 +48,7 @@ export function initSeeAllButton() {
     if (extraItems.length === 0) {
       seeAllBtn.style.display = 'none';
     } else {
-      seeAllBtn.style.display = 'block';
+      seeAllBtn.style.display = 'flex';
       if (isExpanded && hasHiddenItems) {
         isExpanded = false;
         seeAllBtn.textContent = 'Смотреть ВСЕ';
@@ -76,7 +76,7 @@ export function initSeeAllButton() {
         item.classList.remove('hidden-item');
         item.style.opacity = '0';
         item.style.transform = 'scale(0.8)';
-        item.style.display = 'block';
+        item.style.display = 'flex';
         setTimeout(() => {
           item.style.opacity = '1';
           item.style.transform = 'scale(1)';

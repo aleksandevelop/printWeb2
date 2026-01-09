@@ -29,7 +29,7 @@ export function filterWorks(filterValue) {
       if (shouldShow) {
         if (visibleCount < maxVisible) {
           // Показываем первые 13 элементов
-          item.style.display = 'block';
+          item.style.display = 'flex';
           setTimeout(() => {
             item.style.opacity = '1';
             item.style.transform = 'scale(1)';
@@ -51,7 +51,7 @@ export function filterWorks(filterValue) {
   // Показываем/скрываем контейнер для печатей
   if (pechatContainer) {
     if (filterValue === 'pechat') {
-      pechatContainer.style.display = 'block';
+      pechatContainer.style.display = 'flex';
       setTimeout(() => {
         pechatContainer.style.opacity = '1';
         pechatContainer.style.transform = 'translateY(0)';

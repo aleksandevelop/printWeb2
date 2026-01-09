@@ -614,14 +614,15 @@ input:placeholder {
 }
 .order_img_one-title {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 18px;
   height: 30px;
+  white-space: nowrap;
   font-family: Oswald, sans-serif;
   /* overflow: hidden; */
 	font-weight: 500;
 	color: black;
   margin: 0;
-  align-self: start;
+  align-self: center;
 }
 .order_images{
 	display: grid;

@@ -127,6 +127,10 @@
   .modBlogNews .title {
     padding-left: 0;
   }
+  .header__burger-button{
+    display: inline-flex !important;
+  }
+
 }
 @media (max-width: 445px) {
   .works__list {
@@ -136,8 +140,5 @@
   .order_titles {
     width: 100%;
   }
-  .header__burger-button{
-    display: inline-flex !important;
-  }
-
+ 
 }
