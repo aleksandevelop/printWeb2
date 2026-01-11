@@ -1849,14 +1849,17 @@ p.copy {
   height: 450px;
 }
 .box-content {
-  background: url("../images/timetable/graph.jpg") 100% / contain no-repeat;
-  /* border: 1px solid gray; */
-  width: 310px;
-  height: 440px;
-  position: absolute;
-  z-index: 5;
-  pointer-events: none;
-  left: 20px;
+  background: url(../images/timetable/graph.jpg) 50% / cover no-repeat;
+    /* border: 1px solid gray; */
+    width: 310px;
+    height: 415px;
+    position: absolute;
+    z-index: 5;
+    pointer-events: none;
+    left: 2%;
+    top: 3%;
+    box-shadow: -1px 8px 8px 2px rgba(34, 60, 80, 0.3);
+    border-radius: 15px;
 }
 
 .box-content h3 {
@@ -2071,7 +2074,7 @@ span {
   border: none;
   cursor: pointer;
 
-  font-size: 20px;
+  font-size: 15px;
   color: gray;
 }
 /* .counter button:nth-child(1) {
@@ -2417,7 +2420,7 @@ span {
 
 /* Sub-option styling */
 .sub-option {
-  font-size: 15px;
+  font-size: 12px;
   padding: 2px 1px;
   cursor: pointer;
   display: flex;
@@ -2425,7 +2428,6 @@ span {
   width: 100%;
   text-transform: uppercase;
   align-items: end;
-  gap: 5px;
 }
 
 .sub-option span:hover,
@@ -2663,8 +2665,14 @@ body.dialog-open {
 /* Плавная анимация для контейнера печатей */
 .pechat_container {
   transition: all 0.3s ease;
-  opacity: 1;
+  opacity: 0;
   transform: translateY(0);
+  justify-content: center;
+  display: flex;
+  font-family: Oswald;
+  font-size: 18px;
+  opacity: 1;
+  transform: translateY(0px);
 }
 
 .pechat_container.hidden {
