@@ -1,9 +1,25 @@
 // Функция фильтрации каталога
 import { updateSeeAllButtonForFilter } from './see-all-button.js';
 
-export function filterWorks(filterValue) {
+// Глобальные переменные для отслеживания текущих фильтров
+let currentMainFilter = 'all';
+let currentSubFilter = null;
+
+export function filterWorks(filterValue, isSubFilter = false) {
   const workItems = document.querySelectorAll('.works__item');
   const pechatContainer = document.querySelector('.pechat_container');
+  
+  // Обновляем текущие фильтры
+  if (isSubFilter) {
+    currentSubFilter = filterValue;
+  } else {
+    currentMainFilter = filterValue;
+    currentSubFilter = null; // Сбрасываем подкатегорию при смене основного фильтра
+    
+    // Сбрасываем активную кнопку в подкатегориях
+    const subFilterButtons = pechatContainer?.querySelectorAll('.filter-btn');
+    subFilterButtons?.forEach(btn => btn.classList.remove('current'));
+  }
   
   // Сначала скрываем все элементы с анимацией
   workItems.forEach(item => {
@@ -18,11 +34,16 @@ export function filterWorks(filterValue) {
     
     workItems.forEach(item => {
       const category = item.getAttribute('data-category');
+      const subcategory = item.getAttribute('data-subcategory');
       let shouldShow = false;
       
-      if (filterValue === 'all') {
+      if (currentMainFilter === 'all') {
         shouldShow = true;
-      } else if (category === filterValue) {
+      } else if (currentMainFilter === 'pechat' && currentSubFilter) {
+        // Если выбраны печати и есть подкатегория
+        shouldShow = category === 'pechat' && subcategory === currentSubFilter;
+      } else if (category === currentMainFilter) {
+        // Для основных категорий без подкатегории
         shouldShow = true;
       }
       
@@ -50,7 +71,7 @@ export function filterWorks(filterValue) {
   
   // Показываем/скрываем контейнер для печатей
   if (pechatContainer) {
-    if (filterValue === 'pechat') {
+    if (currentMainFilter === 'pechat') {
       pechatContainer.style.display = 'flex';
       setTimeout(() => {
         pechatContainer.style.opacity = '1';
@@ -72,21 +93,41 @@ export function filterWorks(filterValue) {
 }
 
 export function initCatalogFilter() {
-  const filterButtons = document.querySelectorAll('.filter-btn');
+  const mainFilterButtons = document.querySelectorAll('.modGallery > .nav .filter-btn');
+  const subFilterButtons = document.querySelectorAll('.pechat_container .filter-btn');
   
-  filterButtons.forEach(button => {
+  // Обработчики для основных фильтров
+  mainFilterButtons.forEach(button => {
     button.addEventListener('click', function(e) {
       e.preventDefault();
       
       if (this.classList.contains('current')) return;
       
-      filterButtons.forEach(btn => btn.classList.remove('current'));
+      // Убираем активный класс со всех основных кнопок
+      mainFilterButtons.forEach(btn => btn.classList.remove('current'));
       this.classList.add('current');
       
       const filterValue = this.getAttribute('data-filter');
-      filterWorks(filterValue);
+      filterWorks(filterValue, false);
     });
   });
   
-  filterWorks('all');
+  // Обработчики для подкатегорий (фильтры печатей)
+  subFilterButtons.forEach(button => {
+    button.addEventListener('click', function(e) {
+      e.preventDefault();
+      
+      if (this.classList.contains('current')) return;
+      
+      // Убираем активный класс со всех кнопок подкатегорий
+      subFilterButtons.forEach(btn => btn.classList.remove('current'));
+      this.classList.add('current');
+      
+      const filterValue = this.getAttribute('data-filter');
+      filterWorks(filterValue, true);
+    });
+  });
+  
+  // Инициализация - показываем все элементы
+  filterWorks('all', false);
 }

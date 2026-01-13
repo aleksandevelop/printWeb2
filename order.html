@@ -2,44 +2,13 @@
 <html lang='ru'>
 
 <head>
-  <meta charset='utf-8'>
-  <meta content='width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0'
-    name='viewport'>
-  <meta
-    content='Онлайн заказ печатей и штампов в Казани. Закажите печать для ООО, ИП онлайн. Быстрое изготовление, доставка. Удобная форма заказа.'
-    name='description'>
-  <meta
-    content='заказать печать онлайн, печать онлайн казань, заказать штамп онлайн, печать для ООО, печать для ИП, самоштамп, срочно заказать'
-    name='keywords'>
-  <meta content='Печати и штампы в Казани | Онлайн заказ' name='author'>
-  <title>Онлайн заказ печатей и штампов в Казани | Печати и Штампы</title>
-  <link rel="canonical" href="https://pechati-kazan.ru/order.html" />
-  <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta charset="utf-8" />
+  <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    name="viewport" />
+  <title>Печати и штампы в Казани | Изготовление от 1 дня | Печати и Штампы</title>
 
-  <!-- Open Graph / Facebook -->
-  <meta property='og:type' content='website' />
-  <meta property='og:url' content='https://pechati-kazan.ru/order.html' />
-  <meta property='og:title' content='Онлайн заказ печатей и штампов в Казани' />
-  <meta property='og:description'
-    content='Онлайн заказ печатей и штампов в Казани. Закажите печать для ООО, ИП онлайн. Быстрое изготовление, доставка.' />
-  <meta property='og:image' content='https://pechati-kazan.ru/images/logo_for_title.png' />
-
-  <!-- WhatsApp/VK/Telegram -->
-  <meta property='og:site_name' content='Печати и Штампы' />
-  <meta property='og:locale' content='ru_RU' />
-  <link rel="shortcut icon" href="images/logo_for_title.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic|Droid+Sans" rel="stylesheet"
-    type="text/css">
-  <link href="stylesheets/normalize.css" rel="stylesheet" type="text/css">
-  <link href="stylesheets/style.css" media="screen" rel="stylesheet" type="text/css">
-  <link href="stylesheets/responsive.css" media="screen" rel="stylesheet" type="text/css">
-  <script src="https://unpkg.com/imask"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="javascripts/main.js" type="module"></script>
-
+  <link href="stylesheets/style.css" media="screen" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="stylesheets/responsive.css" />
 </head>
 
 <body>
@@ -146,7 +115,7 @@
                 <p>УСЛУГА *</p>
               </label>
 
-              <div class="dropdown-container " style="z-index: 1;">
+              <div class="dropdown-container z-index-1">
 
                 <input type="text" id="dropdown-input" readonly required placeholder="Выбрать услугу">
                 <p class="invalid invalid1">*обязательное поле</p>
@@ -185,7 +154,7 @@
                 <div class="counter">
                   <button type="button" class="min">--</button>
                   <span class="res">1</span>
-                  <button type="button" class="plus" style="font-size: 30px;">+</button>
+                  <button type="button" class="plus font-size-30">+</button>
                 </div>
               </div>
             </div>
@@ -197,7 +166,7 @@
               <div class="order_input delivery_type_parent">
                 <input class="delivery_type delivery_type-date" required readonly type="text"
                   placeholder="Сделать выбор">
-                <div style="width: 100%;">
+                <div class="width-100">
                   <li class="delivery-priority">срочно <span>+300</span></li>
                   <li class="delivery-priority">стандартно (2-3 часа) <span>???</span></li>
                   <li class="delivery-priority">1 день <span>???</span></li>
@@ -207,7 +176,7 @@
               </div>
             </div>
             <!-- <div class="line"></div> -->
-            <div class="title_ord" style="padding-bottom: 20px;">
+            <div class="title_ord padding-bottom-20">
               <div class="title">
                 <p>ДОСТАВКА *</p>
               </div>
@@ -216,12 +185,12 @@
                 <input class="delivery_type delivery_type-delivery" readonly required type="text"
                   placeholder="Сделать выбор">
 
-                <div style="width: 100%; ">
+                <div class="width-100">
                   <li class="delivery-option">Cамовывоз <span>бесплатно</span></li>
                   <li class="delivery-option">Доставка до подезда <span>+300</span></li>
                   <li class="delivery-option">Доставка до метро <span>+200</span></li>
                 </div>
-                <p class="invalid invalid4" style="pointer-events: none;">*обязательное поле</p>
+                <p class="invalid invalid4 pointer-events-none">*обязательное поле</p>
 
               </div>
             </div>
@@ -240,7 +209,7 @@
               0 рублей
             </button>
           </div>
-          <div class="order_images" style="z-index: 0; ">
+          <div class="order_images z-index-0">
             <div class="order_img_one">
               <p class="order_img_one-title"></p>
               <img class="seal-layout "
@@ -267,20 +236,15 @@
       <div id="serviceModal" class="modal">
         <div class="modal-content">
           <div><span class="close">&times;</span>
-            <p style="margin: 0;font-size: 20px;">Выберите вид печати</p>
+            <p class="modal-title">Выберите вид печати</p>
 
-            <div style=" width: 102%;
-            margin: 12px 0;
-            height: 2px;
-            background-color: black;
-            transform: translateX(-1%);">
-            </div>
+            <div class="modal-divider"></div>
           </div>
 
-          <div class="dropdown" style="gap: 30px; padding-bottom: 30px; padding-inline: 20px;">
+          <div class="dropdown" >
             <div class="dropdown-option">
               <label class="dropdown-label" for="Печать">
-                <img style="width: 120px; align-self: center; height: 115px; overflow: hidden; " src="images/layouts/viewpechats/pechat.png" alt="" loading="lazy">
+                <img class="modal-img-120x115" src="images/layouts/viewpechats/pechat.png" alt="" loading="lazy">
                 <div class="dropdown-option__label" data-result-text="печати">
 
                   <input id="Печать" name="service" type="radio">
@@ -306,7 +270,7 @@
             <div class="dropdown-option">
 
               <label class="dropdown-label" for="Штамп1">
-                <img style="width: 150px; height: 60px; margin-top: 35px;   align-self: center;" src="images/layouts/viewpechats/shamp.png" alt="" loading="lazy">
+                <img class="modal-img-150x60" src="images/layouts/viewpechats/shamp.png" alt="" loading="lazy">
                 <div class="dropdown-option__label"
                   data-result-text="штампа">
                   <input id="Штамп1" name="service" type="radio">
@@ -329,7 +293,7 @@
             </div>
             <div class="dropdown-option">
               <label class="dropdown-label" for="Штамп">
-                <img style="width: 140px; align-self: center; height: 110px;  " src="images/layouts/viewpechats/thipechat.png" alt="" loading="lazy">
+                <img class="modal-img-140x110" src="images/layouts/viewpechats/thipechat.png" alt="" loading="lazy">
                 <div class="dropdown-option__label" data-result-text="треугольного штампа">
 
                   <input id="Штамп" name="service" type="radio">
@@ -346,7 +310,7 @@
             </div>
             <div class="dropdown-option">
               <label class="dropdown-label" for=" факсимиле">
-                <img style="width: 140px; height: 110px;   align-self: center;" src="images/layouts/viewpechats/faksimale.png" alt="" loading="lazy">
+                <img class="modal-img-140x110" src="images/layouts/viewpechats/faksimale.png" alt="" loading="lazy">
                 <div class="dropdown-option__label" data-result-text="факсимиле">
                   <input id="факсимиле" name="service" type="radio">
                   <label class="dropdown-option__size" for="факсимиле">
@@ -369,7 +333,7 @@
             </div>
             <div class="dropdown-option">
               <label class="dropdown-label" for="Еклибрис">
-                <img style="width: 140px; height: 110px;   align-self: center;" src="images/layouts/viewpechats/eklibris.png" alt="" loading="lazy">
+                <img class="modal-img-140x110" src="images/layouts/viewpechats/eklibris.png" alt="" loading="lazy">
                 <div class="dropdown-option__label" data-result-text="еклибриса">
                   <input id="Еклибрис" name="service" type="radio">
                   <label class="dropdown-option__size" for="Еклибрис">
@@ -411,13 +375,8 @@
       <div id="manufacturingModal" class="modal">
         <div class="modal-content">
           <div><span class="close">&times;</span>
-            <p style="margin: 0;font-size: 20px;">Выберите срок изготовления</p>
-            <div style="width: 102%;
-            margin: 12px 0;
-            height: 2px;
-            background-color: black;
-            transform: translateX(-1%);">
-            </div>
+            <p class="modal-title">Выберите срок изготовления</p>
+            <div class="modal-divider"></div>
           </div>
           <div class="options-list">
             <div class="option-item" data-value="срочно" data-price="+300">
@@ -438,13 +397,8 @@
       <div id="deliveryModal" class="modal">
         <div class="modal-content">
           <div><span class="close">&times;</span>
-            <p style="margin: 0;font-size: 20px;">Выберите способ доставки</p>
-            <div style="width: 102%;
-            margin: 12px 0;
-            height: 2px;
-            background-color: black;
-            transform: translateX(-1%);">
-            </div>
+            <p class="modal-title">Выберите способ доставки</p>
+            <div class="modal-divider"></div>
           </div>
           <div class="options-list">
             <div class="option-item" data-value="Cамовывоз" data-price="бесплатно">
@@ -466,13 +420,12 @@
         <div class="modal-content">
           <div>
             <span class="close">&times;</span>
-            <p style="margin: 0;font-size: 20px;">Заказ успешно отправлен!</p>
-            <div style="width: 104%;margin: 12px 0;height: 2px;background-color: black;transform: translateX(-2%);">
-            </div>
+            <p class="modal-title">Заказ успешно отправлен!</p>
+            <div class="success-modal-divider"></div>
           </div>
-          <div style="text-align: center; padding: 20px 0;">
-            <div style="font-size: 36px; color: #bd3b13; margin-bottom: 15px;">✓</div>
-            <p style="margin: 0; font-size: 16px; color: #333; line-height: 1.4;">С вами свяжутся в ближайшее время для
+          <div class="success-modal-content">
+            <div class="success-modal-icon">✓</div>
+            <p class="success-modal-text">С вами свяжутся в ближайшее время для
               подтверждения заказа</p>
           </div>
         </div>
@@ -491,21 +444,17 @@
 
 
     <section class="row">
-      <div class="mod modSectionHeader" style="
-    margin-bottom: 40px;">
+      <div class="modSectionHeader margin-bottom-40">
         <p> Наши </p>
         <p> отзывы </p>
       </div>
 
       <div class="modSectionGrid">
         <div class="mod modBlogNews">
-          <h3 class="title subheaders nexaScriptHeavyFont" style="text-transform: none">
+          <h3 class="title subheaders nexaScriptHeavyFont text-transform-none">
             Отзывы о Нас
           </h3>
-          <ul style="
-            display: flex;
-            flex-direction: column;
-            gap: 35px;">
+          <ul>
             <li>
               <p class="left text-center timestamp">
                 <span class="month">Nov</span>
@@ -513,7 +462,7 @@
                 <span class="year">2011</span>
               </p>
               <h4>
-                <a href="single.html" style="text-transform: none">Наталия, Домохозяйка</a>
+                <a href="single.html" class="text-transform-none">Наталия, Домохозяйка</a>
               </h4>
               <p class="excerpt">
                 Dicta est deserunt esse eos rerum eaque corrupti ut dolores
@@ -528,7 +477,7 @@
                 <span class="year">2011</span>
               </p>
               <h4>
-                <a href="single.html" style="text-transform: none">Сергей, Предприниматель</a>
+                <a href="single.html" class="text-transform-none">Сергей, Предприниматель</a>
               </h4>
               <p class="excerpt">
                 Inventore laudantium sint delectus expedita aliquid numquam
@@ -544,7 +493,7 @@
                 <span class="year">2011</span>
               </p>
               <h4>
-                <a href="single.html" style="text-transform: none">Ленар, Директор 000</a>
+                <a href="single.html" class="text-transform-none">Ленар, Директор 000</a>
               </h4>
               <p class="excerpt">
                 Quis quis odio sit quia aspernatur cum fugit sed aut
@@ -556,9 +505,7 @@
         </div>
 
         <div>
-          <h3
-            class="mainheaders nexaScriptHeavyFont"
-            style="margin-bottom: 40px;text-transform: none">
+          <h3 class="mainheaders nexaScriptHeavyFont text-transform-none">
             Оставить Отзыв
           </h3>
 
@@ -580,7 +527,7 @@
                   type="text"
                   id="user_status"
                   name="user_status"
-                  style="margin-top: 20px"
+                  class="margin-top-20"
                   placeholder="Статус"
                   required
                   pattern="^[А-Яа-яЁёA-Za-z\s]{2,50}$"
@@ -590,7 +537,7 @@
                   id="user_email"
                   name="user_email"
                   placeholder="Почта"
-                  style="margin-top: 20px"
+                  class="margin-top-20"
                   required
                   pattern="^[^\s@]+@[^\s@]+\.[^\s@]+$"
                   title="Введите корректный email адрес" />
